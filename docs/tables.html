@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>4 Tables | cattolicadown: An UCSC Thesis Template for R Markdown</title>
+<meta name="author" content="Author Name">
+<meta name="generator" content="bookdown 0.27 with bs4_book()">
+<meta property="og:title" content="4 Tables | cattolicadown: An UCSC Thesis Template for R Markdown">
+<meta property="og:type" content="book">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="4 Tables | cattolicadown: An UCSC Thesis Template for R Markdown">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script async defer src="https://hypothes.is/embed.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+<link rel="stylesheet" href="templates/bs4_style.css">
+<link rel="stylesheet" href="templates/corrections.css">
+<meta name="description" content="4.1 Fare in modo che le tabelle LaTeX si comportino bene Gestire le tabelle in LaTeX può essere disgustoso. Questa sezione spiega i principali trucchi di cui hai bisogno per evitare di accumulare...">
+<meta property="og:description" content="4.1 Fare in modo che le tabelle LaTeX si comportino bene Gestire le tabelle in LaTeX può essere disgustoso. Questa sezione spiega i principali trucchi di cui hai bisogno per evitare di accumulare...">
+<meta name="twitter:description" content="4.1 Fare in modo che le tabelle LaTeX si comportino bene Gestire le tabelle in LaTeX può essere disgustoso. Questa sezione spiega i principali trucchi di cui hai bisogno per evitare di accumulare...">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title=""><p><code>cattolicadown</code>:<br>
+An UCSC Thesis<br>
+Template for R Markdown</p></a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Benvenuto!</a></li>
+<li><a class="" href="introduzione.html">Introduzione</a></li>
+<li><a class="" href="come-si-usa.html"><span class="header-section-number">1</span> Come si usa?</a></li>
+<li><a class="" href="rmd-basics.html"><span class="header-section-number">2</span> R Markdown basics</a></li>
+<li><a class="" href="cites-and-refs.html"><span class="header-section-number">3</span> Citazioni, referenze incrociate, e collaborazione</a></li>
+<li><a class="active" href="tables.html"><span class="header-section-number">4</span> Tables</a></li>
+<li><a class="" href="customisations-and-extensions.html"><span class="header-section-number">5</span> Customisations and extensions</a></li>
+<li><a class="" href="risoluzione-dei-problemi.html"><span class="header-section-number">6</span> Risoluzione dei problemi</a></li>
+<li><a class="" href="conclusioni.html">Conclusioni</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="prima-appendice.html"><span class="header-section-number">A</span> Prima Appendice</a></li>
+<li><a class="" href="la-seconda-appendice-per-ischerzo.html"><span class="header-section-number">B</span> la Seconda Appendice, per ischerzo</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/NiccoloSalvini/cattolicadown">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="tables" class="section level1" number="4">
+<h1>
+<span class="header-section-number">4</span> Tables<a class="anchor" aria-label="anchor" href="#tables"><i class="fas fa-link"></i></a>
+</h1>
+<p><!-- this will include a mini table of contents--></p>
+<div id="fare-in-modo-che-le-tabelle-latex-si-comportino-bene" class="section level2" number="4.1">
+<h2>
+<span class="header-section-number">4.1</span> Fare in modo che le tabelle LaTeX si comportino bene<a class="anchor" aria-label="anchor" href="#fare-in-modo-che-le-tabelle-latex-si-comportino-bene"><i class="fas fa-link"></i></a>
+</h2>
+<p>Gestire le tabelle in LaTeX può essere disgustoso.
+Questa sezione spiega i principali trucchi di cui hai bisogno per evitare di accumulare stress.</p>
+<p>(Nota: se stai guardando la versione ebook, non vedrai molte differenze in questa sezione, poiché è rilevante solo per l’output PDF!)</p>
+<div id="rendere-bella-la-tua-tabella" class="section level3" number="4.1.1">
+<h3>
+<span class="header-section-number">4.1.1</span> Rendere bella la tua tabella<a class="anchor" aria-label="anchor" href="#rendere-bella-la-tua-tabella"><i class="fas fa-link"></i></a>
+</h3>
+<p>Quando usi <code>kable</code> per creare tabelle, quasi sicuramente vorrai impostare l’opzione <code>booktabs = TRUE</code>.
+Questo già e sufficiente a renderla presentabile:</p>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/">knitr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">mtcars</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>booktabs <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<p>Dai un’occhiata q questa con lo stile predefinito, è orribile:</p>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">mtcars</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div id="se-il-tuo-tavolo-è-troppo-largo" class="section level3" number="4.1.2">
+<h3>
+<span class="header-section-number">4.1.2</span> Se il tuo tavolo è troppo largo<a class="anchor" aria-label="anchor" href="#se-il-tuo-tavolo-%C3%A8-troppo-largo"><i class="fas fa-link"></i></a>
+</h3>
+<p>Potresti scoprire che la tua tabella si espande oltre i margini della pagina, come le tabelle sopra.
+Risolvi questo problema con la funzione <code>kable_styling</code> dal pacchetto <a href="https://haozhu233.github.io/kableExtra/"><code>kableExtra</code></a>:</p>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://haozhu233.github.io/kableExtra/">kableExtra</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">mtcars</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>booktabs <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span>latex_options <span class="op">=</span> <span class="st">"scale_down"</span><span class="op">)</span></span></code></pre></div>
+<p>Questo ridimensiona la tabella per adattarsi alla larghezza della pagina.</p>
+</div>
+<div id="se-la-tabella-è-troppo-lunga" class="section level3" number="4.1.3">
+<h3>
+<span class="header-section-number">4.1.3</span> Se la tabella è troppo lunga<a class="anchor" aria-label="anchor" href="#se-la-tabella-%C3%A8-troppo-lunga"><i class="fas fa-link"></i></a>
+</h3>
+<p>Se la tua tabella è troppo lunga per stare su una singola pagina, imposta <code>longtable = TRUE</code> nella funzione <code>kable</code> per dividere la tabella su più pagine.</p>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">a_long_table</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span><span class="op">(</span><span class="va">mtcars</span>, <span class="va">mtcars</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">a_long_table</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">8</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>booktabs <span class="op">=</span> <span class="cn">TRUE</span>, longtable <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<p>Quando lo fai, probabilmente vorrai fare in modo che l’intestazione si ripeta su nuove pagine.
+Fallo con la funzione <code>kable_styling</code> di <code>kableExtra</code>:</p>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">a_long_table</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>booktabs <span class="op">=</span> <span class="cn">TRUE</span>, longtable <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span>latex_options <span class="op">=</span> <span class="st">"repeat_header"</span><span class="op">)</span></span></code></pre></div>
+<p>Sfortunatamente, non possiamo usare l’opzione <code>scale_down</code> con una <code>longtable</code>.
+Quindi, se una <code>longtable</code> è troppo larga, puoi regolare manualmente la dimensione del carattere o mostrare la tabella in formato orizzontale.
+Per regolare la dimensione del carattere, usa l’opzione <code>font_size</code> di kableExtra:</p>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">a_long_table</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>booktabs <span class="op">=</span> <span class="cn">TRUE</span>, longtable <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span>font_size <span class="op">=</span> <span class="fl">9</span>, latex_options <span class="op">=</span> <span class="st">"repeat_header"</span><span class="op">)</span></span></code></pre></div>
+<p>Per mettere la tabella in modalità orizzontale, usa la funzione “landscape” di kableExtra:</p>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">a_long_table</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>booktabs <span class="op">=</span> <span class="cn">TRUE</span>, longtable <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span>latex_options <span class="op">=</span> <span class="st">"repeat_header"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/landscape.html">landscape</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div id="max-power" class="section level3" number="4.1.4">
+<h3>
+<span class="header-section-number">4.1.4</span> Max power: regola manualmente l’output grezzo di LaTeX<a class="anchor" aria-label="anchor" href="#max-power"><i class="fas fa-link"></i></a>
+</h3>
+<p>Per una flessibilità totale, puoi regolare l’output grezzo di LaTeX da <code>kable</code>/<code>kableExtra</code> che genera la tabella.
+Consideriamo il caso di regolazione della dimensione del carattere quando la tabella è troppo larga:
+Latex ha una serie di comandi standard che impostano una dimensione approssimativa del carattere, come mostrato di seguito nella Figura <a href="tables.html#fig:latex-font-sizing">4.1</a>.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:latex-font-sizing"></span>
+<img src="figures/sample-content/latex_font_sizes.png" alt="Font sizes in LaTeX" width="50%"><p class="caption">
+Figure 4.1: Font sizes in LaTeX
+</p>
+</div>
+<p>Puoi usarli per regolare manualmente la dimensione del carattere nel tuo longtable in due passaggi:</p>
+<ol style="list-style-type: decimal">
+<li>Avvolgere l’ambiente longtable, ad esempio, in un ambiente <code>scriptsize</code>, sostituendo una stringa nell’output di <code>kable</code>/<code>kableExtra</code>
+</li>
+<li>Aggiungi gli attributi che fanno capire a R Markdown che la tabella è una tabella (sembra che R li rilasci quando eseguiamo la sostituzione della stringa)</li>
+</ol>
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">our_adjusted_table</span> <span class="op">&lt;-</span> <span class="va">a_long_table</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>booktabs <span class="op">=</span> <span class="cn">TRUE</span>, longtable <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span>latex_options <span class="op">=</span> <span class="st">"repeat_header"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="co"># wrap the longtable in a tiny environment</span></span>
+<span>  <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace</a></span><span class="op">(</span><span class="st">'\\\\begin\\{longtable\\}'</span>, </span>
+<span>              <span class="st">'\\\\begin\\{scriptsize\\}\n\\\\begin\\{longtable\\}'</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace</a></span><span class="op">(</span><span class="st">'\\\\end\\{longtable\\}'</span>, </span>
+<span>              <span class="st">'\\\\end\\{longtable\\}\n\\\\end\\{scriptsize\\}'</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#add attributes to make R Markdown treat this as a kable LaTeX table again</span></span>
+<span><span class="va">our_adjusted_table</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/structure.html">structure</a></span><span class="op">(</span>format <span class="op">=</span> <span class="st">"latex"</span>, class <span class="op">=</span> <span class="st">"knitr_kable"</span><span class="op">)</span></span></code></pre></div>
+
+
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="cites-and-refs.html"><span class="header-section-number">3</span> Citazioni, referenze incrociate, e collaborazione</a></div>
+<div class="next"><a href="customisations-and-extensions.html"><span class="header-section-number">5</span> Customisations and extensions</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#tables"><span class="header-section-number">4</span> Tables</a></li>
+<li>
+<a class="nav-link" href="#fare-in-modo-che-le-tabelle-latex-si-comportino-bene"><span class="header-section-number">4.1</span> Fare in modo che le tabelle LaTeX si comportino bene</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#rendere-bella-la-tua-tabella"><span class="header-section-number">4.1.1</span> Rendere bella la tua tabella</a></li>
+<li><a class="nav-link" href="#se-il-tuo-tavolo-%C3%A8-troppo-largo"><span class="header-section-number">4.1.2</span> Se il tuo tavolo è troppo largo</a></li>
+<li><a class="nav-link" href="#se-la-tabella-%C3%A8-troppo-lunga"><span class="header-section-number">4.1.3</span> Se la tabella è troppo lunga</a></li>
+<li><a class="nav-link" href="#max-power"><span class="header-section-number">4.1.4</span> Max power: regola manualmente l’output grezzo di LaTeX</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/NiccoloSalvini/cattolicadown/blob/master/04-tables.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/NiccoloSalvini/cattolicadown/edit/master/04-tables.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong><p><code>cattolicadown</code>:<br>
+An UCSC Thesis<br>
+Template for R Markdown</p></strong>" was written by Author Name. </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

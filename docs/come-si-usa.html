@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>1 Come si usa? | cattolicadown: An UCSC Thesis Template for R Markdown</title>
+<meta name="author" content="Author Name">
+<meta name="generator" content="bookdown 0.27 with bs4_book()">
+<meta property="og:title" content="1 Come si usa? | cattolicadown: An UCSC Thesis Template for R Markdown">
+<meta property="og:type" content="book">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1 Come si usa? | cattolicadown: An UCSC Thesis Template for R Markdown">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script async defer src="https://hypothes.is/embed.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+<link rel="stylesheet" href="templates/bs4_style.css">
+<link rel="stylesheet" href="templates/corrections.css">
+<meta name="description" content="1.1 Qual è la struttura di cattolicadown . +-- index.Rmd +-- _bookdown.yml +-- 00-introduction.Rmd |  ... +-- 07-conclusion.Rmd +-- front-and-back-matter |  +-- _abstract.Rmd |  +--...">
+<meta property="og:description" content="1.1 Qual è la struttura di cattolicadown . +-- index.Rmd +-- _bookdown.yml +-- 00-introduction.Rmd |  ... +-- 07-conclusion.Rmd +-- front-and-back-matter |  +-- _abstract.Rmd |  +--...">
+<meta name="twitter:description" content="1.1 Qual è la struttura di cattolicadown . +-- index.Rmd +-- _bookdown.yml +-- 00-introduction.Rmd |  ... +-- 07-conclusion.Rmd +-- front-and-back-matter |  +-- _abstract.Rmd |  +--...">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title=""><p><code>cattolicadown</code>:<br>
+An UCSC Thesis<br>
+Template for R Markdown</p></a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Benvenuto!</a></li>
+<li><a class="" href="introduzione.html">Introduzione</a></li>
+<li><a class="active" href="come-si-usa.html"><span class="header-section-number">1</span> Come si usa?</a></li>
+<li><a class="" href="rmd-basics.html"><span class="header-section-number">2</span> R Markdown basics</a></li>
+<li><a class="" href="cites-and-refs.html"><span class="header-section-number">3</span> Citazioni, referenze incrociate, e collaborazione</a></li>
+<li><a class="" href="tables.html"><span class="header-section-number">4</span> Tables</a></li>
+<li><a class="" href="customisations-and-extensions.html"><span class="header-section-number">5</span> Customisations and extensions</a></li>
+<li><a class="" href="risoluzione-dei-problemi.html"><span class="header-section-number">6</span> Risoluzione dei problemi</a></li>
+<li><a class="" href="conclusioni.html">Conclusioni</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="prima-appendice.html"><span class="header-section-number">A</span> Prima Appendice</a></li>
+<li><a class="" href="la-seconda-appendice-per-ischerzo.html"><span class="header-section-number">B</span> la Seconda Appendice, per ischerzo</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/NiccoloSalvini/cattolicadown">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="come-si-usa" class="section level1" number="1">
+<h1>
+<span class="header-section-number">1</span> Come si usa?<a class="anchor" aria-label="anchor" href="#come-si-usa"><i class="fas fa-link"></i></a>
+</h1>
+<p><!-- this will include a mini table of contents--></p>
+<div id="qual-è-la-struttura-di-cattolicadown" class="section level2" number="1.1">
+<h2>
+<span class="header-section-number">1.1</span> Qual è la struttura di <code>cattolicadown</code><a class="anchor" aria-label="anchor" href="#qual-%C3%A8-la-struttura-di-cattolicadown"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="come-si-usa.html#cb1-1" aria-hidden="true" tabindex="-1"></a>.</span>
+<span id="cb1-2"><a href="come-si-usa.html#cb1-2" aria-hidden="true" tabindex="-1"></a>+-- index.Rmd</span>
+<span id="cb1-3"><a href="come-si-usa.html#cb1-3" aria-hidden="true" tabindex="-1"></a>+-- _bookdown.yml</span>
+<span id="cb1-4"><a href="come-si-usa.html#cb1-4" aria-hidden="true" tabindex="-1"></a>+-- 00-introduction.Rmd</span>
+<span id="cb1-5"><a href="come-si-usa.html#cb1-5" aria-hidden="true" tabindex="-1"></a>|   ...</span>
+<span id="cb1-6"><a href="come-si-usa.html#cb1-6" aria-hidden="true" tabindex="-1"></a>+-- 07-conclusion.Rmd</span>
+<span id="cb1-7"><a href="come-si-usa.html#cb1-7" aria-hidden="true" tabindex="-1"></a>+-- front-and-back-matter</span>
+<span id="cb1-8"><a href="come-si-usa.html#cb1-8" aria-hidden="true" tabindex="-1"></a>|   +-- _abstract.Rmd</span>
+<span id="cb1-9"><a href="come-si-usa.html#cb1-9" aria-hidden="true" tabindex="-1"></a>|   +-- 98-appendices.Rmd</span>
+<span id="cb1-10"><a href="come-si-usa.html#cb1-10" aria-hidden="true" tabindex="-1"></a>|   ...</span>
+<span id="cb1-11"><a href="come-si-usa.html#cb1-11" aria-hidden="true" tabindex="-1"></a>+-- bibliography</span>
+<span id="cb1-12"><a href="come-si-usa.html#cb1-12" aria-hidden="true" tabindex="-1"></a>|   +-- references.bib</span>
+<span id="cb1-13"><a href="come-si-usa.html#cb1-13" aria-hidden="true" tabindex="-1"></a>|   ...</span>
+<span id="cb1-14"><a href="come-si-usa.html#cb1-14" aria-hidden="true" tabindex="-1"></a>+-- figures</span>
+<span id="cb1-15"><a href="come-si-usa.html#cb1-15" aria-hidden="true" tabindex="-1"></a>|   ...</span>
+<span id="cb1-16"><a href="come-si-usa.html#cb1-16" aria-hidden="true" tabindex="-1"></a>+-- docs</span>
+<span id="cb1-17"><a href="come-si-usa.html#cb1-17" aria-hidden="true" tabindex="-1"></a>|   +-- _main.pdf</span>
+<span id="cb1-18"><a href="come-si-usa.html#cb1-18" aria-hidden="true" tabindex="-1"></a>|   ...</span>
+<span id="cb1-19"><a href="come-si-usa.html#cb1-19" aria-hidden="true" tabindex="-1"></a>+-- scripts_and_filters</span>
+<span id="cb1-20"><a href="come-si-usa.html#cb1-20" aria-hidden="true" tabindex="-1"></a>|   +-- knit-functions.R</span>
+<span id="cb1-21"><a href="come-si-usa.html#cb1-21" aria-hidden="true" tabindex="-1"></a>|   ...</span>
+<span id="cb1-22"><a href="come-si-usa.html#cb1-22" aria-hidden="true" tabindex="-1"></a>+-- templates</span>
+<span id="cb1-23"><a href="come-si-usa.html#cb1-23" aria-hidden="true" tabindex="-1"></a>|   +-- template.tex</span>
+<span id="cb1-24"><a href="come-si-usa.html#cb1-24" aria-hidden="true" tabindex="-1"></a>|   ...</span></code></pre></div>
+<div id="index.rmd-opzioni-di-metadata-e-layout" class="section level3" number="1.1.1">
+<h3>
+<span class="header-section-number">1.1.1</span> index.Rmd: <strong>opzioni di metadata e layout</strong><a class="anchor" aria-label="anchor" href="#index.rmd-opzioni-di-metadata-e-layout"><i class="fas fa-link"></i></a>
+</h3>
+<p>In index.Rmd setti i la configurazione della tesi e.g., titolo, nome dell’autore</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="come-si-usa.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb2-2"><a href="come-si-usa.html#cb2-2" aria-hidden="true" tabindex="-1"></a>  `cattolicadown`: \</span>
+<span id="cb2-3"><a href="come-si-usa.html#cb2-3" aria-hidden="true" tabindex="-1"></a>  An UCSC Thesis \</span>
+<span id="cb2-4"><a href="come-si-usa.html#cb2-4" aria-hidden="true" tabindex="-1"></a>  Template based on R Markdown</span>
+<span id="cb2-5"><a href="come-si-usa.html#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Tuo Nome</span></span>
+<span id="cb2-6"><a href="come-si-usa.html#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">college</span><span class="kw">:</span><span class="at"> YTua Scuola</span></span></code></pre></div>
+<p>In più setta i percorsi che puntano al tuo abtract, abbreviazioni e bibliografia (ne puoi mettere anche più di uno di file <strong>.bib</strong>):</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="come-si-usa.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">abstract</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb3-2"><a href="come-si-usa.html#cb3-2" aria-hidden="true" tabindex="-1"></a>  `r paste(readLines("front-and-back-matter/_abstract.Rmd"), collapse = '\n  ')`</span>
+<span id="cb3-3"><a href="come-si-usa.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">acknowledgements</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb3-4"><a href="come-si-usa.html#cb3-4" aria-hidden="true" tabindex="-1"></a>  `r paste(readLines("front-and-back-matter/_acknowledgements.Rmd"), collapse = '\n  ')`</span>
+<span id="cb3-5"><a href="come-si-usa.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">dedication</span><span class="kw">:</span><span class="at"> For Yihui Xie</span></span>
+<span id="cb3-6"><a href="come-si-usa.html#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">abbreviations</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb3-7"><a href="come-si-usa.html#cb3-7" aria-hidden="true" tabindex="-1"></a>  `r paste(readLines("front-and-back-matter/_abbreviations.Rmd"), collapse = '\n  ')`</span>
+<span id="cb3-8"><a href="come-si-usa.html#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="come-si-usa.html#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">#######################</span></span>
+<span id="cb3-10"><a href="come-si-usa.html#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">## bibliography path ##</span></span>
+<span id="cb3-11"><a href="come-si-usa.html#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">#######################</span></span>
+<span id="cb3-12"><a href="come-si-usa.html#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">bibliography/references.bib</span><span class="kw">,</span><span class="at"> bibliography/additional-references.bib</span><span class="kw">]</span></span></code></pre></div>
+<p>Infine, <strong>index.Rmd</strong> è anche il luogo in cui puoi personalizzare le opzioni di layout.
+Ad esempio, nell’output PDF cosa dovrebbe dire l’intestazione della sezione bibliografica?
+Come devono essere posizionati i numeri di pagina?
+Devono essere visualizzati i numeri di riga?
+Nell’output HTML, quali file CSS dovrebbero essere utilizzati per lo stile?</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="come-si-usa.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">### citation and bibliography style </span><span class="al">###</span></span>
+<span id="cb4-2"><a href="come-si-usa.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography-heading-in-pdf</span><span class="kw">:</span><span class="at"> Works Cited</span></span>
+<span id="cb4-3"><a href="come-si-usa.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">...</span></span>
+<span id="cb4-4"><a href="come-si-usa.html#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="come-si-usa.html#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">### position of page numbers ###</span></span>
+<span id="cb4-6"><a href="come-si-usa.html#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">ordinary-page-number-foot-or-head: foot #'foot' puts page number in footer, 'head' in header</span></span>
+<span id="cb4-7"><a href="come-si-usa.html#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">ordinary-page-number-position: C</span></span>
+<span id="cb4-8"><a href="come-si-usa.html#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">...</span></span>
+<span id="cb4-9"><a href="come-si-usa.html#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="come-si-usa.html#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">includeline-num: false #show line numbering in PDF?</span></span>
+<span id="cb4-11"><a href="come-si-usa.html#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">...</span></span>
+<span id="cb4-12"><a href="come-si-usa.html#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="come-si-usa.html#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co">  bookdown::bs4_book: </span></span>
+<span id="cb4-14"><a href="come-si-usa.html#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co">    css: </span></span>
+<span id="cb4-15"><a href="come-si-usa.html#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co">      - templates/bs4_style.css</span></span>
+<span id="cb4-16"><a href="come-si-usa.html#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co">      - templates/corrections.css # remove to stop highlighting corrections</span></span></code></pre></div>
+</div>
+<div id="altri-.rmd-files-nella-root-i-capitoli-della-tesi" class="section level3" number="1.1.2">
+<h3>
+<span class="header-section-number">1.1.2</span> altri <strong>.Rmd</strong> files nella root: i capitoli della tesi<a class="anchor" aria-label="anchor" href="#altri-.rmd-files-nella-root-i-capitoli-della-tesi"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p>ogni capitolo della tua tesi dovrebbe avere il proprio file <strong>.Rmd</strong> nella directory principale</p></li>
+<li><p>quando lavori a maglia <strong>index.Rmd</strong>, questi capitoli vengono uniti in ordine alfabetico, in base ai nomi dei file</p></li>
+</ul>
+</div>
+<div id="front-and-back-matter" class="section level3" number="1.1.3">
+<h3>
+<span class="header-section-number">1.1.3</span> <strong>front-and-back-matter/</strong><a class="anchor" aria-label="anchor" href="#front-and-back-matter"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p>questa cartella contiene il fronte e il retro della tua tesi</p></li>
+<li>
+<p>ha file <strong>.Rmd</strong> per il tuo abstract, riconoscimenti, abbreviazioni e una nota di benvenuto che è inclusa nell’output HTML.</p>
+<p>Nota come questi file iniziano con un trattino basso (ad es. <strong>_abstract.Rmd</strong>).
+Ciò significa che non verranno automaticamente uniti alla tesi: sono esplicitamente inclusi in <strong>index.Rmd</strong></p>
+</li>
+<li><p><strong>98-appendices</strong> e <strong>99-references.Rmd</strong> vengono automaticamente uniti nella tesi - quindi i loro nomi di file iniziano con un numero alto (è una naming cinvention dei files comune in R), in modo che saranno inclusi alla fine (l’unione viene eseguita in ordine alfabetico). Dubito tu abbia più di 99 capitoli per tesi, ma se tu ce l’avessi sentiti libero di mettere 99999999.</p></li>
+<li><p><strong>99-references.Rmd</strong>: il suo unico scopo è impostare l’intestazione per la sezione dei riferimenti nell’output di HTML e Word.</p></li>
+</ul>
+</div>
+<div id="bookdown.yml-opzioni-di-build" class="section level3" number="1.1.4">
+<h3>
+<span class="header-section-number">1.1.4</span> <strong>_bookdown.yml</strong>: opzioni di build<a class="anchor" aria-label="anchor" href="#bookdown.yml-opzioni-di-build"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p>Imposta la directory di output per i file della tua tesi (<strong>docs/</strong> è l’impostazione predefinita, poiché semplifica la pubblicazione dell’output HTML sulle pagine GitHub)</p></li>
+<li><p>R Markdown dovrebbe unire automaticamente i file <strong>.Rmd</strong> in ordine alfabetico?
+In alternativa, specificare esplicitamente quali file devono essere inclusi.</p></li>
+</ul>
+</div>
+<div id="scripts-and-filters" class="section level3" number="1.1.5">
+<h3>
+<span class="header-section-number">1.1.5</span> <strong>scripts-and-filters</strong><a class="anchor" aria-label="anchor" href="#scripts-and-filters"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p><strong>knit-function.R</strong> ha le funzioni che vengono utilizzate quando costruisci l’intera tesi facendo knit dell’ <strong>index.Rmd</strong></p></li>
+<li><p><strong>create_chunk_options.R</strong> ti consente di includere citazioni all’inizio di un capitolo nell’output PDF</p></li>
+<li><p><strong>colour_and_highlight.lua</strong> ti consente di colorare il testo o applicare il colore di sfondo al testo</p></li>
+</ul>
+</div>
+<div id="templates" class="section level3" number="1.1.6">
+<h3>
+<span class="header-section-number">1.1.6</span> <strong>templates</strong><a class="anchor" aria-label="anchor" href="#templates"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p><strong>template.tex</strong> è il modello LaTeX utilizzato per costruire l’intera tesi in PDF nel layout OxThesis (si basa su <strong>ociamthesis.cls</strong>)</p></li>
+<li><p><strong>brief-template.tex</strong> è il modello LaTeX utilizzato per creare un singolo capitolo in PDF nel layout OxThesis (si basa su <strong>ociamthesis.cls</strong>)</p></li>
+<li><p><strong>beltcrest.pdf</strong>: il logo oxford utilizzato sulla prima pagina dell’output PDF</p></li>
+</ul>
+</div>
+</div>
+<div id="build-dellintera-tesi" class="section level2" number="1.2">
+<h2>
+<span class="header-section-number">1.2</span> Build dell’intera tesi<a class="anchor" aria-label="anchor" href="#build-dellintera-tesi"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>Costruisci l’intera tesi aprendo <strong>index.Rmd</strong> e facendo clic sul pulsante ‘knit’.</li>
+<li>I file di tesi generati vengono salvati nella cartella <strong>docs/</strong>
+</li>
+<li>Per scegliere i formati di output, vai all’inizio dell’intestazione YAML di <strong>index.Rmd</strong> e modifica la riga <code>thesis_formats &lt;- "pdf";</code> nel formato desiderato (le opzioni sono “pdf”, “bs4”, “gitbook” e “word”)</li>
+<li>Puoi creare più formati contemporaneamente con, ad esempio, <code>thesis_formats &lt;- c("pdf", "bs4", "word")</code>
+</li>
+<li>Se vuoi personalizzare la funzione build, modifica <strong>scripts_and_filters/knit-functions.R</strong>
+</li>
+</ul>
+<div id="pdf-output" class="section level4" number="1.2.0.1">
+<h4>
+<span class="header-section-number">1.2.0.1</span> PDF output<a class="anchor" aria-label="anchor" href="#pdf-output"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb5-1"><a href="come-si-usa.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">knit</span><span class="kw">:</span><span class="at"> (function(input, ...) {</span></span>
+<span id="cb5-2"><a href="come-si-usa.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="at">    thesis_formats &lt;- "pdf";</span></span>
+<span id="cb5-3"><a href="come-si-usa.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="at">    ...</span></span></code></pre></div>
+<p>Quando crei l’intera tesi in PDF, Latex genera un intero gruppo di file ausiliari: questi vengono automaticamente rimossi al termine del processo di creazione dalla funzione di unione personalizzata che viene utilizzata quando lavori a maglia <strong>index.Rmd</strong>.</p>
+<p>Per modificare il modo in cui viene eseguita questa rimozione, modifica <strong>scripts_and_filters/knit-functions.R</strong>.
+La riga <code>file.remove(list.files(pattern = "*\\.(log|mtc\\d*|maf|aux|bcf|lof|lot|out|toc)$"))</code> all’interno di <code>if ( "pdf" %in% output_format){</code> è quello che rimuove i file dopo la generazione dell’output PDF.</p>
+</div>
+<div id="bs4-book-output-html" class="section level4" number="1.2.0.2">
+<h4>
+<span class="header-section-number">1.2.0.2</span> BS4 book output (HTML)<a class="anchor" aria-label="anchor" href="#bs4-book-output-html"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb6-1"><a href="come-si-usa.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">knit</span><span class="kw">:</span><span class="at"> (function(input, ...) {</span></span>
+<span id="cb6-2"><a href="come-si-usa.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="at">    thesis_formats &lt;- "bs4";</span></span>
+<span id="cb6-3"><a href="come-si-usa.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="at">    ...</span></span></code></pre></div>
+<ul>
+<li>NOTA: l’<a href="https://pkgs.rstudio.com/bookdown/reference/bs4_book.html">output del libro bs4</a> richiede i pacchetti R <code>downlit</code> e <code>bslib</code> (installali con <code>install.packages</code>)</li>
+<li>Nota anche che per distribuire un libro BS4 su GitHub Pages, ci deve essere un file <strong>.nojekyll</strong> nella cartella <strong>docs/</strong>, altrimenti GitHub fa della magia nera che fa sì che alcuni percorsi di file non funzionino. Questo file è generato automaticamente dfacendo knit <code>cattolicadown</code>.</li>
+</ul>
+</div>
+<div id="gitbook-output-html" class="section level4" number="1.2.0.3">
+<h4>
+<span class="header-section-number">1.2.0.3</span> Gitbook output (HTML)<a class="anchor" aria-label="anchor" href="#gitbook-output-html"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb7"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb7-1"><a href="come-si-usa.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">knit</span><span class="kw">:</span><span class="at"> (function(input, ...) {</span></span>
+<span id="cb7-2"><a href="come-si-usa.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">    thesis_formats &lt;- "gitbook";</span></span>
+<span id="cb7-3"><a href="come-si-usa.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="at">    ...</span></span></code></pre></div>
+<ul>
+<li>Nota anche che per distribuire un libro gitbook su GitHub Pages, ci deve essere un file <strong>.nojekyll</strong> nella cartella <strong>docs/</strong>, altrimenti GitHub fa della magia nera che fa sì che alcuni percorsi di file non funzionino. Questo file è generato automaticamente dfacendo knit <code>cattolicadown</code>.</li>
+</ul>
+</div>
+<div id="word-output" class="section level4" number="1.2.0.4">
+<h4>
+<span class="header-section-number">1.2.0.4</span> Word output<a class="anchor" aria-label="anchor" href="#word-output"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb8"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb8-1"><a href="come-si-usa.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">knit</span><span class="kw">:</span><span class="at"> (function(input, ...) {</span></span>
+<span id="cb8-2"><a href="come-si-usa.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="at">    thesis_formats &lt;- "word";</span></span>
+<span id="cb8-3"><a href="come-si-usa.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="at">    ...</span></span></code></pre></div>
+<ul>
+<li>Nota che l’output di Word non ha modelli dietro e molte cose non funzionano (ad es. rotazione dell’immagine, correzioni di evidenziazione). <strong>Incoraggio le richieste pull che ottimizzano l’output di Word, ad es. utilizzando gli strumenti del pacchetto <a href="https://github.com/davidgohel/officer"><code>officer</code></a>.</strong>
+</li>
+</ul>
+</div>
+</div>
+<div id="fare-build-di-un-singolo-capitolo" class="section level2" number="1.3">
+<h2>
+<span class="header-section-number">1.3</span> Fare build di un singolo capitolo<a class="anchor" aria-label="anchor" href="#fare-build-di-un-singolo-capitolo"><i class="fas fa-link"></i></a>
+</h2>
+<p>Per fare knit di un singolo capitolo senza compilare l’intera tesi:</p>
+<ol style="list-style-type: decimal">
+<li>aprire il file <strong>.Rmd</strong> di un capitolo</li>
+<li>aggiungi un’intestazione YAML specificando i formati di output (ad es. <code><a href="https://pkgs.rstudio.com/bookdown/reference/html_document2.html">bookdown::word_document2</a></code> per un documento Word per cui potresti voler caricare su Google Docs e ricevere il feedback de* correlator* /relator* /collaborator*)</li>
+<li>fare clic sul pulsante <code>knit</code> (il file di output viene quindi salvato nella cartella principale)</li>
+</ol>
+<p>Come mostrato nelle intestazioni YAML dei capitoli di esempio, per generare un singolo capitolo in PDF, utilizzare:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb9-1"><a href="come-si-usa.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb9-2"><a href="come-si-usa.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="at">  bookdown:</span><span class="fu">:pdf_document2</span><span class="kw">:</span></span>
+<span id="cb9-3"><a href="come-si-usa.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">template</span><span class="kw">:</span><span class="at"> templates/brief_template.tex</span></span>
+<span id="cb9-4"><a href="come-si-usa.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">citation_package</span><span class="kw">:</span><span class="at"> biblatex</span></span>
+<span id="cb9-5"><a href="come-si-usa.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">documentclass</span><span class="kw">:</span><span class="at"> book</span></span>
+<span id="cb9-6"><a href="come-si-usa.html#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span></code></pre></div>
+<p>The file <strong>templates/brief_template.tex</strong> formats the chapter in the OxThesis style but without including the front matter (table of contents, abstract, etc).</p>
+</div>
+<div id="usare-_common.r" class="section level2" number="1.4">
+<h2>
+<span class="header-section-number">1.4</span> usare <code>_common.R</code><a class="anchor" aria-label="anchor" href="#usare-_common.r"><i class="fas fa-link"></i></a>
+</h2>
+<p>il file <code>_common.R</code> serve a raccogliere gli script che desideri eseguire prima del knit di ciascun capitolo. Alcune scelte ricorrenti sono:</p>
+<ul>
+<li>il caricamento di librerie comuni a tutti i capitoli</li>
+<li>il tema ggplot2 ( <em>ricorda di aggiungere anche il caricamento della dipendenza</em> )</li>
+<li>il comportamento di default dei chunks</li>
+<li>il caricamento in memoria di un dataset usato nei capitoli</li>
+</ul>
+<p>Attenzione in questo ultimo caso, se il dataset è particolarmente pesante potrebbe rallentare la compilazione di ciascun .Rmd proporzionalmente al numero di capitoli della tua tesi.</p>
+
+
+<!-- 
+Notes for adding an opening quote in PDF output:
+i) add the reference for the quote with the chunk option quote_author="my author name",
+ii) include=knitr::opts_knit$get('rmarkdown.pandoc.to') == 'latex' means that these quotes are only included when output is latex (in HTML output, it would appear by the end of the previous page)
+iii) You can't use markdown syntax inside chunk options, so if you want to e.g. italicise a book name in the quote reference use a 'text reference': Create a named piece of text with '(ref:label-name) My text', then link to this in the chunk option with quote_author='(ref:label-name)'
+-->
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="introduzione.html">Introduzione</a></div>
+<div class="next"><a href="rmd-basics.html"><span class="header-section-number">2</span> R Markdown basics</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#come-si-usa"><span class="header-section-number">1</span> Come si usa?</a></li>
+<li>
+<a class="nav-link" href="#qual-%C3%A8-la-struttura-di-cattolicadown"><span class="header-section-number">1.1</span> Qual è la struttura di cattolicadown</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#index.rmd-opzioni-di-metadata-e-layout"><span class="header-section-number">1.1.1</span> index.Rmd: opzioni di metadata e layout</a></li>
+<li><a class="nav-link" href="#altri-.rmd-files-nella-root-i-capitoli-della-tesi"><span class="header-section-number">1.1.2</span> altri .Rmd files nella root: i capitoli della tesi</a></li>
+<li><a class="nav-link" href="#front-and-back-matter"><span class="header-section-number">1.1.3</span> front-and-back-matter/</a></li>
+<li><a class="nav-link" href="#bookdown.yml-opzioni-di-build"><span class="header-section-number">1.1.4</span> _bookdown.yml: opzioni di build</a></li>
+<li><a class="nav-link" href="#scripts-and-filters"><span class="header-section-number">1.1.5</span> scripts-and-filters</a></li>
+<li><a class="nav-link" href="#templates"><span class="header-section-number">1.1.6</span> templates</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#build-dellintera-tesi"><span class="header-section-number">1.2</span> Build dell’intera tesi</a></li>
+<li><a class="nav-link" href="#fare-build-di-un-singolo-capitolo"><span class="header-section-number">1.3</span> Fare build di un singolo capitolo</a></li>
+<li><a class="nav-link" href="#usare-_common.r"><span class="header-section-number">1.4</span> usare _common.R</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/NiccoloSalvini/cattolicadown/blob/master/01-how-to-use.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/NiccoloSalvini/cattolicadown/edit/master/01-how-to-use.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong><p><code>cattolicadown</code>:<br>
+An UCSC Thesis<br>
+Template for R Markdown</p></strong>" was written by Author Name. </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>2 R Markdown basics | cattolicadown: An UCSC Thesis Template for R Markdown</title>
+<meta name="author" content="Author Name">
+<meta name="generator" content="bookdown 0.27 with bs4_book()">
+<meta property="og:title" content="2 R Markdown basics | cattolicadown: An UCSC Thesis Template for R Markdown">
+<meta property="og:type" content="book">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2 R Markdown basics | cattolicadown: An UCSC Thesis Template for R Markdown">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script async defer src="https://hypothes.is/embed.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+<link rel="stylesheet" href="templates/bs4_style.css">
+<link rel="stylesheet" href="templates/corrections.css">
+<meta name="description" content="Ecco una breve introduzione all’uso di R Markdown. Markdown è una semplice sintassi di formattazione per la creazione di documenti HTML, PDF e MS Word e molto altro ancora. R Markdown offre la...">
+<meta property="og:description" content="Ecco una breve introduzione all’uso di R Markdown. Markdown è una semplice sintassi di formattazione per la creazione di documenti HTML, PDF e MS Word e molto altro ancora. R Markdown offre la...">
+<meta name="twitter:description" content="Ecco una breve introduzione all’uso di R Markdown. Markdown è una semplice sintassi di formattazione per la creazione di documenti HTML, PDF e MS Word e molto altro ancora. R Markdown offre la...">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title=""><p><code>cattolicadown</code>:<br>
+An UCSC Thesis<br>
+Template for R Markdown</p></a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Benvenuto!</a></li>
+<li><a class="" href="introduzione.html">Introduzione</a></li>
+<li><a class="" href="come-si-usa.html"><span class="header-section-number">1</span> Come si usa?</a></li>
+<li><a class="active" href="rmd-basics.html"><span class="header-section-number">2</span> R Markdown basics</a></li>
+<li><a class="" href="cites-and-refs.html"><span class="header-section-number">3</span> Citazioni, referenze incrociate, e collaborazione</a></li>
+<li><a class="" href="tables.html"><span class="header-section-number">4</span> Tables</a></li>
+<li><a class="" href="customisations-and-extensions.html"><span class="header-section-number">5</span> Customisations and extensions</a></li>
+<li><a class="" href="risoluzione-dei-problemi.html"><span class="header-section-number">6</span> Risoluzione dei problemi</a></li>
+<li><a class="" href="conclusioni.html">Conclusioni</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="prima-appendice.html"><span class="header-section-number">A</span> Prima Appendice</a></li>
+<li><a class="" href="la-seconda-appendice-per-ischerzo.html"><span class="header-section-number">B</span> la Seconda Appendice, per ischerzo</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/NiccoloSalvini/cattolicadown">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="rmd-basics" class="section level1" number="2">
+<h1>
+<span class="header-section-number">2</span> R Markdown basics<a class="anchor" aria-label="anchor" href="#rmd-basics"><i class="fas fa-link"></i></a>
+</h1>
+<p><!-- this will include a mini table of contents--></p>
+<!-- LaTeX normally does not indent the first line after a heading - however, it does so after the mini table of contents. You can manually tell it not to with \noindent -->
+<p>Ecco una breve introduzione all’uso di <em>R Markdown</em>.
+<em>Markdown</em> è una semplice sintassi di formattazione per la creazione di documenti HTML, PDF e MS Word e molto altro ancora.
+<em>R Markdown</em> offre la flessibilità di <em>Markdown</em> con l’implementazione di input e output <strong>R</strong>. Per maggiori dettagli sull’utilizzo di <em>R Markdown</em>, vedere <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<div id="sintassi-di-base-markdown" class="section level2" number="2.1">
+<h2>
+<span class="header-section-number">2.1</span> Sintassi di base Markdown<a class="anchor" aria-label="anchor" href="#sintassi-di-base-markdown"><i class="fas fa-link"></i></a>
+</h2>
+<div id="whitespace" class="section level3" number="2.1.1">
+<h3>
+<span class="header-section-number">2.1.1</span> Whitespace<a class="anchor" aria-label="anchor" href="#whitespace"><i class="fas fa-link"></i></a>
+</h3>
+<p>Fai attenzione al distanziamento.
+Sebbene lo spazio bianco sia in gran parte ignorato, a volte fornisce segnali su come procedere.
+Come abitudine, cerca di mantenere tutto allineato a sinistra quando possibile, specialmente mentre compili un nuovo paragrafo.
+In altre parole, non è necessario indentare il testo di base nel documento Rmd (in effetti, se lo fai, il tuo testo potrebbe sclerare).</p>
+</div>
+<div id="corsivo-e-grassetto" class="section level3" number="2.1.2">
+<h3>
+<span class="header-section-number">2.1.2</span> Corsivo e grassetto<a class="anchor" aria-label="anchor" href="#corsivo-e-grassetto"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>
+<em>Corsivo</em> si fa così *this* o _this_</li>
+<li>
+<strong>Grassetti</strong> si fa così **this** o __this__</li>
+<li>
+<strong><em>Grassetto e corsivo</em></strong> si fa così ***this***, ___this___, o (il più comprensibile) **_this_**</li>
+</ul>
+</div>
+<div id="codice-inline" class="section level3" number="2.1.3">
+<h3>
+<span class="header-section-number">2.1.3</span> Codice Inline<a class="anchor" aria-label="anchor" href="#codice-inline"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>
+<code>Codice Inline</code> si fa coi backticks, così <code>`questo`</code>
+</li>
+</ul>
+</div>
+<div id="pedice-e-apice" class="section level3" number="2.1.4">
+<h3>
+<span class="header-section-number">2.1.4</span> Pedice e Apice<a class="anchor" aria-label="anchor" href="#pedice-e-apice"><i class="fas fa-link"></i></a>
+</h3>
+<p>pedice<sub>2</sub> e apice<sup>2</sup> sono fatti così ~2~ e ^2^</p>
+</div>
+<div id="barrato" class="section level3" number="2.1.5">
+<h3>
+<span class="header-section-number">2.1.5</span> Barrato<a class="anchor" aria-label="anchor" href="#barrato"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>
+<del>Barrato</del> si fa così ~~ barrato ~~</li>
+</ul>
+</div>
+<div id="escaping-aka-se-avessi-bisogno-di-un-aterisco" class="section level3" number="2.1.6">
+<h3>
+<span class="header-section-number">2.1.6</span> ‘Escaping’ (aka “se avessi bisogno di un aterisco?”)<a class="anchor" aria-label="anchor" href="#escaping-aka-se-avessi-bisogno-di-un-aterisco"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Per includere un asterisco *, _ or \, aggiungi un altro \ prima del solito: \*, \_, \\</li>
+</ul>
+</div>
+<div id="endash-emdash" class="section level3" number="2.1.7">
+<h3>
+<span class="header-section-number">2.1.7</span> Endash (–), emdash (—)<a class="anchor" aria-label="anchor" href="#endash-emdash"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>– e — con -- e ---</li>
+</ul>
+</div>
+<div id="blocco-citazione" class="section level3" number="2.1.8">
+<h3>
+<span class="header-section-number">2.1.8</span> Blocco citazione<a class="anchor" aria-label="anchor" href="#blocco-citazione"><i class="fas fa-link"></i></a>
+</h3>
+<p>Fai così:</p>
+<blockquote>
+<p>Metti un &gt; prima della linea di citazione.</p>
+</blockquote>
+</div>
+<div id="intestazioni" class="section level3" number="2.1.9">
+<h3>
+<span class="header-section-number">2.1.9</span> Intestazioni<a class="anchor" aria-label="anchor" href="#intestazioni"><i class="fas fa-link"></i></a>
+</h3>
+<p>Le intestazioni delle sezioni vengono create con # di numero crescente, ad es.</p>
+<ul>
+<li># Intestazione di primo livello</li>
+<li>## Intestazione di secondo livello</li>
+<li>### Etc.</li>
+</ul>
+<p>Nell’output PDF, un’intestazione di livello cinque si trasformerà in un’intestazione di paragrafo, ad esempio <code>\paragraph{La mia intestazione di livello cinque}</code>, che appare in grassetto sulla stessa riga del paragrafo successivo.</p>
+</div>
+<div id="elenchi-puntati-e-numerati" class="section level3" number="2.1.10">
+<h3>
+<span class="header-section-number">2.1.10</span> Elenchi puntati e numerati<a class="anchor" aria-label="anchor" href="#elenchi-puntati-e-numerati"><i class="fas fa-link"></i></a>
+</h3>
+<p>Le liste senza ordine inziamo * o con -:</p>
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+</ul>
+<p>Le liste ordinate invece iniziano con un numero.
+Nota che puoi etichettare erroneamente i numeri e <em>Markdown</em> eseguirà comunque l’ordine direttamente nell’output:</p>
+<ol style="list-style-type: decimal">
+<li>Item 1</li>
+<li>Item 2</li>
+</ol>
+<p>Per creare una sottolista, indenta leggermente i valori (almeno quattro spazi o una tabulazione):</p>
+<ol style="list-style-type: decimal">
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3
+<ul>
+<li>Item 3a</li>
+<li>Item 3b</li>
+</ul>
+</li>
+</ol>
+</div>
+<div id="interruzioni-linea" class="section level3" number="2.1.11">
+<h3>
+<span class="header-section-number">2.1.11</span> Interruzioni linea<a class="anchor" aria-label="anchor" href="#interruzioni-linea"><i class="fas fa-link"></i></a>
+</h3>
+<p>Il modo ufficiale <em>Markdown</em> per creare interruzioni di riga è terminare una riga con più di due spazi.</p>
+<p>Le rose sono rosse.
+Le violette sono blu.</p>
+<p>Questo appare sulla stessa riga nell’output, perché non abbiamo aggiunto spazi dopo il rosso.</p>
+<p>Le rose sono rosse.
+Le violette sono blu.</p>
+<p>Questo appare con un’interruzione di riga perché ho aggiunto spazi dopo il rosso.</p>
+<p>Trovo che questo sia fonte di confusione, quindi consiglio il modo alternativo: terminare una riga con una barra rovesciata creerà anche un’interruzione di riga:</p>
+<p>Le rose sono rosse.<br>
+Le violette sono blu.</p>
+<p>Per creare un nuovo paragrafo, metti una riga vuota.</p>
+<p>Pertanto, questa riga inizia il proprio paragrafo.</p>
+</div>
+<div id="collegamenti-ipertestuali" class="section level3" number="2.1.12">
+<h3>
+<span class="header-section-number">2.1.12</span> Collegamenti ipertestuali<a class="anchor" aria-label="anchor" href="#collegamenti-ipertestuali"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>
+<a href="https://www.google.com">Questo è un collegamento ipertestuale</a> creato scrivendo il testo che vuoi trasformare in un collegamento cliccabile tra <code>[parentesi quadre seguite da a](https://hyperlink-in-parentheses)</code>
+</li>
+</ul>
+</div>
+<div id="note-a-piè-di-pagina" class="section level3" number="2.1.13">
+<h3>
+<span class="header-section-number">2.1.13</span> Note a piè di pagina<a class="anchor" aria-label="anchor" href="#note-a-pi%C3%A8-di-pagina"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Vengono creati<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;testo della mia nota a piè di pagina&lt;/p&gt;"><sup>1</sup></a> scrivendo ^[testo della mia nota a piè di pagina] per fornire il contenuto della nota a piè di pagina in linea, o qualcosa come <code>[^a-random-footnote-label]</code> e fornendo il testo altrove nel formato mostrato sotto [^test-note]:</li>
+</ul>
+<p><code>[^a-random-footnote-label]: questo è un test casuale.</code></p>
+</div>
+<div id="commenti" class="section level3" number="2.1.14">
+<h3>
+<span class="header-section-number">2.1.14</span> Commenti<a class="anchor" aria-label="anchor" href="#commenti"><i class="fas fa-link"></i></a>
+</h3>
+<p>Per scrivere commenti all’interno del testo che non verranno effettivamente inclusi nell’output, utilizzare la stessa sintassi utilizzata per scrivere commenti in HTML. Cioè, &lt;!-- questo non sarà incluso nell’output --&gt;.</p>
+<!-- È super utile usare i commenti! -->
+</div>
+<div id="matematica-sintassi" class="section level3" number="2.1.15">
+<h3>
+<span class="header-section-number">2.1.15</span> Matematica (sintassi)<a class="anchor" aria-label="anchor" href="#matematica-sintassi"><i class="fas fa-link"></i></a>
+</h3>
+<p>La sintassi per scrivere matematica è stata rubata da LaTeX (il cui strumento di render MathJax). Per scrivere un’espressione matematica che verrà mostrata <strong>inline</strong>, racchiuderla tra i segni del dollaro.
+- Questo: $A = \pi*r^{2}$ Diventa: <span class="math inline">\(A = \pi*r^{2}\)</span></p>
+<p>Per scrivere un’espressione matematica che verrà mostrata in un blocco, racchiuderla tra due segni di dollaro.<br></p>
+<p>Questo: <span>$</span>$A = \pi*r^{2}$$</p>
+<p>Diventa:</p>
+<p><span class="math display">\[A = \pi*r^{2}\]</span></p>
+<p>Per creare equazioni numerate, mettile in un ambiente ‘equazione’ e assegna loro un’etichetta con la sintassi <code>(\#eq:label)</code>, in questo modo:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb10-1"><a href="rmd-basics.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}<span class="ss"> </span></span>
+<span id="cb10-2"><a href="rmd-basics.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ss">  f</span><span class="sc">\left</span><span class="ss">(k</span><span class="sc">\right</span><span class="ss">) = </span><span class="sc">\binom</span><span class="ss">{n}{k} p^k</span><span class="sc">\left</span><span class="ss">(1-p</span><span class="sc">\right</span><span class="ss">)^{n-k}</span></span>
+<span id="cb10-3"><a href="rmd-basics.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ss">  (</span><span class="sc">\#</span><span class="ss">eq:binom)</span></span>
+<span id="cb10-4"><a href="rmd-basics.html#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>} </span></code></pre></div>
+<p>Diventa:
+<span class="math display" id="eq:binom">\[\begin{equation}
+f\left(k\right)=\binom{n}{k}p^k\left(1-p\right)^{n-k}
+\tag{2.1}
+\end{equation}\]</span></p>
+<p>Per ulteriori informazioni (ad esempio come teoremi), vedere ad es. la documentazione su <a href="https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html#equations">bookdown.org</a>
+## Blocchi di codice eseguibile {#code}
+La magia di R Markdown è che possiamo aggiungere codice eseguibile all’interno del nostro documento per renderlo dinamico.</p>
+<p>Lo facciamo sia come <em>blocchi di codice</em> (generalmente utilizzati per caricare librerie e dati, eseguire calcoli e aggiungere immagini, grafici e tabelle) o <em>codice in linea</em> (generalmente utilizzato per riportare dinamicamente i risultati all’interno del nostro testo).</p>
+<p>La sintassi di un blocco di codice è mostrata nella figura <a href="rmd-basics.html#fig:chunk-parts">2.1</a>.</p>
+<div class="figure">
+<span style="display:block;" id="fig:chunk-parts"></span>
+<img src="figures/sample-content/chunk-parts.png" alt="Code chunk syntax" width="100%"><p class="caption">
+Figure 2.1: Code chunk syntax
+</p>
+</div>
+<p>Le opzioni di blocco comuni includono (vedi ad esempio <a href="https://bookdown.org/yihui/rmarkdown/r-code.html">bookdown.org</a>):</p>
+<ul>
+<li>
+<code>echo</code>: se visualizzare o meno il codice nell’output knitted</li>
+<li>
+<code>eval</code>: se o per eseguire il codice nel blocco durante il lavoro a maglia</li>
+<li>
+<code>include</code>: se includere qualcosa da un pezzo di codice nel documento di output</li>
+<li>
+<code>fig.cap</code>: didascalia della figura</li>
+<li>
+<code>fig.scap</code>: didascalia con cifre brevi, che verrà utilizzata nell’“Elenco delle cifre” nella prima parte del PDF</li>
+</ul>
+<p><strong>IMPORTANTE</strong>: <em>non</em> utilizzare i trattini bassi nelle etichette dei blocchi - se lo fai, è probabile che venga visualizzato un errore nell’output PDF che dice qualcosa come “! Errore didascalia pacchetto: \caption outside float”.</p>
+</div>
+<div id="pezzi-di-configurazione-configurazione-immagini-grafici" class="section level3" number="2.1.16">
+<h3>
+<span class="header-section-number">2.1.16</span> Pezzi di configurazione: configurazione, immagini, grafici<a class="anchor" aria-label="anchor" href="#pezzi-di-configurazione-configurazione-immagini-grafici"><i class="fas fa-link"></i></a>
+</h3>
+<p>Un documento R Markdown di solito inizia con un pezzo che viene utilizzato per <strong>caricare le librerie</strong> e per <strong>impostare le opzioni di blocco predefinite</strong> con <code>knitr::opts_chunk$set</code>.</p>
+<p>Nella tua tesi, questo accadrà probabilmente in <strong>index.Rmd</strong> e/o come parti di apertura in ciascuno dei tuoi capitoli.</p>
+<pre><code>```{r setup, include=FALSE}
+# don't show code unless we explicitly set echo = TRUE
+knitr::opts_chunk$set(echo = FALSE)
+
+library(tidyverse)
+```</code></pre>
+</div>
+<div id="comprese-le-immagini" class="section level3" number="2.1.17">
+<h3>
+<span class="header-section-number">2.1.17</span> Comprese le immagini<a class="anchor" aria-label="anchor" href="#comprese-le-immagini"><i class="fas fa-link"></i></a>
+</h3>
+<p>I blocchi di codice vengono utilizzati anche per includere immagini, con <code>include_graphics</code> dal pacchetto <code>knitr</code>, come in Figura <a href="rmd-basics.html#fig:catto-logo">2.2</a></p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"figures/sample-content/cattolica-logo.png"</span><span class="op">)</span></span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:catto-logo"></span>
+<img src="figures/sample-content/cattolica-logo.png" alt="UCSC logo" width="50%"><p class="caption">
+Figure 2.2: UCSC logo
+</p>
+</div>
+<p>Utili opzioni di blocco per le figure includono:</p>
+<ul>
+<li>
+<code>out.width</code> (usare con una percentuale) per impostare la dimensione dell’immagine</li>
+<li>se hai un’immagine che diventa mooolto grande nel tuo output, sarà vincolata alla larghezza della pagina impostando <code>out.width = "100%"</code>
+</li>
+</ul>
+<div id="rotazione-figura" class="section level4 unnumbered">
+<h4>Rotazione figura<a class="anchor" aria-label="anchor" href="#rotazione-figura"><i class="fas fa-link"></i></a>
+</h4>
+<p>Puoi usare l’opzione chunk <code>out.extra</code> per ruotare le immagini.</p>
+<p>La sintassi è diversa per LaTeX e HTML, quindi per comodità potremmo iniziare assegnando la stringa giusta a una variabile che dipende dal formato in cui stai eseguendo l’output:</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/output_type.html">is_latex_output</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="va">rotate180</span> <span class="op">&lt;-</span> <span class="st">"angle=180"</span></span>
+<span><span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
+<span>  <span class="va">rotate180</span> <span class="op">&lt;-</span> <span class="st">"style='transform:rotate(180deg);'"</span></span>
+<span><span class="op">}</span></span></code></pre></div>
+<p>Quindi puoi fare riferimento a quella variabile come il valore di <code>out.extra</code> per ruotare le immagini, come in Figura <a href="#fig:catto-logo-roated"><strong>??</strong></a>.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:catto-logo-rotated"></span>
+<img src="figures/sample-content/cattolica-logo.png" alt="UCSC logo, rotated" width="50%" style="transform:rotate(180deg);"><p class="caption">
+Figure 2.3: UCSC logo, rotated
+</p>
+</div>
+</div>
+</div>
+<div id="comprese-le-trame" class="section level3" number="2.1.18">
+<h3>
+<span class="header-section-number">2.1.18</span> Comprese le trame<a class="anchor" aria-label="anchor" href="#comprese-le-trame"><i class="fas fa-link"></i></a>
+</h3>
+<p>Allo stesso modo, i blocchi di codice vengono utilizzati per includere grafici generati dinamicamente.
+Usi il codice ordinario in R o in altri linguaggi - La figura <a href="rmd-basics.html#fig:cars-plot">2.4</a> mostra un grafico del set di dati <code>cars</code> delle distanze di arresto per le auto a varie velocità (questo set di dati è integrato in <strong>R</strong> ).</p>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">cars</span> <span class="op">%&gt;%</span> </span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">speed</span>, y <span class="op">=</span> <span class="va">dist</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="figure">
+<span style="display:block;" id="fig:cars-plot"></span>
+<img src="_main_files/figure-html/cars-plot-1.png" alt="A ggplot of car stuff" width="672"><p class="caption">
+Figure 2.4: A ggplot of car stuff
+</p>
+</div>
+<p>Sotto il cappelo, il grafico sono incluse nel tuo documento allo stesso modo delle immagini: quando costruisci il libro o lavori a maglia un capitolo, la trama viene generata automaticamente dal tuo codice, salvata come immagine, quindi inclusa nel documento di output.</p>
+</div>
+<div id="tabelle-comprese" class="section level3" number="2.1.19">
+<h3>
+<span class="header-section-number">2.1.19</span> Tabelle comprese<a class="anchor" aria-label="anchor" href="#tabelle-comprese"><i class="fas fa-link"></i></a>
+</h3>
+<p>Le tabelle sono solitamente incluse con la funzione <code>kable</code> del pacchetto <code>knitr</code>.</p>
+<p>La tabella <a href="#tab:cars-table"><strong>??</strong></a> mostra le prime righe dei dati delle auto: leggi i tuoi dati, quindi usa questo approccio per generare automaticamente tabelle.</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">cars</span> <span class="op">%&gt;%</span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"A knitr kable table"</span><span class="op">)</span></span></code></pre></div>
+<ul>
+<li>Gotcha: quando si utilizza <a href="https://www.rdocumentation.org/packages/knitr/versions/1.21/topics/kable"><code>kable</code></a>, i sottotitoli sono impostati all’interno della funzione <code>kable</code>
+</li>
+<li>Il pacchetto <code>kable</code> viene spesso utilizzato con il pacchetto <a href="https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html"><code>kableExtra</code></a>
+</li>
+</ul>
+</div>
+<div id="controllo-del-posizionamento" class="section level3" number="2.1.20">
+<h3>
+<span class="header-section-number">2.1.20</span> Controllo del posizionamento<a class="anchor" aria-label="anchor" href="#controllo-del-posizionamento"><i class="fas fa-link"></i></a>
+</h3>
+<p>Una cosa che potrebbe essere fastidiosa è il modo in cui <em>R Markdown</em> gestisce i “fluttuanti” come tabelle e figure.
+Nel tuo output PDF, LaTeX cercherà di trovare il posto migliore per mettere il tuo oggetto in base al testo che lo circonda e finché non hai davvero finito di scrivere dovresti semplicemente lasciarlo dove si trova.</p>
+<p>In generale, dovresti consentire a LaTeX di farlo, ma se hai davvero <em>veramente</em> bisogno di una figura da posizionare dove inserisci nel documento, puoi fare in modo che LaTeX tenti di farlo con l’opzione chunk <code>fig.pos=" H"</code>, come in Figura <a href="rmd-basics.html#fig:cattolica-logo-controlled">2.5</a>:</p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"figures/sample-content/cattolica-logo.png"</span><span class="op">)</span></span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:cattolica-logo-controlled"></span>
+<img src="figures/sample-content/cattolica-logo.png" alt="An UCSC logo that LaTeX will try to place at this position in the text" width="50%"><p class="caption">
+Figure 2.5: An UCSC logo that LaTeX will try to place at this position in the text
+</p>
+</div>
+<p>Come sa chiunque abbia provato a giocare manualmente con il posizionamento di figure in un documento di Word, questo può avere molti effetti collaterali con spaziatura extra su altre pagine, ecc.
+Pertanto, generalmente non è una buona idea farlo - fallo solo quando hai davvero bisogno di assicurarti che un’immagine segua direttamente sotto il testo dove ti riferisci ad essa (in questo documento, dovevo farlo per Figure @ref( fig:latex-font-sizing) nella sezione <a href="tables.html#max-power">4.1.4</a>).
+Per maggiori dettagli, leggi la sezione pertinente del <a href="https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html">R Markdown Cookbook</a>.</p>
+</div>
+</div>
+<div id="codice-in-linea-eseguibile" class="section level2" number="2.2">
+<h2>
+<span class="header-section-number">2.2</span> Codice in linea eseguibile<a class="anchor" aria-label="anchor" href="#codice-in-linea-eseguibile"><i class="fas fa-link"></i></a>
+</h2>
+<p>“Codice in linea” significa semplicemente inclusione di codice all’interno del testo.
+La sintassi per farlo è <code>`r R_CODE`</code>
+Ad esempio, <code>`r 4 + 4`</code> produrrà 8 nel tuo testo.</p>
+<p>Di solito lo utilizzerai nelle parti della tua tesi in cui riporti i risultati: leggi i dati o i risultati in un blocco di codice, archivia le cose che vuoi segnalare in una variabile, quindi inserisci il valore di quella variabile nel tuo testo.
+Ad esempio, potremmo assegnare il numero di righe nel dataset <code>cars</code> a una variabile:</p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">num_car_observations</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">cars</span><span class="op">)</span></span></code></pre></div>
+<p>Potremmo quindi scrivere:<br>
+“Nel set di dati <code>cars</code>, abbiamo osservazioni <code>`r num_car_observations`</code>.”</p>
+<p>Che genererebbe:<br>
+“Nel set di dati <code>cars</code>, abbiamo osservazioni 50.”</p>
+</div>
+<div id="codice-eseguibile-in-lingue-diverse-da-r" class="section level2" number="2.3">
+<h2>
+<span class="header-section-number">2.3</span> Codice eseguibile in lingue diverse da R<a class="anchor" aria-label="anchor" href="#codice-eseguibile-in-lingue-diverse-da-r"><i class="fas fa-link"></i></a>
+</h2>
+<p>Se desideri utilizzare linguaggi diversi da R, come Python, Julia C++ o SQL, consulta <a href="https://bookdown.org/yihui/rmarkdown-cookbook/other-%20lingue.html">la sezione pertinente del <em>R Markdown Cookbook</em></a></p>
+
+</div>
+</div>
+
+  <div class="chapter-nav">
+<div class="prev"><a href="come-si-usa.html"><span class="header-section-number">1</span> Come si usa?</a></div>
+<div class="next"><a href="cites-and-refs.html"><span class="header-section-number">3</span> Citazioni, referenze incrociate, e collaborazione</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#rmd-basics"><span class="header-section-number">2</span> R Markdown basics</a></li>
+<li>
+<a class="nav-link" href="#sintassi-di-base-markdown"><span class="header-section-number">2.1</span> Sintassi di base Markdown</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#whitespace"><span class="header-section-number">2.1.1</span> Whitespace</a></li>
+<li><a class="nav-link" href="#corsivo-e-grassetto"><span class="header-section-number">2.1.2</span> Corsivo e grassetto</a></li>
+<li><a class="nav-link" href="#codice-inline"><span class="header-section-number">2.1.3</span> Codice Inline</a></li>
+<li><a class="nav-link" href="#pedice-e-apice"><span class="header-section-number">2.1.4</span> Pedice e Apice</a></li>
+<li><a class="nav-link" href="#barrato"><span class="header-section-number">2.1.5</span> Barrato</a></li>
+<li><a class="nav-link" href="#escaping-aka-se-avessi-bisogno-di-un-aterisco"><span class="header-section-number">2.1.6</span> ‘Escaping’ (aka “se avessi bisogno di un aterisco?”)</a></li>
+<li><a class="nav-link" href="#endash-emdash"><span class="header-section-number">2.1.7</span> Endash (–), emdash (—)</a></li>
+<li><a class="nav-link" href="#blocco-citazione"><span class="header-section-number">2.1.8</span> Blocco citazione</a></li>
+<li><a class="nav-link" href="#intestazioni"><span class="header-section-number">2.1.9</span> Intestazioni</a></li>
+<li><a class="nav-link" href="#elenchi-puntati-e-numerati"><span class="header-section-number">2.1.10</span> Elenchi puntati e numerati</a></li>
+<li><a class="nav-link" href="#interruzioni-linea"><span class="header-section-number">2.1.11</span> Interruzioni linea</a></li>
+<li><a class="nav-link" href="#collegamenti-ipertestuali"><span class="header-section-number">2.1.12</span> Collegamenti ipertestuali</a></li>
+<li><a class="nav-link" href="#note-a-pi%C3%A8-di-pagina"><span class="header-section-number">2.1.13</span> Note a piè di pagina</a></li>
+<li><a class="nav-link" href="#commenti"><span class="header-section-number">2.1.14</span> Commenti</a></li>
+<li><a class="nav-link" href="#matematica-sintassi"><span class="header-section-number">2.1.15</span> Matematica (sintassi)</a></li>
+<li><a class="nav-link" href="#pezzi-di-configurazione-configurazione-immagini-grafici"><span class="header-section-number">2.1.16</span> Pezzi di configurazione: configurazione, immagini, grafici</a></li>
+<li><a class="nav-link" href="#comprese-le-immagini"><span class="header-section-number">2.1.17</span> Comprese le immagini</a></li>
+<li><a class="nav-link" href="#comprese-le-trame"><span class="header-section-number">2.1.18</span> Comprese le trame</a></li>
+<li><a class="nav-link" href="#tabelle-comprese"><span class="header-section-number">2.1.19</span> Tabelle comprese</a></li>
+<li><a class="nav-link" href="#controllo-del-posizionamento"><span class="header-section-number">2.1.20</span> Controllo del posizionamento</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#codice-in-linea-eseguibile"><span class="header-section-number">2.2</span> Codice in linea eseguibile</a></li>
+<li><a class="nav-link" href="#codice-eseguibile-in-lingue-diverse-da-r"><span class="header-section-number">2.3</span> Codice eseguibile in lingue diverse da R</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/NiccoloSalvini/cattolicadown/blob/master/02-rmd-basics-markdown.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/NiccoloSalvini/cattolicadown/edit/master/02-rmd-basics-markdown.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong><p><code>cattolicadown</code>:<br>
+An UCSC Thesis<br>
+Template for R Markdown</p></strong>" was written by Author Name. </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
