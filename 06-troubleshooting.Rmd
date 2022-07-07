@@ -1,0 +1,34 @@
+---
+output:
+  #bookdown::html_document2: default
+  #bookdown::word_document2: default
+  bookdown::pdf_document2: 
+    template: templates/brief_template.tex
+    citation_package: biblatex
+documentclass: book
+#bibliography: [bibliography/references.bib, bibliography/additional-references.bib]
+---
+  
+# Risoluzione dei problemi
+
+Questo capitolo descrive gli errori comuni che potresti incontrare e come risolverli.
+
+## Errore: impossibile creare la bibliografia tramite biber
+Questo può accadere se hai avuto una build non riuscita, forse in relazione all'arresto improvviso di RStudio.
+
+Prova a fare questo:
+
+1. digita `make clean-knits` nella scheda del terminale (o esegui `file.remove(list.files(pattern = "*.(log|mtc|maf|aux|bbl|blg|xml)"))` in la console R) per ripulire i file generati da LaTeX durante una build
+2. riavvia il computer
+
+Se ciò non risolve il problema, prova a utilizzare il pacchetto LaTeX [natbib](https://www.overleaf.com/learn/latex/Bibliography_management_with_natbib) invece di [biblatex](https://www.overleaf.com/learn /latex/Articles/Getting_started_with_BibLaTeX) per la gestione dei riferimenti.
+Per fare ciò, vai su **index.Rmd** e
+
+1. imposta `use-bilatex: false` e ​​`use-natbib: true`
+2. imposta `citation_package: natbib` sotto
+
+```yaml
+output:
+  bookdown::pdf_book:
+    citation_package: natbib
+```

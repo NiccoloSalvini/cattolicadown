@@ -1,0 +1,127 @@
+---
+output:
+  #bookdown::html_document2: default
+  #bookdown::word_document2: default
+  bookdown::pdf_document2:
+    template: templates/brief_template.tex
+    citation_package: biblatex
+documentclass: book
+#bibliography: [bibliography/references.bib, bibliography/additional-references.bib]
+---
+
+# Tables {#tables} 
+\minitoc <!-- this will include a mini table of contents-->
+
+## Fare in modo che le tabelle LaTeX si comportino bene
+Gestire le tabelle in LaTeX può essere disgustoso.
+Questa sezione spiega i principali trucchi di cui hai bisogno per evitare di accumulare stress.
+
+(Nota: se stai guardando la versione ebook, non vedrai molte differenze in questa sezione, poiché è rilevante solo per l'output PDF!)
+
+### Rendere bella la tua tabella
+Quando usi `kable` per creare tabelle, quasi sicuramente vorrai impostare l'opzione `booktabs = TRUE`.
+Questo già e sufficiente a renderla presentabile:
+
+```{r, message=FALSE}
+library(knitr)
+library(tidyverse)
+
+head(mtcars) %>% 
+  kable(booktabs = TRUE)
+```
+
+\vspace{4mm}
+
+Dai un'occhiata q questa con lo stile predefinito, è orribile:
+
+```{r}
+head(mtcars) %>% 
+  kable()
+```
+
+
+### Se il tuo tavolo è troppo largo
+Potresti scoprire che la tua tabella si espande oltre i margini della pagina, come le tabelle sopra.
+Risolvi questo problema con la funzione `kable_styling` dal pacchetto [`kableExtra`](https://haozhu233.github.io/kableExtra/):
+
+
+```{r, message=FALSE}
+library(kableExtra)
+
+head(mtcars) %>% 
+  kable(booktabs = TRUE) %>% 
+  kable_styling(latex_options = "scale_down")
+```
+
+Questo ridimensiona la tabella per adattarsi alla larghezza della pagina.
+
+
+### Se la tabella è troppo lunga
+
+Se la tua tabella è troppo lunga per stare su una singola pagina, imposta `longtable = TRUE` nella funzione `kable` per dividere la tabella su più pagine.
+
+```{r}
+a_long_table <- rbind(mtcars, mtcars)
+
+a_long_table %>% 
+  select(1:8) %>% 
+  kable(booktabs = TRUE, longtable = TRUE)
+```
+
+Quando lo fai, probabilmente vorrai fare in modo che l'intestazione si ripeta su nuove pagine.
+Fallo con la funzione `kable_styling` di `kableExtra`:
+
+```{r}
+a_long_table %>% 
+  kable(booktabs = TRUE, longtable = TRUE) %>% 
+  kable_styling(latex_options = "repeat_header")
+```
+
+Sfortunatamente, non possiamo usare l'opzione `scale_down` con una `longtable`.
+Quindi, se una `longtable` è troppo larga, puoi regolare manualmente la dimensione del carattere o mostrare la tabella in formato orizzontale.
+Per regolare la dimensione del carattere, usa l'opzione `font_size` di kableExtra:
+
+```{r}
+a_long_table %>% 
+  kable(booktabs = TRUE, longtable = TRUE) %>% 
+  kable_styling(font_size = 9, latex_options = "repeat_header")
+```
+
+Per mettere la tabella in modalità orizzontale, usa la funzione "landscape" di kableExtra:
+
+```{r}
+a_long_table %>% 
+  kable(booktabs = TRUE, longtable = TRUE) %>% 
+  kable_styling(latex_options = "repeat_header") %>% 
+  landscape()
+```
+
+### Max power: regola manualmente l'output grezzo di LaTeX {#max-power}
+Per una flessibilità totale, puoi regolare l'output grezzo di LaTeX da `kable`/`kableExtra` che genera la tabella.
+Consideriamo il caso di regolazione della dimensione del carattere quando la tabella è troppo larga:
+Latex ha una serie di comandi standard che impostano una dimensione approssimativa del carattere, come mostrato di seguito nella Figura \@ref(fig:latex-font-sizing).
+
+
+```{r latex-font-sizing, echo=FALSE, out.width='50%', fig.cap="Font sizes in LaTeX", fig.pos="H", fig.align='center'}
+knitr::include_graphics("figures/sample-content/latex_font_sizes.png")
+```
+
+Puoi usarli per regolare manualmente la dimensione del carattere nel tuo longtable in due passaggi:
+
+1. Avvolgere l'ambiente longtable, ad esempio, in un ambiente `scriptsize`, sostituendo una stringa nell'output di `kable`/`kableExtra`
+2. Aggiungi gli attributi che fanno capire a R Markdown che la tabella è una tabella (sembra che R li rilasci quando eseguiamo la sostituzione della stringa)
+
+```{r}
+our_adjusted_table <- a_long_table %>% 
+  kable(booktabs = TRUE, longtable = TRUE) %>% 
+  kable_styling(latex_options = "repeat_header") %>% 
+  # wrap the longtable in a tiny environment
+  str_replace('\\\\begin\\{longtable\\}', 
+              '\\\\begin\\{scriptsize\\}\n\\\\begin\\{longtable\\}') %>%
+  str_replace('\\\\end\\{longtable\\}', 
+              '\\\\end\\{longtable\\}\n\\\\end\\{scriptsize\\}')
+
+#add attributes to make R Markdown treat this as a kable LaTeX table again
+our_adjusted_table %>% 
+  structure(format = "latex", class = "knitr_kable")
+```

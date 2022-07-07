@@ -1,0 +1,48 @@
+---
+#########################################
+# options for knitting a single chapter #
+#########################################
+output:
+  bookdown::pdf_document2:
+    template: templates/brief_template.tex
+    citation_package: biblatex
+  bookdown::html_document2: default
+  bookdown::word_document2: default
+documentclass: book
+#bibliography: [bibliography/references.bib, bibliography/additional-references.bib]
+---
+
+# Introduzione {.unnumbered}
+
+```{=tex}
+\adjustmtc
+\markboth{Introduction}{}
+```
+<!-- For PDF output, include these two LaTeX commands after unnumbered chapter headings, otherwise the mini table of contents and the running header will show the previous chapter -->
+
+Benvenuto in `cattolicadown` [@lyngscattolicadown2019], un template di tesi per R Markdown che ho creato per i laureandi dell'Università Cattolica del Sacro Cuore (per tutte le sedi, per tutte le lauree).
+Questo template ti consente di scrivere tutta la tesi in R Markdown, mentre formatti l'.output PDF con il bellissimo e collaudato [OxThesis LaTeX template](https://github.com/mcmanigle/OxThesis).
+Questo è un contributo, in parte adattato ed open source che si ispira a [`thesisdown`](https://github.com/ismayc/thesisdown).
+
+Si spera che scrivere la tua tesi in R Markdown fornisca un'interfaccia migliore per latex (OxThesis se non hai mai usato TeX o LaTeX) togliendoti l'impiccio di impararlo da capo.
+Ancora più importante, *R Markdown* ti consente di incorporare blocchi di codice all'interno della tua tesi e generare grafici e tabelle direttamente dai dati sottostanti, evitando passaggi di copia e incolla.
+Questo ti fa prendere l'abitudine di fare ricerche riproducibili, il che ti beneficerà a lungo termine come ricercatore o analista, e aiuterà anche chiunque stia cercando di riprodurre o sviluppare i tuoi risultati.
+
+## Perché usarlo? {.unnumbered}
+
+*R Markdown* crea un modo semplice e diretto per interfacciarsi con la bellezza di LaTeX.
+I pacchetti sono stati scritti in **R** per lavorare direttamente con LaTeX per produrre tabelle e paragrafi ben formattati.
+Oltre a creare un'interfaccia intuitiva per LaTeX, *R Markdown* ti consente di leggere i tuoi dati, analizzarli e visualizzarli usando **R**, **Python** o altri linguaggi e fornire documentazione e commenti sui risultati del tuo progetto.\
+Inoltre, consente di passare i risultati dell'output del codice in linea al commento dei risultati.
+Vedrai di più su questo più avanti, concentrandoti su **R**.
+Se ti piace di più **Python** o qualcos'altro, puoi comunque usare *R Markdown* - vedi ['Other language engine'](https://bookdown.org/yihui/rmarkdown/language-engines.html) in [*R Markdown: The Definitive Guide*] di Yihui Xie (https://bookdown.org/yihui/rmarkdown/language-engines.html).
+
+L'uso di LaTeX insieme a *Markdown* è più coerente dell'output di un qualsiasi altro text editor, molto meno soggetto a danneggiamento o arresto anomalo e il file risultante è più piccolo di un file di Word.
+Anche se potresti non aver mai avuto problemi con Word in passato, è probabile che la tua tesi sarà circa due volte più grande e complessa di qualsiasi cosa tu abbia scritto prima, mettendo a dura prova le capacità di Word.
+
+## Chi lo dovrebbe usare? {.unnumbered}
+
+Chiunque abbia bisogno di utilizzare l'analisi dei dati, la matematica, le tabelle, molte cifre, riferimenti incrociati complessi o che si preoccupa solo della riproducibilità nella ricerca può trarre vantaggio dall'utilizzo di *R Markdown*.
+Se stai lavorando in campi "più morbidi", la natura user-friendly della sintassi *Markdown* e la sua capacità di tenere traccia e includere facilmente le figure, generano automaticamente un sommario, indice, riferimenti, sommario, ecc. dovrebbe comunque renderlo di grande beneficio per il tuo progetto di tesi.
+
+Inoltre se deciderai di ospitare i files della tua tesi tramite *git* in una cartella *Github*, offrirai al tu* relatore/correlat* la possiblità di farti fare una PR (pull request) sul codice che genera sia il testo, sia le analisi, sia la formattazione. Questo permetterà ad entrambe di tenere traccia dei cambiamenti, dello sviluppo e limitare l'antipatia del ping-pong delle versioni, come "final.docx", "final-final.docx" e "davvero-ultimo-final.docx"

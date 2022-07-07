@@ -1,0 +1,33 @@
+---
+#########################################
+# options for knitting a single chapter #
+#########################################
+output:
+  #bookdown::html_document2: default
+  #bookdown::word_document2: default
+  bookdown::pdf_document2:
+    template: templates/brief_template.tex
+documentclass: book
+#bibliography: [bibliography/references.bib, bibliography/additional-references.bib]
+---
+
+```{block type='savequote', include=knitr::opts_knit$get('rmarkdown.pandoc.to') == 'latex', quote_author='(ref:goethe-quote)'}
+Alles Gescheite ist schon gedacht worden.\
+Man muss nur versuchen, es noch einmal zu denken.
+
+All intelligent thoughts have already been thought;\
+what is necessary is only to try to think them again.
+
+<!-- ending a line with a lonely backslash inserts a linebreak -->
+```
+(ref:goethe-quote) --- Johann Wolfgang von Goethe [@von_goethe_wilhelm_1829]
+
+# Conclusioni {-}
+Se non vogliamo che "Conclusioni" abbia un numero di capitolo accanto, possiamo aggiungere l'attributo `{-}`.
+
+## Ulteriori informazioni {-}
+Ed ecco alcune altre informazioni casuali:
+il primo paragrafo dopo il titolo di un capitolo o l'intestazione di una sezione _non dovrebbe essere_ rientrato, perché i rientri devono dire al lettore che stai iniziando un nuovo paragrafo.
+
+Questo paragrafo, al contrario, *sarà* rientrato come dovrebbe perché non è il primo dopo il titolo "Maggiori informazioni".
+Ciao LaTeX. (Se stai leggendo la versione HTML, non vedrai alcun rientro - dai un'occhiata alla versione PDF per capire di cosa diavolo sta parlando questa sezione).

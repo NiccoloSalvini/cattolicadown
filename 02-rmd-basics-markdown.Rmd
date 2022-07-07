@@ -1,0 +1,296 @@
+---
+#########################################
+# options for knitting a single chapter #
+#########################################
+output:
+  bookdown::pdf_document2:
+    template: templates/brief_template.tex
+    citation_package: biblatex
+  bookdown::html_document2: default
+  bookdown::word_document2: default
+documentclass: book
+#bibliography: [bibliography/references.bib, bibliography/additional-references.bib]
+---
+
+```{block type='savequote', quote_author='(ref:cicero-quote)', include=knitr::is_latex_output()}
+Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+
+There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...
+```
+(ref:cicero-quote) --- Cicero's *de Finibus Bonorum et Malorum*.
+
+<!-- 
+Notes for adding an opening quote in PDF output:
+i) add the reference for the quote with the chunk option quote_author="my author name",
+ii) include=knitr::opts_knit$get('rmarkdown.pandoc.to') == 'latex' means that these quotes are only included when output is latex (in HTML output, it would appear by the end of the previous page)
+iii) You can't use markdown syntax inside chunk options, so if you want to e.g. italicise a book name in the quote reference use a 'text reference': Create a named piece of text with '(ref:label-name) My text', then link to this in the chunk option with quote_author='(ref:label-name)'
+-->
+
+# R Markdown basics {#rmd-basics}
+\minitoc <!-- this will include a mini table of contents-->
+
+<!-- LaTeX normally does not indent the first line after a heading - however, it does so after the mini table of contents. You can manually tell it not to with \noindent -->
+\noindent Ecco una breve introduzione all'uso di *R Markdown*.
+*Markdown* è una semplice sintassi di formattazione per la creazione di documenti HTML, PDF e MS Word e molto altro ancora.
+*R Markdown* offre la flessibilità di *Markdown* con l'implementazione di input e output **R**. Per maggiori dettagli sull'utilizzo di *R Markdown*, vedere <http://rmarkdown.rstudio.com>.
+
+## Sintassi di base Markdown
+### Whitespace
+Fai attenzione al distanziamento.
+Sebbene lo spazio bianco sia in gran parte ignorato, a volte fornisce segnali su come procedere.
+Come abitudine, cerca di mantenere tutto allineato a sinistra quando possibile, specialmente mentre compili un nuovo paragrafo.
+In altre parole, non è necessario indentare il testo di base nel documento Rmd (in effetti, se lo fai, il tuo testo potrebbe sclerare).
+
+### Corsivo e grassetto
+- *Corsivo* si fa così \*this\* o \_this\_
+- **Grassetti** si fa così \*\*this\*\* o \_\_this\_\_
+- **_Grassetto e corsivo_** si fa così \*\*\*this\*\*\*, \_\_\_this\_\_\_, o (il più comprensibile) \*\*\_this\_\*\*
+
+### Codice Inline
+- `Codice Inline` si fa coi backticks, così `` `questo` ``
+
+### Pedice e Apice 
+pedice~2~ e apice^2^ sono fatti così \~2\~ e \^2\^
+
+### Barrato
+- ~~Barrato~~ si fa così \~\~ barrato \~\~
+
+### 'Escaping' (aka "se avessi bisogno di un aterisco?")
+- Per includere un asterisco \*, \_ or \\, aggiungi un altro \\ prima del solito: \\\*, \\\_, \\\\
+
+### Endash (--), emdash (---)
+- -- e --- con \-\- e \-\-\-
+
+### Blocco citazione
+Fai così:
+
+> Metti un \> prima della linea di citazione.
+
+### Intestazioni
+Le intestazioni delle sezioni vengono create con \# di numero crescente, ad es.
+  
+- \# Intestazione di primo livello
+- \#\# Intestazione di secondo livello
+- \#\#\# Etc.
+
+Nell'output PDF, un'intestazione di livello cinque si trasformerà in un'intestazione di paragrafo, ad esempio `\paragraph{La mia intestazione di livello cinque}`, che appare in grassetto sulla stessa riga del paragrafo successivo.
+
+
+### Elenchi puntati e numerati
+Le liste senza ordine inziamo \* o con \-:
+
+* Item 1
+* Item 2
+
+Le liste ordinate invece iniziano con un numero.
+Nota che puoi etichettare erroneamente i numeri e *Markdown* eseguirà comunque l'ordine direttamente nell'output:
+
+1. Item 1
+4. Item 2
+
+Per creare una sottolista, indenta leggermente i valori (almeno quattro spazi o una tabulazione):
+
+1. Item 1
+1. Item 2
+1. Item 3
+    - Item 3a
+    - Item 3b
+
+### Interruzioni linea
+
+Il modo ufficiale *Markdown* per creare interruzioni di riga è terminare una riga con più di due spazi.
+
+Le rose sono rosse.
+Le violette sono blu.
+
+Questo appare sulla stessa riga nell'output, perché non abbiamo aggiunto spazi dopo il rosso.
+
+Le rose sono rosse.
+Le violette sono blu.
+
+Questo appare con un'interruzione di riga perché ho aggiunto spazi dopo il rosso.
+
+Trovo che questo sia fonte di confusione, quindi consiglio il modo alternativo: terminare una riga con una barra rovesciata creerà anche un'interruzione di riga:
+
+Le rose sono rosse.\
+Le violette sono blu.
+
+Per creare un nuovo paragrafo, metti una riga vuota.
+
+Pertanto, questa riga inizia il proprio paragrafo.
+
+### Collegamenti ipertestuali
+- [Questo è un collegamento ipertestuale](https://www.google.com) creato scrivendo il testo che vuoi trasformare in un collegamento cliccabile tra `[parentesi quadre seguite da a](https://hyperlink-in-parentheses) `
+
+### Note a piè di pagina
+- Vengono creati^[testo della mia nota a piè di pagina] scrivendo \^[testo della mia nota a piè di pagina] per fornire il contenuto della nota a piè di pagina in linea, o qualcosa come `[^a-random-footnote-label]` e fornendo il testo altrove nel formato mostrato sotto [^test-note]:
+
+`[^a-random-footnote-label]: questo è un test casuale.`
+
+[^test-footnote]: questo è un test.
+
+### Commenti
+Per scrivere commenti all'interno del testo che non verranno effettivamente inclusi nell'output, utilizzare la stessa sintassi utilizzata per scrivere commenti in HTML. Cioè, \<!\-\- questo non sarà incluso nell'output \-\->.
+
+<!-- È super utile usare i commenti! -->
+
+### Matematica (sintassi)
+La sintassi per scrivere matematica è stata rubata da LaTeX (il cui strumento di render MathJax). Per scrivere un'espressione matematica che verrà mostrata **inline**, racchiuderla tra i segni del dollaro.
+  - Questo: \$A = \\pi*r^{2}\$ Diventa: $A = \pi*r^{2}$
+  
+Per scrivere un'espressione matematica che verrà mostrata in un blocco, racchiuderla tra due segni di dollaro.\
+
+Questo: `r ifelse(knitr::opts_knit$get('rmarkdown.pandoc.to') == 'latex', "\\$\\$A = \\\\pi*r^{2}\\$ \\$", "<span>&#36;</span>\\$A = \\\\pi*r^{2}\\$\\$")`
+
+Diventa:
+
+$$A = \pi*r^{2}$$
+
+
+Per creare equazioni numerate, mettile in un ambiente 'equazione' e assegna loro un'etichetta con la sintassi `(\#eq:label)`, in questo modo:
+
+```latex
+\begin{equation} 
+  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+  (\#eq:binom)
+\end{equation} 
+```
+
+Diventa:
+\begin{equation}
+f\left(k\right)=\binom{n}{k}p^k\left(1-p\right)^{n-k}
+(\#eq:binom)
+\end{equation}
+
+
+Per ulteriori informazioni (ad esempio come teoremi), vedere ad es. la documentazione su [bookdown.org](https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html#equations)
+## Blocchi di codice eseguibile {#code}
+La magia di R Markdown è che possiamo aggiungere codice eseguibile all'interno del nostro documento per renderlo dinamico.
+
+Lo facciamo sia come *blocchi di codice* (generalmente utilizzati per caricare librerie e dati, eseguire calcoli e aggiungere immagini, grafici e tabelle) o *codice in linea* (generalmente utilizzato per riportare dinamicamente i risultati all'interno del nostro testo).
+
+La sintassi di un blocco di codice è mostrata nella figura \@ref(fig:chunk-parts).
+
+```{r chunk-parts, echo=FALSE, fig.cap="Code chunk syntax", out.width="100%", message=FALSE, fig.pos='H'}
+library(tidyverse)
+knitr::include_graphics("figures/sample-content/chunk-parts.png")
+```
+
+Le opzioni di blocco comuni includono (vedi ad esempio [bookdown.org](https://bookdown.org/yihui/rmarkdown/r-code.html)):
+
+- `echo`: se visualizzare o meno il codice nell'output knitted
+- `eval`: se o per eseguire il codice nel blocco durante il lavoro a maglia
+- `include`: se includere qualcosa da un pezzo di codice nel documento di output
+- `fig.cap`: didascalia della figura
+- `fig.scap`: didascalia con cifre brevi, che verrà utilizzata nell'"Elenco delle cifre" nella prima parte del PDF
+
+**IMPORTANTE**: *non* utilizzare i trattini bassi nelle etichette dei blocchi - se lo fai, è probabile che venga visualizzato un errore nell'output PDF che dice qualcosa come "! Errore didascalia pacchetto: \\caption outside float".
+
+### Pezzi di configurazione: configurazione, immagini, grafici
+Un documento R Markdown di solito inizia con un pezzo che viene utilizzato per **caricare le librerie** e per **impostare le opzioni di blocco predefinite** con `knitr::opts_chunk$set`.
+
+Nella tua tesi, questo accadrà probabilmente in **index.Rmd** e/o come parti di apertura in ciascuno dei tuoi capitoli.
+
+````
+`r ''````{r setup, include=FALSE}
+# don't show code unless we explicitly set echo = TRUE
+knitr::opts_chunk$set(echo = FALSE)
+
+library(tidyverse)
+```
+````
+
+### Comprese le immagini
+I blocchi di codice vengono utilizzati anche per includere immagini, con `include_graphics` dal pacchetto `knitr`, come in Figura \@ref(fig:catto-logo)
+
+```{r catto-logo, fig.cap="UCSC logo", out.width='50%', fig.align='center'}
+knitr::include_graphics("figures/sample-content/cattolica-logo.png")
+```
+
+Utili opzioni di blocco per le figure includono:
+
+- `out.width` (usare con una percentuale) per impostare la dimensione dell'immagine
+- se hai un'immagine che diventa mooolto grande nel tuo output, sarà vincolata alla larghezza della pagina impostando `out.width = "100%"`
+
+
+#### Rotazione figura {-}
+Puoi usare l'opzione chunk `out.extra` per ruotare le immagini.
+
+La sintassi è diversa per LaTeX e HTML, quindi per comodità potremmo iniziare assegnando la stringa giusta a una variabile che dipende dal formato in cui stai eseguendo l'output:
+
+```{r}
+if (knitr::is_latex_output()){
+  rotate180 <- "angle=180"
+} else {
+  rotate180 <- "style='transform:rotate(180deg);'"
+}
+```
+
+Quindi puoi fare riferimento a quella variabile come il valore di `out.extra` per ruotare le immagini, come in Figura \@ref(fig:catto-logo-roated).
+
+```{r catto-logo-rotated, out.extra=rotate180, fig.cap="UCSC logo, rotated", out.width='50%', fig.align='center', echo=FALSE}
+knitr::include_graphics("figures/sample-content/cattolica-logo.png")
+```
+
+### Comprese le trame
+Allo stesso modo, i blocchi di codice vengono utilizzati per includere grafici generati dinamicamente.
+Usi il codice ordinario in R o in altri linguaggi - La figura \@ref(fig:cars-plot) mostra un grafico del set di dati `cars` delle distanze di arresto per le auto a varie velocità (questo set di dati è integrato in **R** ).
+
+```{r cars-plot, fig.cap = "A ggplot of car stuff"}
+cars %>% 
+  ggplot() +
+    aes(x = speed, y = dist) +
+    geom_point()
+```
+
+Sotto il cappelo, il grafico sono incluse nel tuo documento allo stesso modo delle immagini: quando costruisci il libro o lavori a maglia un capitolo, la trama viene generata automaticamente dal tuo codice, salvata come immagine, quindi inclusa nel documento di output.
+
+### Tabelle comprese
+Le tabelle sono solitamente incluse con la funzione `kable` del pacchetto `knitr`.
+
+La tabella \@ref(tab:cars-table) mostra le prime righe dei dati delle auto: leggi i tuoi dati, quindi usa questo approccio per generare automaticamente tabelle.
+
+```{r cars-table}
+cars %>% 
+  head() %>% 
+  knitr::kable(caption = "A knitr kable table")
+```
+
+- Gotcha: quando si utilizza [`kable`](https://www.rdocumentation.org/packages/knitr/versions/1.21/topics/kable), i sottotitoli sono impostati all'interno della funzione `kable`
+- Il pacchetto `kable` viene spesso utilizzato con il pacchetto [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)
+
+### Controllo del posizionamento
+Una cosa che potrebbe essere fastidiosa è il modo in cui *R Markdown* gestisce i "fluttuanti" come tabelle e figure.
+Nel tuo output PDF, LaTeX cercherà di trovare il posto migliore per mettere il tuo oggetto in base al testo che lo circonda e finché non hai davvero finito di scrivere dovresti semplicemente lasciarlo dove si trova.
+
+In generale, dovresti consentire a LaTeX di farlo, ma se hai davvero *veramente* bisogno di una figura da posizionare dove inserisci nel documento, puoi fare in modo che LaTeX tenti di farlo con l'opzione chunk `fig.pos=" H"`, come in Figura \@ref(fig:cattolica-logo-controlled):
+
+```{r cattolica-logo-controlled, fig.cap="An UCSC logo that LaTeX will try to place at this position in the text", out.width='50%', fig.align='center', fig.pos="H"}
+knitr::include_graphics("figures/sample-content/cattolica-logo.png")
+```
+
+Come sa chiunque abbia provato a giocare manualmente con il posizionamento di figure in un documento di Word, questo può avere molti effetti collaterali con spaziatura extra su altre pagine, ecc.
+Pertanto, generalmente non è una buona idea farlo - fallo solo quando hai davvero bisogno di assicurarti che un'immagine segua direttamente sotto il testo dove ti riferisci ad essa (in questo documento, dovevo farlo per Figure \@ref( fig:latex-font-sizing) nella sezione \@ref(max-power)).
+Per maggiori dettagli, leggi la sezione pertinente del [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html).
+
+## Codice in linea eseguibile
+"Codice in linea" significa semplicemente inclusione di codice all'interno del testo.
+La sintassi per farlo è ``` ``r ''`r R_CODE` ```
+Ad esempio, ``` ``r ''`r 4 + 4` ``` produrrà `r 4 + 4` nel tuo testo.
+
+Di solito lo utilizzerai nelle parti della tua tesi in cui riporti i risultati: leggi i dati o i risultati in un blocco di codice, archivia le cose che vuoi segnalare in una variabile, quindi inserisci il valore di quella variabile nel tuo testo.
+Ad esempio, potremmo assegnare il numero di righe nel dataset `cars` a una variabile:
+
+```{r}
+num_car_observations <- nrow(cars)
+```
+
+Potremmo quindi scrivere:\
+"Nel set di dati `cars`, abbiamo osservazioni ``` ``r ''`r num_car_observations` ```."
+
+Che genererebbe:\
+"Nel set di dati `cars`, abbiamo osservazioni `r num_car_observations`."
+
+
+## Codice eseguibile in lingue diverse da R
+Se desideri utilizzare linguaggi diversi da R, come Python, Julia C++ o SQL, consulta [la sezione pertinente del *R Markdown Cookbook*](https://bookdown.org/yihui/rmarkdown-cookbook/other- lingue.html)

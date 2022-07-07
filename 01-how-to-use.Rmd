@@ -1,0 +1,230 @@
+---
+#########################################
+# options for knitting a single chapter #
+#########################################
+output:
+  bookdown::pdf_document2:
+    template: templates/brief_template.tex
+    citation_package: biblatex
+  bookdown::html_document2: default
+  bookdown::word_document2: default
+documentclass: book
+#bibliography: [bibliography/references.bib, bibliography/additional-references.bib]
+---
+
+# Come si usa?
+
+\minitoc <!-- this will include a mini table of contents-->
+
+## Qual è la struttura di `cattolicadown`
+
+``` markdown
+.
++-- index.Rmd
++-- _bookdown.yml
++-- 00-introduction.Rmd
+|   ...
++-- 07-conclusion.Rmd
++-- front-and-back-matter
+|   +-- _abstract.Rmd
+|   +-- 98-appendices.Rmd
+|   ...
++-- bibliography
+|   +-- references.bib
+|   ...
++-- figures
+|   ...
++-- docs
+|   +-- _main.pdf
+|   ...
++-- scripts_and_filters
+|   +-- knit-functions.R
+|   ...
++-- templates
+|   +-- template.tex
+|   ...
+```
+
+### index.Rmd: **opzioni di metadata e layout**
+
+In index.Rmd setti i la configurazione della tesi e.g., titolo, nome dell'autore
+
+```{yaml}
+title: |
+  `cattolicadown`: \
+  An UCSC Thesis \
+  Template based on R Markdown
+author: Tuo Nome
+college: YTua Scuola
+```
+
+In più setta i percorsi che puntano al tuo abtract, abbreviazioni e bibliografia (ne puoi mettere anche più di uno di file **.bib**):
+
+```{yaml}
+abstract: |
+  `r paste(readLines("front-and-back-matter/_abstract.Rmd"), collapse = '\n  ')`
+acknowledgements: |
+  `r paste(readLines("front-and-back-matter/_acknowledgements.Rmd"), collapse = '\n  ')`
+dedication: For Yihui Xie
+abbreviations: |
+  `r paste(readLines("front-and-back-matter/_abbreviations.Rmd"), collapse = '\n  ')`
+
+#######################
+## bibliography path ##
+#######################
+bibliography: [bibliography/references.bib, bibliography/additional-references.bib]
+```
+
+Infine, **index.Rmd** è anche il luogo in cui puoi personalizzare le opzioni di layout.
+Ad esempio, nell'output PDF cosa dovrebbe dire l'intestazione della sezione bibliografica?
+Come devono essere posizionati i numeri di pagina?
+Devono essere visualizzati i numeri di riga?
+Nell'output HTML, quali file CSS dovrebbero essere utilizzati per lo stile?
+
+```{yaml}
+### citation and bibliography style ###
+bibliography-heading-in-pdf: Works Cited
+...
+
+### position of page numbers ###
+ordinary-page-number-foot-or-head: foot #'foot' puts page number in footer, 'head' in header
+ordinary-page-number-position: C
+...
+
+includeline-num: false #show line numbering in PDF?
+...
+
+  bookdown::bs4_book: 
+    css: 
+      - templates/bs4_style.css
+      - templates/corrections.css # remove to stop highlighting corrections
+```
+
+### altri **.Rmd** files nella root: i capitoli della tesi
+
+- ogni capitolo della tua tesi dovrebbe avere il proprio file **.Rmd** nella directory principale
+
+- quando lavori a maglia **index.Rmd**, questi capitoli vengono uniti in ordine alfabetico, in base ai nomi dei file
+
+### **front-and-back-matter/**
+
+- questa cartella contiene il fronte e il retro della tua tesi
+
+- ha file **.Rmd** per il tuo abstract, riconoscimenti, abbreviazioni e una nota di benvenuto che è inclusa nell'output HTML.
+
+    Nota come questi file iniziano con un trattino basso (ad es. **\_abstract.Rmd**).
+    Ciò significa che non verranno automaticamente uniti alla tesi: sono esplicitamente inclusi in **index.Rmd**
+    
+- **98-appendices** e **99-references.Rmd** vengono automaticamente uniti nella tesi - quindi i loro nomi di file iniziano con un numero alto (è una naming cinvention dei files comune in R), in modo che saranno inclusi alla fine (l'unione viene eseguita in ordine alfabetico). Dubito tu abbia più di 99 capitoli per tesi, ma se tu ce l'avessi sentiti libero di mettere 99999999.
+
+- **99-references.Rmd**: il suo unico scopo è impostare l'intestazione per la sezione dei riferimenti nell'output di HTML e Word.
+
+### **\_bookdown.yml**: opzioni di build 
+
+- Imposta la directory di output per i file della tua tesi (**docs/** è l'impostazione predefinita, poiché semplifica la pubblicazione dell'output HTML sulle pagine GitHub)
+
+- R Markdown dovrebbe unire automaticamente i file **.Rmd** in ordine alfabetico?
+    In alternativa, specificare esplicitamente quali file devono essere inclusi.
+    
+### **scripts-and-filters**
+
+- **knit-function.R** ha le funzioni che vengono utilizzate quando costruisci l'intera tesi facendo knit dell' **index.Rmd**
+
+- **create_chunk_options.R** ti consente di includere citazioni all'inizio di un capitolo nell'output PDF
+
+- **colour_and_highlight.lua** ti consente di colorare il testo o applicare il colore di sfondo al testo
+
+### **templates**
+
+- **template.tex** è il modello LaTeX utilizzato per costruire l'intera tesi in PDF nel layout OxThesis (si basa su **ociamthesis.cls**)
+
+- **brief-template.tex** è il modello LaTeX utilizzato per creare un singolo capitolo in PDF nel layout OxThesis (si basa su **ociamthesis.cls**)
+
+- **beltcrest.pdf**: il logo oxford utilizzato sulla prima pagina dell'output PDF
+
+## Build dell'intera tesi
+
+- Costruisci l'intera tesi aprendo **index.Rmd** e facendo clic sul pulsante 'knit'.
+- I file di tesi generati vengono salvati nella cartella **docs/**
+- Per scegliere i formati di output, vai all'inizio dell'intestazione YAML di **index.Rmd** e modifica la riga `thesis_formats <- "pdf";` nel formato desiderato (le opzioni sono "pdf", "bs4", "gitbook" e "word")
+- Puoi creare più formati contemporaneamente con, ad esempio, `thesis_formats <- c("pdf", "bs4", "word")`
+- Se vuoi personalizzare la funzione build, modifica **scripts_and_filters/knit-functions.R**
+
+#### PDF output
+
+``` yaml
+knit: (function(input, ...) {
+    thesis_formats <- "pdf";
+    ...
+```
+
+Quando crei l'intera tesi in PDF, Latex genera un intero gruppo di file ausiliari: questi vengono automaticamente rimossi al termine del processo di creazione dalla funzione di unione personalizzata che viene utilizzata quando lavori a maglia **index.Rmd**.
+
+Per modificare il modo in cui viene eseguita questa rimozione, modifica **scripts_and_filters/knit-functions.R**.
+La riga `file.remove(list.files(pattern = "*\\.(log|mtc\\d*|maf|aux|bcf|lof|lot|out|toc)$"))` all'interno di `if ( "pdf" %in% output_format){` è quello che rimuove i file dopo la generazione dell'output PDF.
+
+#### BS4 book output (HTML)
+
+``` yaml
+knit: (function(input, ...) {
+    thesis_formats <- "bs4";
+    ...
+```
+
+- NOTA: l'[output del libro bs4](https://pkgs.rstudio.com/bookdown/reference/bs4_book.html) richiede i pacchetti R `downlit` e `bslib` (installali con `install.packages`)
+- Nota anche che per distribuire un libro BS4 su GitHub Pages, ci deve essere un file **.nojekyll** nella cartella **docs/**, altrimenti GitHub fa della magia nera che fa sì che alcuni percorsi di file non funzionino. Questo file è generato automaticamente dfacendo knit `cattolicadown`.
+
+#### Gitbook output (HTML)
+
+``` yaml
+knit: (function(input, ...) {
+    thesis_formats <- "gitbook";
+    ...
+```
+
+- Nota anche che per distribuire un libro gitbook su GitHub Pages, ci deve essere un file **.nojekyll** nella cartella **docs/**, altrimenti GitHub fa della magia nera che fa sì che alcuni percorsi di file non funzionino. Questo file è generato automaticamente dfacendo knit `cattolicadown`.
+
+#### Word output
+
+``` yaml
+knit: (function(input, ...) {
+    thesis_formats <- "word";
+    ...
+```
+
+- Nota che l'output di Word non ha modelli dietro e molte cose non funzionano (ad es. rotazione dell'immagine, correzioni di evidenziazione). **Incoraggio le richieste pull che ottimizzano l'output di Word, ad es. utilizzando gli strumenti del pacchetto [`officer`](https://github.com/davidgohel/officer).**
+
+## Fare build di un singolo capitolo
+
+Per fare knit di un singolo capitolo senza compilare l'intera tesi:
+
+1. aprire il file **.Rmd** di un capitolo
+2. aggiungi un'intestazione YAML specificando i formati di output (ad es. `bookdown::word_document2` per un documento Word per cui potresti voler caricare su Google Docs e ricevere il feedback de* correlator* /relator* /collaborator*)
+3. fare clic sul pulsante `knit` (il file di output viene quindi salvato nella cartella principale)
+
+Come mostrato nelle intestazioni YAML dei capitoli di esempio, per generare un singolo capitolo in PDF, utilizzare:
+
+``` yaml
+output:
+  bookdown::pdf_document2:
+    template: templates/brief_template.tex
+    citation_package: biblatex
+documentclass: book
+bibliography: references.bib
+```
+
+The file **templates/brief_template.tex** formats the chapter in the OxThesis style but without including the front matter (table of contents, abstract, etc).
+
+## usare `_common.R`
+
+il file `_common.R` serve a raccogliere gli script che desideri eseguire prima del knit di ciascun capitolo. Alcune scelte ricorrenti sono:
+
+- il caricamento di librerie comuni a tutti i capitoli
+- il tema ggplot2 ( _ricorda di aggiungere anche il caricamento della dipendenza_ )
+- il comportamento di default dei chunks
+- il caricamento in memoria di un dataset usato nei capitoli
+
+
+Attenzione in questo ultimo caso, se il dataset è particolarmente pesante potrebbe rallentare la compilazione di ciascun .Rmd proporzionalmente al numero di capitoli della tua tesi.
+
+
