@@ -1,0 +1,6 @@
+Questo template *R Markdown* serve per scrivere una tesi dell'Università Cattolica del Sacro Cuore di tutte le sedi, di tutti i corsi di laurea.
+Il template è costruito usando il pacchetto `bookdown` di Yihui Xie, con una forte ispirazione da `thesisdown` di Chester Ismay e dal template `OxThesis` \LaTeX\ (più recentemente riadattato da John McManigle).
+
+Il contenuto di esempio di questo template include illustrazioni su come scrivere una tesi in R Markdown e segue in gran parte la struttura di [questo workshop R Markdown](https://ulyngs.github.io/rmarkdown-workshop-2019/) a cura di un ricercatore dell'università di Oxford, da cui ho presto molta ispirazione.
+
+Congratulazioni per aver fatto un ulteriore passo avanti nelle terre della scienza open e riproducibile utilizzando uno strumento sottovalutato che ti consente di includere in modo trasparente tabelle e grafici generati direttamente dai dati sottostanti.

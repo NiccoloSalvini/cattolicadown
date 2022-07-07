@@ -1,0 +1,27 @@
+# Benvenuto! {-}
+
+::: {.row}
+:::::: {.col-sm-6}
+Benvenuti nell'output di `bs4` dal template di tesi [`cattolicadown`](https://github.com/NiccoloSalvini/cattolicadown) per [R Markdown](https://rmarkdown.rstudio.com).
+Per visualizzare/scaricare l'output PDF, [clicca qui](_main.pdf) (o fai clic sull'immagine di copertina).
+Divertiti, ma impara!
+
+::::::::: {.byline}
+dr. Niccolò Salvini \
+5 Luglio 2022
+:::::::::
+::::::
+
+:::::: {.col-sm-6 .thesis-cover}
+<a href="_main.pdf" target="_blank"><img src="templates/cover-catto.png" alt="Download PDF" class="img-fluid"/></a> 
+::::::
+:::
+
+## Abstract {-}
+```{r abstract, child=here::here('front-and-back-matter/_abstract.Rmd')}
+```
+
+
+## Ringraziamenti {-}
+```{r acknowledgments, child=here::here('front-and-back-matter/_acknowledgements.Rmd')}
+```

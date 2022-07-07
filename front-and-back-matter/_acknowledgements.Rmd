@@ -1,0 +1,12 @@
+È qui che normalmente ringrazierai il tuo relator* /correlator*, collegh*, la famiglia e gli amici, nonché i finanziamenti e il supporto istituzionale. Nel nostro caso, daremo le tesseremo le lodi alle persone che hanno sviluppato le idee e gli strumenti che ci consentono di spingere la scienza aperta un piccolo passo avanti scrivendo tesi trasparenti e riproducibili in R Markdown.
+
+Dobbiamo essere grati a John Gruber per aver inventato la versione originale di Markdown, a John MacFarlane per aver creato Pandoc (<http://pandoc.org>) che converte Markdown in un gran numero di formati di output e a Yihui Xie per aver creato ` knitr` che ha introdotto R Markdown come un modo per incorporare il codice nei documenti Markdown e `bookdown` che ha aggiunto strumenti per la scrittura tecnica in forma più estesa.
+
+Un ringraziamento speciale a [Chester Ismay](http://chester.rbind.io), che ha creato il pacchetto `thesisdown` che ha aiutato molti dottorandi a scrivere le loro tesi in R Markdown. 
+
+Infine, un profondo ringraziamento a JJ Allaire, fondatore e CEO di [RStudio](http://rstudio.com), e Hadley Wickham, la mente del tidyverse senza il quale ci saremmo semplicemente arresi e avremmo fatto scienza dei dati in Python, sbagliando. Grazie per aver reso la scienza dei dati più semplice, più accessibile e più divertente per tutti noi.
+\begin{flushright}
+Niccolo Salvini \\
+Campus Gemelli, Roma \\
+5 Luglio 2022
+\end{flushright}

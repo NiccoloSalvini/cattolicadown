@@ -1,0 +1,5 @@
+\item[1-D, 2-D] Mono o bidimensionale, riferendosi **in questa tesi** alle dimensioni spaziali di un'immagine.
+
+\item[Lontra] Uno dei mammiferi acquatici più belli.
+
+\item[Riccio] Davvero un simpatico amico spinoso.
