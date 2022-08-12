@@ -227,7 +227,7 @@ Il file **templates/brief_template.tex** formatta il capitolo nello stile OxThes
 
 **NOTA:** Il percorso bibliografico nelle intestazioni YAML dei singoli capitoli deve essere identico a quello in **index.Rmd** - altrimenti il percorso bibliografico dei singoli capitoli potrebbe sovrascrivere il percorso in **index.Rmd** e causare problemi fai knit dell'intera tesi.
 
-## Personalizzazioni ed estenzioni
+## Personalizzazioni ed estensioni
 
 - per le cose comuni che potresti voler fare nella tua tesi, leggi il contenuto di esempio
 - il [capitolo 'Personalizzazioni ed estensioni'](https://NiccoloSalvini.github.io/cattolicadown/customisations-and-extensions.html) (contiene suggerimenti su come includere pagine PDF da una composizione pubblicata articolo nella tua tesi e molto altro!
