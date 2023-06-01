@@ -15,18 +15,18 @@ There is grandeur in this view of life, with its several powers, having been ori
 ```
 (ref:darwin-quote) --- Charles Darwin [@Darwin1859]
   
-# Customisations and extensions
+# Customizzazioni ed estensioni
 \minitoc <!-- this will include a mini table of contents-->
 
 <!-- LaTeX normally does not indent the first line after a heading - however, it does so after the mini table of contents. You can manually tell it not to with \noindent -->
 
-\noindent Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi di `cattolicadown '.
+\noindent Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi di `cattolicadown`.
 
-## cache di chunk e la cartella ** \ _ bookdown \ _files **
+## cache di chunk e la cartella **\ _bookdown\_files**
 
-Se si imposta `cache = true` in un blocco di codice, per memorizzare nella memorizzazione la memorizzazione dei risultati se richiede tempo per eseguire, consultare [la documentazione R Markdown] (https://bookdown.org/yihui/rmarkdown-cookbook/cache. HTML), quindi i file per la memorizzazione nella cache sono archiviati nella cartella ** _ bookdown_files **.
+Se si imposta `cache = true` in un blocco di codice, per memorizzare nella memorizzazione la memorizzazione dei risultati se richiede tempo per eseguire, consultare [la documentazione R Markdown] (https://bookdown.org/yihui/rmarkdown-cookbook/cache. HTML), quindi i file per la memorizzazione nella cache sono archiviati nella cartella **_bookdown_files**.
 
-Se non usi la memorizzazione nella cache e desideri semplicemente avere la cartella ** _ bookdown_files ** eliminata dopo il completamento del processo di build, impostare `abilit_cache = false` in ** indice.rmd ** `.
+Se non usi la memorizzazione nella cache e desideri semplicemente avere la cartella ** _ bookdown_files ** eliminata dopo il completamento del processo di build, impostare `abilit_cache = false` in **index.rmd **.
 
 Cioè, il tuo yaml dovrebbe assomigliare a questo:
 
@@ -39,27 +39,27 @@ knit: (function(input, ...) {
   })
 ```
 
-## Questione fronte pagina
+## Fronte Pagina
 ### Accorcia le didascalie mostrate nell'elenco delle figure (PDF)
 Potresti voler che il tuo elenco di cifre (che segue il contenuto del contenuto) abbia descrizioni di figure più brevi (o semplicemente diverse) rispetto alle didascalie alla figura effettiva.
 
-Fallo usando l'opzione chunk `fig.scap` ('didascalia breve'), ad esempio` {R Captain-Image, Fig.cap = "Una didascalia molto lunga e descrittiva (e potenzialmente noiosa) che non si adatta alla Elenco delle figure, ma aiuta il lettore a capire cosa comunica la figura. ", Fig.Scap =" Una descrizione concisa per l'elenco delle figure "`
+Fallo usando l'opzione chunk `Fig.scap` ('didascalia breve'), ad esempio` {R Captain-Image, fig.cap = "Una didascalia molto lunga e descrittiva (e potenzialmente noiosa) che non si adatta alla Elenco delle figure, ma aiuta il lettore a capire cosa comunica la figura. ", fig.scap =" Una descrizione concisa per l'elenco delle figure "`
 
-### abbrevia le didascalie mostrate nell'elenco delle tabelle (PDF)
-Potresti voler che il tuo elenco di tabelle (che segue l'elenco delle figure nella questione della tesi) abbia descrizioni delle tabelle più brevi (o solo diverse) rispetto alle didascalie alla tabella effettive.
+### abbrevia le didascalie visualizzate nell'elenco delle tabelle (PDF)
+È possibile che l'elenco delle tabelle (che segue l'elenco delle figure nel frontespizio della tesi) abbia descrizioni delle tabelle più brevi (o semplicemente diverse) rispetto alle didascalie delle tabelle stesse.
 
-Se stai usando `Knitr :: Kable` per generare una tabella, puoi farlo con l'argomento` didascalia.short`, ad esempio::
+Se stai usando `knitr::kable` per generare una tabella, puoi farlo con l'argomento `caption.short`, ad esempio:
 ```r
 knitr::kable(mtcars,
-              caption = "Un molto lungo e descrittivo (e potenzialmente
-               noioso) didascalia che non si adatta all'elenco delle figure,
+              caption = "Una didascalia molto lunga e descrittiva (e potenzialmente
+               noioso) che non si adatta all'elenco delle figure,
                ma aiuta il lettore a capire cosa la figura
                comunica.",
               caption.short = "Una descrizione concisa per l'elenco delle tabelle")
 ```
 
-## Shorten Esecing Header (PDF)
-Potresti voler l'intestazione in esecuzione di un capitolo (ovvero l'intestazione che mostra il titolo dell'attuale capitolo nella parte superiore della pagina) è più breve (o semplicemente diversa) rispetto al titolo del capitolo effettivo.
+## Accorciare l'intestazione di corsa (PDF)
+Potresti voler l'intestazione nel mezzo di un capitolo (ovvero l'intestazione che mostra il titolo all'interno dell'attuale capitolo nella parte superiore della pagina) è più breve (o semplicemente diversa) rispetto al titolo del capitolo effettivo.
 
 Fallo aggiungendo il comando latex `\ capitolo {la mia versione più corta}` dopo il titolo del capitolo.
 
@@ -71,43 +71,43 @@ Ad esempio, il capitolo \ @ref (cittadini e refs) è semplicemente "cita e cross
 ```
 
 ## Capitoli non numerati
-Per rendere i capitoli non numerati (normalmente solo rilevanti per l'introduzione e/o la conclusione), seguire l'intestazione del capitolo con `{-}`, ad es. `# Introduzione {-}`.
+Per rendere i capitoli non numerati (normalmente lo fai per l'introduzione e/o la conclusione), far seguire l'intestazione del capitolo a `{-}`, ad es. `# Introduzione {-}`.
 
-Quando lo fai, devi anche seguire l'intestazione con questi due comandi in lattice:
+Quando lo fai, ricordati che devi anche mettere questi due comandi in LaTeX:
 ```latex
 \adjustmtc
 \markboth{The Name of Your Unnumbered Chapter}{}
 ```
 
-Altrimenti il ​​Mini Sommario del capitolo e l'intestazione in esecuzione mostreranno il capitolo precedente.
+Altrimenti il mini-sommario del capitolo e l'intestazione mostreranno il capitolo precedente.
 
 
 ## Capitoli iniziali con citazioni (PDF)
-Il modello di lattice di Oxthesis ti consente di iniettare un po 'di arguzia nella tua tesi includendo un blocco di tipo `Savequote` all'inizio dei capitoli.
-Per fare ciò, usa la sintassi `` `` `` {block type = 'savequote'} `` ``.^[Per ulteriori informazioni sui tipi di blocchi personalizzati, consultare la sezione rilevante in [_authoring libri con r markdown _] (https (https : //bookdown.org/yihui/bookdown/custom-blocks.html).]
+Il modello di LaTeX di Oxthesis ti consente di includere anche un blocco di tipo `savequote` all'inizio dei capitoli.
+Per farlo, usa la sintassi `` `` `` {block type = 'savequote'} `` ``.^[Per ulteriori informazioni sui tipi di blocchi personalizzati, consultare la sezione in [_authoring libri con r markdown _] (https (https : //bookdown.org/yihui/bookdown/custom-blocks.html).]
 
-Aggiungi il riferimento per la citazione con l'opzione chunk `quote_author =" il mio nome autore "`.
-Ti consigliamo anche di aggiungere l'opzione chunk `include = knitr :: is_latex_output ()` in modo che le quotazioni siano incluse solo nell'output PDF.
+Aggiungi la referenza della citazione con l'opzione chunk `quote_author =" il mio nome autore "`.
+Ti consiglio anche di aggiungere l'opzione chunk `include = knitr::is_latex_output()` in modo che le citazioni siano incluse solo nell'output PDF.
 
-Non è possibile utilizzare la sintassi di Markdown all'interno delle opzioni di chunk, quindi se si desidera ad es. in corsivo un nome del libro nel riferimento Usa un ['Testo Reference'] (https://bookdown.org/yihui/Bookdown/markdown-extensions-by-Bookdown.html#text-references): crea un pezzo di testo chiamato con '(rif: etichetta) il mio testo', quindi indica questo nell'opzione chunk con `quote_author = '(rif: etichetta)'`.
+Non è possibile utilizzare la sintassi di Markdown all'interno delle opzioni di chunk, quindi se si desidera ad es. in corsivo un nome del libro usa  ['Testo Reference'](https://bookdown.org/yihui/Bookdown/markdown-extensions-by-Bookdown.html#text-references): crea un pezzo di testo chiamato con '(rif: etichetta) il mio testo', quindi indica questo nell'opzione chunk con `quote_author = '(rif: etichetta)'`.
 
 
 ## Evidenziazione delle correzioni (HTML e PDF)
-Per quando arriva il momento di fare correzioni, potresti voler evidenziare le modifiche apportate quando si invia una copia post-Viva, corretta agli esaminatori in modo che possano verificare rapidamente di aver completato l'attività.
+Quando arriva il momento di fare correzioni, potresti voler evidenziare le modifiche apportate corretta agli esaminatori in modo che possano verificare rapidamente di le cose cambiate
 Puoi farlo così:
 
 ### correzioni in linea brevi
-Evidenzia ** correzioni brevi e inline ** facendo `[come questo] {. Correzione}` --- Il testo tra le staffe quadrate verrà quindi [evidenziato in blu] {. Correzione} nell'output.
+Evidenzia **correzioni brevi e inline ** facendo `[come questo] {.correction}` --- Il testo tra le parentesi quadrate verrà quindi [evidenziato in blu]{.correction} nell'output.
 
 Si noti che Pandoc potrebbe essere confuso da citazioni e riferimenti incrociati all'interno delle correzioni in linea.
-In particolare, potrebbe essere confuso da `" [cosa ha detto @shea2014] {. Correzione} "` che diventa [cosa ha detto @shea2014] {. Correzione}
+In particolare, potrebbe essere confuso da `" [cosa ha detto @shea2014] {.correction} "` che diventa [cosa ha detto @shea2014] {. Correzione}
 In tali casi, è possibile utilizzare direttamente la sintassi in lattice.
 L'evidenziazione della correzione usa il pacchetto [Soul] (https://ctan.org/pkg/soul), quindi puoi fare così:
 
 - Se si utilizza BiBLATEX per i riferimenti, usa `\ hl {What \ textCite {Shea2014} detto}}
 - Se si utilizza Natbib per riferimenti, usa `\ hl {cosa \ cite {shea2014} detto}}
 
-L'uso del lattice grezzo ha lo svantaggio delle correzioni, quindi non viene visualizzata nell'output HTML, ma potresti comunque preoccuparti dell'evidenziazione della correzione nel PDF per gli esaminatori!
+L'uso di LaTeX grezzo ha lo svantaggio delle correzioni, quindi non viene visualizzata nell'output HTML, ma potresti comunque preoccuparti dell'evidenziazione della correzione nel PDF per gli esaminatori!
 
 
 ### blocchi di materiale aggiunto o modificato

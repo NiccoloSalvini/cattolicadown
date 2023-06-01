@@ -1,6 +1,6 @@
 # Per citarmi!
 Se usi questo template per scrivere la tua tesi, citalo! :smiling_face_with_three_hearts:
-Sto correggendo refusi e sitnassi per la documentazione online, quindi se hai suggerimenti lasciameli per favore. Il modo più facile per farlo è notare sulla costa sx del sito di `cattolicadown` dovresti vedere un plug-in, si chiama **hypothes**, serve per annotare pagine web, lasciami un commento se puoi. Settimanalmente li rivedo e aggiorno.
+Sto correggendo refusi e sintassi per la [documentazione online](https://cattolicadown.netlify.app/), quindi se hai suggerimenti lasciameli per favore. Il modo più facile per farlo è annotare sulla costa sx del sito di `cattolicadown`, infatti dovresti vedere un plug-in (una piccola linguetta), si chiama **hypothes**, serve appunto per annotare pagine web, lasciami un commento se puoi. Settimanalmente li rivedo e aggiorno.
 
 **EDIT DOI**
 
@@ -16,7 +16,7 @@ Sto correggendo refusi e sitnassi per la documentazione online, quindi se hai su
   year = {2022},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/NiccoloSalvini/cattolicadown}},
+  howpublished = {\url{https://cattolicadown.netlify.app/}},
   doi = {10.5281/zenodo.3484681},
 }
 ```
@@ -39,20 +39,15 @@ Sto correggendo refusi e sitnassi per la documentazione online, quindi se hai su
     -   [Gotchas](#gotchas)
     -   [Output formats](#output-formats)
 
-# Oxforddown
+# `cattolicadown`
 
 Un modello per scrivere una tesi dell'Università Cattolica del Sacro Cuore (per tutte le sedi) in R Markdown.
-Il modello utilizza il pacchetto [bookdown](https://bookdown.org) R insieme a [OxThesis LaTeX template](https://github.com/mcmanigle/OxThesis), oltre a molte ispirazioni da [thesisdown](https ://github.com/ismayc/thesisdown).
+Il modello utilizza il pacchetto [bookdown](https://bookdown.org) R insieme a [OxThesis LaTeX template](https://github.com/mcmanigle/OxThesis), oltre a molte ispirazioni da [thesisdown](https ://github.com/ismayc/thesisdown) e [oxforddown](https://ulyngs.github.io/oxforddown/) .
 
--   [Esempio PDF output](https://github.com/NiccoloSalvini/cattolicadown/blob/master/docs/_main.pdf)
+-   [Esempio PDF output](https://github.com/NiccoloSalvini/cattolicadown/blob/main/docs/_main.pdf)
 -   [Esempio docs BS4 book out](https://NiccoloSalvini.github.io/cattolicadown/)
 
-Esempi di tesu scritte col template with `cattolicadown` (see also [Google Scholar](https://scholar.google.dk/scholar?oi=bibs&hl=en&cites=14343601209555768076)):
-
-...
-
-
-*NOTA: se hai utilizzato questo modello per scrivere la tua tesi, mandami una riga a [niccolo.salvini@unicatt.it](mailto:niccolo.salvini@unicatt.it) cosicchè lo aggiunga qua!*
+*NOTA: se hai utilizzato questo modello per scrivere la tua tesi, mandami due righe al [niccolo.salvini@unicatt.it](mailto:niccolo.salvini@unicatt.it) cosicchè lo aggiunga qua e possa essere di esempio!*
 
 ## Requisiti
 
@@ -99,19 +94,21 @@ Esempi di tesu scritte col template with `cattolicadown` (see also [Google Schol
 
 ## Cosa devo fare?
 
--   download di **NiccoloSalvini/cattolicadown** repo come zip
--   apri **cattolicadown.Rproj** in RStudio
+-   clicca sul pulsante verde **Use this template**
+-   crea la tua repository della tesi (come se tu la mettessi su drive)
+-   successivamente apri un progetto R clonando la Repo (questo passaggio ti sarà più chiaro nella documentazione)
+-   apri **cattolicadown.Rproj** in RStudio e sei pronto a scrivere!
 
 ### How-to Capitoli
 Leggi il [capitolo 'How-to'](https://NiccoloSalvini.github.io/cattolicadown/how-to-use.html) per comprendere lo scheletro di `cattolicadown` e come fare le cose di base come costruire la tua tesi.
 
-Riguardo l'utilizzo di R Markdown e sintassi, e in generale in `cattolicadown` in particolare, leggere i capitoli dedicati a questo ([Nozioni di base su R Markdown](https://NiccoloSalvini.github.io/cattolicadown/rmd-basics.html), [Citazioni, riferimenti incrociati e collaborazione](https://NiccoloSalvini.github.io/cattolicadown/cites-and-refs.html) e [Tables](https://NiccoloSalvini.github.io/cattolicadown/tables. html)).
+Riguardo l'utilizzo di R Markdown e sintassi, e in generale in `cattolicadown` in particolare, leggere i capitoli dedicati a questo ([Nozioni di base su R Markdown](https://cattolicadown.netlify.app/rmd-basics.html), [Citazioni, riferimenti incrociati e collaborazione](https://cattolicadown.netlify.app/cites-and-refs.html) e [Tabelle](https://cattolicadown.netlify.app/tables.html)).
 
 Vedi anche le risorse generali e ufficiali di R Markdown [*R Markdown: The Definitive Guide*](https://bookdown.org/yihui/rmarkdown/) e il [*R Markdown Cookbook*](https://bookdown.org /yihui/rmarkdown-cookbook/).
 
 ### Video tutorials
 
-Sto aggiornando i video tutorial  - Ho notato di seguito che devono ancora essere aggiornati, ma sono ancora informativi e ho cancellato quelli che non si applicano più:
+Sto aggiornando i video tutorial  - Ho notato di seguito che devono ancora essere aggiornati, ma sono ancora informativi e ho cancellato quelli che non si applicano più. Non sono a cura mia, ma sto pianificando di metterli! 
 
 - [Part 1: Building the entire thesis](https://youtu.be/LBHxcuCMjnk)
 - [Part 2: Building a single chapter](https://youtu.be/8vcO252Us6g)
@@ -246,6 +243,6 @@ Il file **templates/brief_template.tex** formatta il capitolo nello stile OxThes
 
 ### Formati di Output
 
-- al momento solo l'output PDF e HTML è stato correttamente implementato; Potrei migliorare l'output di Word più avanti
+- al momento solo l'output PDF e HTML è stato correttamente implementato; Potrei migliorare l'output di Word più avanti.
 
 Enjoy!

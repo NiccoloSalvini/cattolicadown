@@ -120,7 +120,7 @@ Per creare un nuovo paragrafo, metti una riga vuota.
 Pertanto, questa riga inizia il proprio paragrafo.
 
 ### Collegamenti ipertestuali
-- [Questo è un collegamento ipertestuale](https://www.google.com) creato scrivendo il testo che vuoi trasformare in un collegamento cliccabile tra `[parentesi quadre seguite da a](https://hyperlink-in-parentheses) `
+- [Questo è un collegamento ipertestuale](https://www.google.com) a google creato scrivendo il testo che vuoi trasformare in un collegamento cliccabile tra `[parentesi quadre seguite da a](https://hyperlink-in-parentheses) `
 
 ### Note a piè di pagina
 - Vengono creati^[testo della mia nota a piè di pagina] scrivendo \^[testo della mia nota a piè di pagina] per fornire il contenuto della nota a piè di pagina in linea, o qualcosa come `[^a-random-footnote-label]` e fornendo il testo altrove nel formato mostrato sotto [^test-note]:
@@ -226,13 +226,13 @@ if (knitr::is_latex_output()){
 }
 ```
 
-Quindi puoi fare riferimento a quella variabile come il valore di `out.extra` per ruotare le immagini, come in Figura \@ref(fig:catto-logo-roated).
+Quindi puoi fare riferimento a quella variabile come il valore di `out.extra` per ruotare le immagini, come in Figura \@ref(fig:catto-logo-rotated).
 
 ```{r catto-logo-rotated, out.extra=rotate180, fig.cap="UCSC logo, rotated", out.width='50%', fig.align='center', echo=FALSE}
 knitr::include_graphics("figures/sample-content/cattolica-logo.png")
 ```
 
-### Comprese le trame
+### Mettere i grafici
 Allo stesso modo, i blocchi di codice vengono utilizzati per includere grafici generati dinamicamente.
 Usi il codice ordinario in R o in altri linguaggi - La figura \@ref(fig:cars-plot) mostra un grafico del set di dati `cars` delle distanze di arresto per le auto a varie velocità (questo set di dati è integrato in **R** ).
 
@@ -243,12 +243,12 @@ cars %>%
     geom_point()
 ```
 
-Sotto il cappelo, il grafico sono incluse nel tuo documento allo stesso modo delle immagini: quando costruisci il libro o lavori a maglia un capitolo, la trama viene generata automaticamente dal tuo codice, salvata come immagine, quindi inclusa nel documento di output.
+In automatico il grafico viene incluse nel tuo documento, così come le immagini. Questo succede tutte le volte che costruisci i.e. buildi il libro (bookdown `bookdown::serve_book()`) o fai knit i.e.`knitr::knit` un capitolo, i plots vengono generati automaticamente a partire dal tuo codice, poi salvati come immagini, quindi inclusi nel documento di output.
 
-### Tabelle comprese
+### Tabelle
 Le tabelle sono solitamente incluse con la funzione `kable` del pacchetto `knitr`.
 
-La tabella \@ref(tab:cars-table) mostra le prime righe dei dati delle auto: leggi i tuoi dati, quindi usa questo approccio per generare automaticamente tabelle.
+La tabella \@ref(tab:cars-table) mostra le prime righe dei dati del dataset `mtcars`.
 
 ```{r cars-table}
 cars %>% 
@@ -256,11 +256,11 @@ cars %>%
   knitr::kable(caption = "A knitr kable table")
 ```
 
-- Gotcha: quando si utilizza [`kable`](https://www.rdocumentation.org/packages/knitr/versions/1.21/topics/kable), i sottotitoli sono impostati all'interno della funzione `kable`
+- Gotchas: quando si utilizza [`kable`](https://www.rdocumentation.org/packages/knitr/versions/1.21/topics/kable), i sottotitoli sono impostati all'interno della funzione `kable`
 - Il pacchetto `kable` viene spesso utilizzato con il pacchetto [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)
 
 ### Controllo del posizionamento
-Una cosa che potrebbe essere fastidiosa è il modo in cui *R Markdown* gestisce i "fluttuanti" come tabelle e figure.
+Una cosa che potrebbe essere fastidiosa è il modo in cui *R Markdown* gestisce i "fluttuanti" come tabelle e figure. Li chiamo fluttuanti perchè prendo a prestito la notazione LaTeX che li chiama proprio così.
 Nel tuo output PDF, LaTeX cercherà di trovare il posto migliore per mettere il tuo oggetto in base al testo che lo circonda e finché non hai davvero finito di scrivere dovresti semplicemente lasciarlo dove si trova.
 
 In generale, dovresti consentire a LaTeX di farlo, ma se hai davvero *veramente* bisogno di una figura da posizionare dove inserisci nel documento, puoi fare in modo che LaTeX tenti di farlo con l'opzione chunk `fig.pos=" H"`, come in Figura \@ref(fig:cattolica-logo-controlled):
@@ -269,7 +269,7 @@ In generale, dovresti consentire a LaTeX di farlo, ma se hai davvero *veramente*
 knitr::include_graphics("figures/sample-content/cattolica-logo.png")
 ```
 
-Come sa chiunque abbia provato a giocare manualmente con il posizionamento di figure in un documento di Word, questo può avere molti effetti collaterali con spaziatura extra su altre pagine, ecc.
+Come sa chiunque abbia provato a giocare manualmente con il posizionamento di figure in un documento di Word, questo può avere effetti collaterali tipo spaziatura extra su altre pagine, ecc.
 Pertanto, generalmente non è una buona idea farlo - fallo solo quando hai davvero bisogno di assicurarti che un'immagine segua direttamente sotto il testo dove ti riferisci ad essa (in questo documento, dovevo farlo per Figure \@ref( fig:latex-font-sizing) nella sezione \@ref(max-power)).
 Per maggiori dettagli, leggi la sezione pertinente del [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html).
 
@@ -292,5 +292,5 @@ Che genererebbe:\
 "Nel set di dati `cars`, abbiamo osservazioni `r num_car_observations`."
 
 
-## Codice eseguibile in lingue diverse da R
-Se desideri utilizzare linguaggi diversi da R, come Python, Julia C++ o SQL, consulta [la sezione pertinente del *R Markdown Cookbook*](https://bookdown.org/yihui/rmarkdown-cookbook/other- lingue.html)
+## Codice eseguibile in linguaggi diversi da R
+Se desideri utilizzare linguaggi diversi da R, come Python, Julia C++ o SQL, consulta [la sezione pertinente del *R Markdown Cookbook*](https://bookdown.org/yihui/rmarkdown-cookbook/other- lingue.html).

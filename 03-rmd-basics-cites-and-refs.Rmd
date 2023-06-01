@@ -22,7 +22,7 @@ Quindi fai riferimento al percorso di questo file nell'intestazione YAML di **in
 
 La maggior parte dei gestori di referenze può creare automaticamente un file .bib con le tue referenze.
 Tuttavia, il **di gran lunga** miglior gestore di riferimento da utilizzare con *R Markdown* è [Zotero](https://www.zotero.org) con il [plug-in Better BibTex](https://retorque. re/zotero-better-bibtex/), perché il plugin `citr` per RStudio (vedi sotto) può leggere i riferimenti direttamente dalla tua libreria Zotero! 
-Ah, dimenticavo, Rmarkdown sistema da sola in ordine alfabetico le referenze ogni volta che fai knit e ne fai riferimento nel testo.
+Ah, dimenticavo, Rmarkdown sistema da sola in ordine alfabetico le referenze ogni volta che fai knit e ne fai riferimento nel testo. Puoi dare un'occhiata anche a [mybib](https://www.mybib.com/#/), molto comodo e ti permette di esportare nel formato che più preferisci.
 
 Ecco un esempio di una voce in un file **.bib**:
 ```bibtex
@@ -98,7 +98,7 @@ Vedi [il titolo del nostro capitolo](#cites-and-refs) per un esempio. Quella era
 - **NB**: le figure e le tabelle devono avere didascalie se desideri fare un riferimento incrociato.
 
 Aggiungiamo un'immagine:
-```{r captain, fig.align='center', fig.cap="A marvel-lous meme", out.width="65%"}
+```{r capitano, fig.align='center', fig.cap="A marvel-lous meme", out.width="65%"}
 knitr::include_graphics("figures/sample-content/captain.jpeg")
 ```
 
@@ -110,7 +110,7 @@ E nella figura \@ref(fig:cars-plot) vediamo [cars plot](#fig:cars-plot).
 ### Riferimenti a tabelle
 - Per fare riferimento alle tabelle, utilizzare la sintassi `\@ref(tab:label)`
 
-Adeso includiamo la tabella:
+Adesso includiamo la tabella:
 ```{r cars-table2}
 knitr::kable(cars[1:5,],
             caption="Stopping cars")
