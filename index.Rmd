@@ -26,8 +26,8 @@ university: Catholic University of Sacred Heart (, sede)
 university-logo: templates/cattolica-logo.pdf
 university-logo-width: 5cm
 submitted-text: A thesis submitted for the degree of
-degree: MSc in Statistical and Actuarial Sciences
-degreedate: 5th July 2022
+degree: MSc in <your degree>
+degreedate: 5th July 2023
 dedication: For my Mum
 acknowledgements: |
   `r paste(readLines("front-and-back-matter/_acknowledgements.Rmd"), collapse = '\n  ')`

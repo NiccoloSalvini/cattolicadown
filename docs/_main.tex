@@ -255,9 +255,9 @@ Template for R Markdown}
 % Uncomment the following line if your degree also includes exams (eg most masters):
 %\renewcommand{\submittedtext}{Submitted in partial completion of the}
 % Your full degree name.  (But remember that DPhils aren't "in" anything.  They're just DPhils.)
-\degree{MSc in Statistical and Actuarial Sciences}
+\degree{MSc in}
 % Term and year of submission, or date if your board requires (eg most masters)
-\degreedate{5th July 2022}
+\degreedate{5th July 2023}
 
 
 %%%%% YOUR OWN PERSONAL MACROS
@@ -338,17 +338,17 @@ Template for R Markdown}
 \begin{acknowledgements}
  	È qui che normalmente ringrazierai il tuo relator* /correlator\emph{, collegh}, la famiglia e gli amici, nonché i finanziamenti e il supporto istituzionale. Nel nostro caso, daremo le tesseremo le lodi alle persone che hanno sviluppato le idee e gli strumenti che ci consentono di spingere la scienza aperta un piccolo passo avanti scrivendo tesi trasparenti e riproducibili in R Markdown.
 
-  Dobbiamo essere grati a John Gruber per aver inventato la versione originale di Markdown, a John MacFarlane per aver creato Pandoc (\url{http://pandoc.org}) che converte Markdown in un gran numero di formati di output e a Yihui Xie per aver creato \texttt{knitr} che ha introdotto R Markdown come un modo per incorporare il codice nei documenti Markdown e \texttt{bookdown} che ha aggiunto strumenti per la scrittura tecnica in forma più estesa.
+ Dobbiamo essere grati a John Gruber per aver inventato la versione originale di Markdown, a John MacFarlane per aver creato Pandoc (\url{http://pandoc.org}) che converte Markdown in un gran numero di formati di output e a Yihui Xie per aver creato \texttt{knitr} che ha introdotto R Markdown come un modo per incorporare il codice nei documenti Markdown e \texttt{bookdown} che ha aggiunto strumenti per la scrittura tecnica in forma più estesa.
 
-  Un ringraziamento speciale a \href{http://chester.rbind.io}{Chester Ismay}, che ha creato il pacchetto \texttt{thesisdown} che ha aiutato molti dottorandi a scrivere le loro tesi in R Markdown.
+ Un ringraziamento speciale a \href{http://chester.rbind.io}{Chester Ismay}, che ha creato il pacchetto \texttt{thesisdown} che ha aiutato molti dottorandi a scrivere le loro tesi in R Markdown.
 
-  Infine, un profondo ringraziamento a JJ Allaire, fondatore e CEO di \href{http://rstudio.com}{RStudio}, e Hadley Wickham, la mente del tidyverse senza il quale ci saremmo semplicemente arresi e avremmo fatto scienza dei dati in Python, sbagliando. Grazie per aver reso la scienza dei dati più semplice, più accessibile e più divertente per tutti noi.
+ Infine, un profondo ringraziamento a JJ Allaire, fondatore e CEO di \href{http://rstudio.com}{RStudio}, e Hadley Wickham, la mente del tidyverse senza il quale ci saremmo semplicemente arresi e avremmo fatto scienza dei dati in Python, sbagliando. Grazie per aver reso la scienza dei dati più semplice, più accessibile e più divertente per tutti noi.
 
-  \begin{flushright}
-  Niccolo Salvini \\
-  Campus Gemelli, Roma \\
-  5 Luglio 2022
-  \end{flushright}
+ \begin{flushright}
+ Niccolo Salvini \\
+ Campus Gemelli, Roma \\
+ 5 Luglio 2022
+ \end{flushright}
 \end{acknowledgements}
 
 
@@ -359,11 +359,11 @@ Template for R Markdown}
 \renewcommand{\abstracttitle}{Abstract}
 \begin{abstract}
 	Questo template \emph{R Markdown} serve per scrivere una tesi dell'Università Cattolica del Sacro Cuore di tutte le sedi, di tutti i corsi di laurea.
- Il template è costruito usando il pacchetto \texttt{bookdown} di Yihui Xie, con una forte ispirazione da \texttt{thesisdown} di Chester Ismay e dal template \texttt{OxThesis} \LaTeX~(più recentemente riadattato da John McManigle).
+Il template è costruito usando il pacchetto \texttt{bookdown} di Yihui Xie, con una forte ispirazione da \texttt{thesisdown} di Chester Ismay e dal template \texttt{OxThesis} \LaTeX~(più recentemente riadattato da John McManigle).
 
- Il contenuto di esempio di questo template include illustrazioni su come scrivere una tesi in R Markdown e segue in gran parte la struttura di \href{https://ulyngs.github.io/rmarkdown-workshop-2019/}{questo workshop R Markdown} a cura di un ricercatore dell'università di Oxford, da cui ho presto molta ispirazione.
+Il contenuto di esempio di questo template include illustrazioni su come scrivere una tesi in R Markdown e segue in gran parte la struttura di \href{https://ulyngs.github.io/rmarkdown-workshop-2019/}{questo workshop R Markdown} a cura di un ricercatore dell'università di Oxford, da cui ho presto molta ispirazione.
 
- Congratulazioni per aver fatto un ulteriore passo avanti nelle terre della scienza open e riproducibile utilizzando uno strumento sottovalutato che ti consente di includere in modo trasparente tabelle e grafici generati direttamente dai dati sottostanti.
+Congratulazioni per aver fatto un ulteriore passo avanti nelle terre della scienza open e riproducibile utilizzando uno strumento sottovalutato che ti consente di includere in modo trasparente tabelle e grafici generati direttamente dai dati sottostanti.
 \end{abstract}
 
 
@@ -939,7 +939,7 @@ Pertanto, questa riga inizia il proprio paragrafo.
 \begin{itemize}
 \tightlist
 \item
-  \href{https://www.google.com}{Questo è un collegamento ipertestuale} creato scrivendo il testo che vuoi trasformare in un collegamento cliccabile tra \texttt{{[}parentesi\ quadre\ seguite\ da\ a{]}(https://hyperlink-in-parentheses)}
+  \href{https://www.google.com}{Questo è un collegamento ipertestuale} a google creato scrivendo il testo che vuoi trasformare in un collegamento cliccabile tra \texttt{{[}parentesi\ quadre\ seguite\ da\ a{]}(https://hyperlink-in-parentheses)}
 \end{itemize}
 
 \hypertarget{note-a-piuxe8-di-pagina}{%
@@ -1083,7 +1083,7 @@ La sintassi è diversa per LaTeX e HTML, quindi per comodità potremmo iniziare 
 \end{Highlighting}
 \end{Shaded}
 
-Quindi puoi fare riferimento a quella variabile come il valore di \texttt{out.extra} per ruotare le immagini, come in Figura \ref{fig:catto-logo-roated}.
+Quindi puoi fare riferimento a quella variabile come il valore di \texttt{out.extra} per ruotare le immagini, come in Figura \ref{fig:catto-logo-rotated}.
 
 \begin{figure}
 
@@ -1094,8 +1094,8 @@ Quindi puoi fare riferimento a quella variabile come il valore di \texttt{out.ex
 \caption{UCSC logo, rotated}\label{fig:catto-logo-rotated}
 \end{figure}
 
-\hypertarget{comprese-le-trame}{%
-\subsection{Comprese le trame}\label{comprese-le-trame}}
+\hypertarget{mettere-i-grafici}{%
+\subsection{Mettere i grafici}\label{mettere-i-grafici}}
 
 Allo stesso modo, i blocchi di codice vengono utilizzati per includere grafici generati dinamicamente.
 Usi il codice ordinario in R o in altri linguaggi - La figura \ref{fig:cars-plot} mostra un grafico del set di dati \texttt{cars} delle distanze di arresto per le auto a varie velocità (questo set di dati è integrato in \textbf{R} ).
@@ -1115,14 +1115,14 @@ Usi il codice ordinario in R o in altri linguaggi - La figura \ref{fig:cars-plot
 \caption{\label{fig:cars-plot}A ggplot of car stuff}
 \end{figure}
 
-Sotto il cappelo, il grafico sono incluse nel tuo documento allo stesso modo delle immagini: quando costruisci il libro o lavori a maglia un capitolo, la trama viene generata automaticamente dal tuo codice, salvata come immagine, quindi inclusa nel documento di output.
+In automatico il grafico viene incluse nel tuo documento, così come le immagini. Questo succede tutte le volte che costruisci i.e.~buildi il libro (bookdown \texttt{bookdown::serve\_book()}) o fai knit i.e.\texttt{knitr::knit} un capitolo, i plots vengono generati automaticamente a partire dal tuo codice, poi salvati come immagini, quindi inclusi nel documento di output.
 
-\hypertarget{tabelle-comprese}{%
-\subsection{Tabelle comprese}\label{tabelle-comprese}}
+\hypertarget{tabelle}{%
+\subsection{Tabelle}\label{tabelle}}
 
 Le tabelle sono solitamente incluse con la funzione \texttt{kable} del pacchetto \texttt{knitr}.
 
-La tabella \ref{tab:cars-table} mostra le prime righe dei dati delle auto: leggi i tuoi dati, quindi usa questo approccio per generare automaticamente tabelle.
+La tabella \ref{tab:cars-table} mostra le prime righe dei dati del dataset \texttt{mtcars}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1158,7 +1158,7 @@ speed & dist\\
 \begin{itemize}
 \tightlist
 \item
-  Gotcha: quando si utilizza \href{https://www.rdocumentation.org/packages/knitr/versions/1.21/topics/kable}{\texttt{kable}}, i sottotitoli sono impostati all'interno della funzione \texttt{kable}
+  Gotchas: quando si utilizza \href{https://www.rdocumentation.org/packages/knitr/versions/1.21/topics/kable}{\texttt{kable}}, i sottotitoli sono impostati all'interno della funzione \texttt{kable}
 \item
   Il pacchetto \texttt{kable} viene spesso utilizzato con il pacchetto \href{https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html}{\texttt{kableExtra}}
 \end{itemize}
@@ -1166,7 +1166,7 @@ speed & dist\\
 \hypertarget{controllo-del-posizionamento}{%
 \subsection{Controllo del posizionamento}\label{controllo-del-posizionamento}}
 
-Una cosa che potrebbe essere fastidiosa è il modo in cui \emph{R Markdown} gestisce i ``fluttuanti'' come tabelle e figure.
+Una cosa che potrebbe essere fastidiosa è il modo in cui \emph{R Markdown} gestisce i ``fluttuanti'' come tabelle e figure. Li chiamo fluttuanti perchè prendo a prestito la notazione LaTeX che li chiama proprio così.
 Nel tuo output PDF, LaTeX cercherà di trovare il posto migliore per mettere il tuo oggetto in base al testo che lo circonda e finché non hai davvero finito di scrivere dovresti semplicemente lasciarlo dove si trova.
 
 In generale, dovresti consentire a LaTeX di farlo, ma se hai davvero \emph{veramente} bisogno di una figura da posizionare dove inserisci nel documento, puoi fare in modo che LaTeX tenti di farlo con l'opzione chunk \texttt{fig.pos="\ H"}, come in Figura \ref{fig:cattolica-logo-controlled}:
@@ -1186,7 +1186,7 @@ In generale, dovresti consentire a LaTeX di farlo, ma se hai davvero \emph{veram
 \caption{An UCSC logo that LaTeX will try to place at this position in the text}\label{fig:cattolica-logo-controlled}
 \end{figure}
 
-Come sa chiunque abbia provato a giocare manualmente con il posizionamento di figure in un documento di Word, questo può avere molti effetti collaterali con spaziatura extra su altre pagine, ecc.
+Come sa chiunque abbia provato a giocare manualmente con il posizionamento di figure in un documento di Word, questo può avere effetti collaterali tipo spaziatura extra su altre pagine, ecc.
 Pertanto, generalmente non è una buona idea farlo - fallo solo quando hai davvero bisogno di assicurarti che un'immagine segua direttamente sotto il testo dove ti riferisci ad essa (in questo documento, dovevo farlo per Figure @ref( fig:latex-font-sizing) nella sezione \ref{max-power}).
 Per maggiori dettagli, leggi la sezione pertinente del \href{https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html}{R Markdown Cookbook}.
 
@@ -1212,10 +1212,10 @@ Potremmo quindi scrivere:\\
 Che genererebbe:\\
 ``Nel set di dati \texttt{cars}, abbiamo osservazioni 50.''
 
-\hypertarget{codice-eseguibile-in-lingue-diverse-da-r}{%
-\section{Codice eseguibile in lingue diverse da R}\label{codice-eseguibile-in-lingue-diverse-da-r}}
+\hypertarget{codice-eseguibile-in-linguaggi-diversi-da-r}{%
+\section{Codice eseguibile in linguaggi diversi da R}\label{codice-eseguibile-in-linguaggi-diversi-da-r}}
 
-Se desideri utilizzare linguaggi diversi da R, come Python, Julia C++ o SQL, consulta \href{https://bookdown.org/yihui/rmarkdown-cookbook/other-\%20lingue.html}{la sezione pertinente del \emph{R Markdown Cookbook}}
+Se desideri utilizzare linguaggi diversi da R, come Python, Julia C++ o SQL, consulta \href{https://bookdown.org/yihui/rmarkdown-cookbook/other-\%20lingue.html}{la sezione pertinente del \emph{R Markdown Cookbook}}.
 
 \hypertarget{cites-and-refs}{%
 \chapter{Citazioni, referenze incrociate, e collaborazione}\label{cites-and-refs}}
@@ -1232,7 +1232,7 @@ Quindi fai riferimento al percorso di questo file nell'intestazione YAML di \tex
 
 La maggior parte dei gestori di referenze può creare automaticamente un file .bib con le tue referenze.
 Tuttavia, il \textbf{di gran lunga} miglior gestore di riferimento da utilizzare con \emph{R Markdown} è \href{https://www.zotero.org}{Zotero} con il \href{https://retorque.\%20re/zotero-better-bibtex/}{plug-in Better BibTex}, perché il plugin \texttt{citr} per RStudio (vedi sotto) può leggere i riferimenti direttamente dalla tua libreria Zotero!
-Ah, dimenticavo, Rmarkdown sistema da sola in ordine alfabetico le referenze ogni volta che fai knit e ne fai riferimento nel testo.
+Ah, dimenticavo, Rmarkdown sistema da sola in ordine alfabetico le referenze ogni volta che fai knit e ne fai riferimento nel testo. Puoi dare un'occhiata anche a \href{https://www.mybib.com/\#/}{mybib}, molto comodo e ti permette di esportare nel formato che più preferisci.
 
 Ecco un esempio di una voce in un file \textbf{.bib}:
 
@@ -1367,7 +1367,7 @@ Aggiungiamo un'immagine:
 
 }
 
-\caption{A marvel-lous meme}\label{fig:captain}
+\caption{A marvel-lous meme}\label{fig:capitano}
 \end{figure}
 
 Ci riferiamo a questa immagine con \texttt{\textbackslash{}@ref(fig:capitano)}.
@@ -1384,7 +1384,7 @@ E nella figura \ref{fig:cars-plot} vediamo \protect\hyperlink{fig:cars-plot}{car
   Per fare riferimento alle tabelle, utilizzare la sintassi \texttt{\textbackslash{}@ref(tab:label)}
 \end{itemize}
 
-Adeso includiamo la tabella:
+Adesso includiamo la tabella:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1475,7 +1475,7 @@ Sospetto che qualche grande soluzione sarà sviluppata in un futuro non troppo l
 \end{itemize}
 
 \hypertarget{tables}{%
-\chapter{Tables}\label{tables}}
+\chapter{Tabelle}\label{tables}}
 
 \minitoc 
 
@@ -2143,19 +2143,19 @@ wonderful have been, and are being, evolved.
 
 
 
-\hypertarget{customisations-and-extensions}{%
-\chapter{Customisations and extensions}\label{customisations-and-extensions}}
+\hypertarget{customizzazioni-ed-estensioni}{%
+\chapter{Customizzazioni ed estensioni}\label{customizzazioni-ed-estensioni}}
 
 \minitoc 
 
-\noindent Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi di `cattolicadown '.
+\noindent Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi di \texttt{cattolicadown}.
 
-\hypertarget{cache-di-chunk-e-la-cartella-_-bookdown-_files}{%
-\section{cache di chunk e la cartella ** ~\_ bookdown ~\_files **}\label{cache-di-chunk-e-la-cartella-_-bookdown-_files}}
+\hypertarget{cache-di-chunk-e-la-cartella-_bookdown_files}{%
+\section{cache di chunk e la cartella **~\_bookdown\_files**}\label{cache-di-chunk-e-la-cartella-_bookdown_files}}
 
-Se si imposta \texttt{cache\ =\ true} in un blocco di codice, per memorizzare nella memorizzazione la memorizzazione dei risultati se richiede tempo per eseguire, consultare {[}la documentazione R Markdown{]} (\url{https://bookdown.org/yihui/rmarkdown-cookbook/cache}. HTML), quindi i file per la memorizzazione nella cache sono archiviati nella cartella ** \_ bookdown\_files **.
+Se si imposta \texttt{cache\ =\ true} in un blocco di codice, per memorizzare nella memorizzazione la memorizzazione dei risultati se richiede tempo per eseguire, consultare {[}la documentazione R Markdown{]} (\url{https://bookdown.org/yihui/rmarkdown-cookbook/cache}. HTML), quindi i file per la memorizzazione nella cache sono archiviati nella cartella **\_bookdown\_files**.
 
-Se non usi la memorizzazione nella cache e desideri semplicemente avere la cartella ** \_ bookdown\_files ** eliminata dopo il completamento del processo di build, impostare \texttt{abilit\_cache\ =\ false} in ** indice.rmd ** `.
+Se non usi la memorizzazione nella cache e desideri semplicemente avere la cartella ** \_ bookdown\_files ** eliminata dopo il completamento del processo di build, impostare \texttt{abilit\_cache\ =\ false} in \textbf{index.rmd }.
 
 Cioè, il tuo yaml dovrebbe assomigliare a questo:
 
@@ -2170,38 +2170,38 @@ Cioè, il tuo yaml dovrebbe assomigliare a questo:
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{questione-fronte-pagina}{%
-\section{Questione fronte pagina}\label{questione-fronte-pagina}}
+\hypertarget{fronte-pagina}{%
+\section{Fronte Pagina}\label{fronte-pagina}}
 
 \hypertarget{accorcia-le-didascalie-mostrate-nellelenco-delle-figure-pdf}{%
 \subsection{Accorcia le didascalie mostrate nell'elenco delle figure (PDF)}\label{accorcia-le-didascalie-mostrate-nellelenco-delle-figure-pdf}}
 
 Potresti voler che il tuo elenco di cifre (che segue il contenuto del contenuto) abbia descrizioni di figure più brevi (o semplicemente diverse) rispetto alle didascalie alla figura effettiva.
 
-Fallo usando l'opzione chunk \texttt{fig.scap} (`didascalia breve'), ad esempio\texttt{\{R\ Captain-Image,\ Fig.cap\ =\ "Una\ didascalia\ molto\ lunga\ e\ descrittiva\ (e\ potenzialmente\ noiosa)\ che\ non\ si\ adatta\ alla\ Elenco\ delle\ figure,\ ma\ aiuta\ il\ lettore\ a\ capire\ cosa\ comunica\ la\ figura.\ ",\ Fig.Scap\ ="\ Una\ descrizione\ concisa\ per\ l\textquotesingle{}elenco\ delle\ figure\ "}
+Fallo usando l'opzione chunk \texttt{Fig.scap} (`didascalia breve'), ad esempio\texttt{\{R\ Captain-Image,\ fig.cap\ =\ "Una\ didascalia\ molto\ lunga\ e\ descrittiva\ (e\ potenzialmente\ noiosa)\ che\ non\ si\ adatta\ alla\ Elenco\ delle\ figure,\ ma\ aiuta\ il\ lettore\ a\ capire\ cosa\ comunica\ la\ figura.\ ",\ fig.scap\ ="\ Una\ descrizione\ concisa\ per\ l\textquotesingle{}elenco\ delle\ figure\ "}
 
-\hypertarget{abbrevia-le-didascalie-mostrate-nellelenco-delle-tabelle-pdf}{%
-\subsection{abbrevia le didascalie mostrate nell'elenco delle tabelle (PDF)}\label{abbrevia-le-didascalie-mostrate-nellelenco-delle-tabelle-pdf}}
+\hypertarget{abbrevia-le-didascalie-visualizzate-nellelenco-delle-tabelle-pdf}{%
+\subsection{abbrevia le didascalie visualizzate nell'elenco delle tabelle (PDF)}\label{abbrevia-le-didascalie-visualizzate-nellelenco-delle-tabelle-pdf}}
 
-Potresti voler che il tuo elenco di tabelle (che segue l'elenco delle figure nella questione della tesi) abbia descrizioni delle tabelle più brevi (o solo diverse) rispetto alle didascalie alla tabella effettive.
+È possibile che l'elenco delle tabelle (che segue l'elenco delle figure nel frontespizio della tesi) abbia descrizioni delle tabelle più brevi (o semplicemente diverse) rispetto alle didascalie delle tabelle stesse.
 
-Se stai usando \texttt{Knitr\ ::\ Kable} per generare una tabella, puoi farlo con l'argomento\texttt{didascalia.short}, ad esempio::
+Se stai usando \texttt{knitr::kable} per generare una tabella, puoi farlo con l'argomento \texttt{caption.short}, ad esempio:
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(mtcars,}
-              \AttributeTok{caption =} \StringTok{"Un molto lungo e descrittivo (e potenzialmente}
-\StringTok{               noioso) didascalia che non si adatta all\textquotesingle{}elenco delle figure,}
+              \AttributeTok{caption =} \StringTok{"Una didascalia molto lunga e descrittiva (e potenzialmente}
+\StringTok{               noioso) che non si adatta all\textquotesingle{}elenco delle figure,}
 \StringTok{               ma aiuta il lettore a capire cosa la figura}
 \StringTok{               comunica."}\NormalTok{,}
               \AttributeTok{caption.short =} \StringTok{"Una descrizione concisa per l\textquotesingle{}elenco delle tabelle"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{shorten-esecing-header-pdf}{%
-\section{Shorten Esecing Header (PDF)}\label{shorten-esecing-header-pdf}}
+\hypertarget{accorciare-lintestazione-di-corsa-pdf}{%
+\section{Accorciare l'intestazione di corsa (PDF)}\label{accorciare-lintestazione-di-corsa-pdf}}
 
-Potresti voler l'intestazione in esecuzione di un capitolo (ovvero l'intestazione che mostra il titolo dell'attuale capitolo nella parte superiore della pagina) è più breve (o semplicemente diversa) rispetto al titolo del capitolo effettivo.
+Potresti voler l'intestazione nel mezzo di un capitolo (ovvero l'intestazione che mostra il titolo all'interno dell'attuale capitolo nella parte superiore della pagina) è più breve (o semplicemente diversa) rispetto al titolo del capitolo effettivo.
 
 Fallo aggiungendo il comando latex \texttt{\textbackslash{}\ capitolo\ \{la\ mia\ versione\ più\ corta\}} dopo il titolo del capitolo.
 
@@ -2217,9 +2217,9 @@ Ad esempio, il capitolo ~(\protect\hyperlink{ref-ref}{\textbf{ref?}}) (cittadini
 \hypertarget{capitoli-non-numerati}{%
 \section{Capitoli non numerati}\label{capitoli-non-numerati}}
 
-Per rendere i capitoli non numerati (normalmente solo rilevanti per l'introduzione e/o la conclusione), seguire l'intestazione del capitolo con \texttt{\{-\}}, ad es. \texttt{\#\ Introduzione\ \{-\}}.
+Per rendere i capitoli non numerati (normalmente lo fai per l'introduzione e/o la conclusione), far seguire l'intestazione del capitolo a \texttt{\{-\}}, ad es. \texttt{\#\ Introduzione\ \{-\}}.
 
-Quando lo fai, devi anche seguire l'intestazione con questi due comandi in lattice:
+Quando lo fai, ricordati che devi anche mettere questi due comandi in LaTeX:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2228,32 +2228,32 @@ Quando lo fai, devi anche seguire l'intestazione con questi due comandi in latti
 \end{Highlighting}
 \end{Shaded}
 
-Altrimenti il \hspace{0pt}\hspace{0pt}Mini Sommario del capitolo e l'intestazione in esecuzione mostreranno il capitolo precedente.
+Altrimenti il mini-sommario del capitolo e l'intestazione mostreranno il capitolo precedente.
 
 \hypertarget{capitoli-iniziali-con-citazioni-pdf}{%
 \section{Capitoli iniziali con citazioni (PDF)}\label{capitoli-iniziali-con-citazioni-pdf}}
 
-Il modello di lattice di Oxthesis ti consente di iniettare un po 'di arguzia nella tua tesi includendo un blocco di tipo \texttt{Savequote} all'inizio dei capitoli.
-Per fare ciò, usa la sintassi \texttt{} \texttt{\{block\ type\ =\ \textquotesingle{}savequote\textquotesingle{}\}} ``.\footnote{Per ulteriori informazioni sui tipi di blocchi personalizzati, consultare la sezione rilevante in {[}\emph{authoring libri con r markdown }{]} (https (https : //bookdown.org/yihui/bookdown/custom-blocks.html).}
+Il modello di LaTeX di Oxthesis ti consente di includere anche un blocco di tipo \texttt{savequote} all'inizio dei capitoli.
+Per farlo, usa la sintassi \texttt{} \texttt{\{block\ type\ =\ \textquotesingle{}savequote\textquotesingle{}\}} ``.\footnote{Per ulteriori informazioni sui tipi di blocchi personalizzati, consultare la sezione in {[}\emph{authoring libri con r markdown }{]} (https (https : //bookdown.org/yihui/bookdown/custom-blocks.html).}
 
-Aggiungi il riferimento per la citazione con l'opzione chunk \texttt{quote\_author\ ="\ il\ mio\ nome\ autore\ "}.
-Ti consigliamo anche di aggiungere l'opzione chunk \texttt{include\ =\ knitr\ ::\ is\_latex\_output\ ()} in modo che le quotazioni siano incluse solo nell'output PDF.
+Aggiungi la referenza della citazione con l'opzione chunk \texttt{quote\_author\ ="\ il\ mio\ nome\ autore\ "}.
+Ti consiglio anche di aggiungere l'opzione chunk \texttt{include\ =\ knitr::is\_latex\_output()} in modo che le citazioni siano incluse solo nell'output PDF.
 
-Non è possibile utilizzare la sintassi di Markdown all'interno delle opzioni di chunk, quindi se si desidera ad es. in corsivo un nome del libro nel riferimento Usa un {[}`Testo Reference'{]} (\url{https://bookdown.org/yihui/Bookdown/markdown-extensions-by-Bookdown.html\#text-references}): crea un pezzo di testo chiamato con `(rif: etichetta) il mio testo', quindi indica questo nell'opzione chunk con \texttt{quote\_author\ =\ \textquotesingle{}(rif:\ etichetta)\textquotesingle{}}.
+Non è possibile utilizzare la sintassi di Markdown all'interno delle opzioni di chunk, quindi se si desidera ad es. in corsivo un nome del libro usa \href{https://bookdown.org/yihui/Bookdown/markdown-extensions-by-Bookdown.html\#text-references}{`Testo Reference'}: crea un pezzo di testo chiamato con `(rif: etichetta) il mio testo', quindi indica questo nell'opzione chunk con \texttt{quote\_author\ =\ \textquotesingle{}(rif:\ etichetta)\textquotesingle{}}.
 
 \hypertarget{evidenziazione-delle-correzioni-html-e-pdf}{%
 \section{Evidenziazione delle correzioni (HTML e PDF)}\label{evidenziazione-delle-correzioni-html-e-pdf}}
 
-Per quando arriva il momento di fare correzioni, potresti voler evidenziare le modifiche apportate quando si invia una copia post-Viva, corretta agli esaminatori in modo che possano verificare rapidamente di aver completato l'attività.
+Quando arriva il momento di fare correzioni, potresti voler evidenziare le modifiche apportate corretta agli esaminatori in modo che possano verificare rapidamente di le cose cambiate
 Puoi farlo così:
 
 \hypertarget{correzioni-in-linea-brevi}{%
 \subsection{correzioni in linea brevi}\label{correzioni-in-linea-brevi}}
 
-Evidenzia ** correzioni brevi e inline ** facendo \texttt{{[}come\ questo{]}\ \{.\ Correzione\}} --- Il testo tra le staffe quadrate verrà quindi {[}evidenziato in blu{]} \{. Correzione\} nell'output.
+Evidenzia \textbf{correzioni brevi e inline } facendo \texttt{{[}come\ questo{]}\ \{.correction\}} --- Il testo tra le parentesi quadrate verrà quindi \hl{evidenziato in blu} nell'output.
 
 Si noti che Pandoc potrebbe essere confuso da citazioni e riferimenti incrociati all'interno delle correzioni in linea.
-In particolare, potrebbe essere confuso da \texttt{"\ {[}cosa\ ha\ detto\ @shea2014{]}\ \{.\ Correzione\}\ "} che diventa (cosa ha detto \protect\hyperlink{ref-shea2014}{\textbf{shea2014?}}) \{. Correzione\}
+In particolare, potrebbe essere confuso da \texttt{"\ {[}cosa\ ha\ detto\ @shea2014{]}\ \{.correction\}\ "} che diventa (cosa ha detto \protect\hyperlink{ref-shea2014}{\textbf{shea2014?}}) \{. Correzione\}
 In tali casi, è possibile utilizzare direttamente la sintassi in lattice.
 L'evidenziazione della correzione usa il pacchetto {[}Soul{]} (\url{https://ctan.org/pkg/soul}), quindi puoi fare così:
 
@@ -2265,7 +2265,7 @@ L'evidenziazione della correzione usa il pacchetto {[}Soul{]} (\url{https://ctan
   Se si utilizza Natbib per riferimenti, usa `~hl \{cosa ~cite \{shea2014\} detto\}\}
 \end{itemize}
 
-L'uso del lattice grezzo ha lo svantaggio delle correzioni, quindi non viene visualizzata nell'output HTML, ma potresti comunque preoccuparti dell'evidenziazione della correzione nel PDF per gli esaminatori!
+L'uso di LaTeX grezzo ha lo svantaggio delle correzioni, quindi non viene visualizzata nell'output HTML, ma potresti comunque preoccuparti dell'evidenziazione della correzione nel PDF per gli esaminatori!
 
 \hypertarget{blocchi-di-materiale-aggiunto-o-modificato}{%
 \subsection{blocchi di materiale aggiunto o modificato}\label{blocchi-di-materiale-aggiunto-o-modificato}}

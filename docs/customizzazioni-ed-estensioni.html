@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>5 Customizzazioni ed estensioni | cattolicadown: An UCSC Thesis Template for R Markdown</title>
+<meta name="author" content="Author Name">
+<meta name="generator" content="bookdown 0.29 with bs4_book()">
+<meta property="og:title" content="5 Customizzazioni ed estensioni | cattolicadown: An UCSC Thesis Template for R Markdown">
+<meta property="og:type" content="book">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="5 Customizzazioni ed estensioni | cattolicadown: An UCSC Thesis Template for R Markdown">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script async defer src="https://hypothes.is/embed.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+<link rel="stylesheet" href="templates/bs4_style.css">
+<link rel="stylesheet" href="templates/corrections.css">
+<meta name="description" content="Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi di cattolicadown.  5.1 cache di chunk e la cartella ** _bookdown_files** Se si...">
+<meta property="og:description" content="Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi di cattolicadown.  5.1 cache di chunk e la cartella ** _bookdown_files** Se si...">
+<meta name="twitter:description" content="Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi di cattolicadown.  5.1 cache di chunk e la cartella ** _bookdown_files** Se si...">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title=""><p><code>cattolicadown</code>:<br>
+An UCSC Thesis<br>
+Template for R Markdown</p></a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Benvenuto!</a></li>
+<li><a class="" href="introduzione.html">Introduzione</a></li>
+<li><a class="" href="come-si-usa.html"><span class="header-section-number">1</span> Come si usa?</a></li>
+<li><a class="" href="rmd-basics.html"><span class="header-section-number">2</span> R Markdown basics</a></li>
+<li><a class="" href="cites-and-refs.html"><span class="header-section-number">3</span> Citazioni, referenze incrociate, e collaborazione</a></li>
+<li><a class="" href="tables.html"><span class="header-section-number">4</span> Tabelle</a></li>
+<li><a class="active" href="customizzazioni-ed-estensioni.html"><span class="header-section-number">5</span> Customizzazioni ed estensioni</a></li>
+<li><a class="" href="risoluzione-dei-problemi.html"><span class="header-section-number">6</span> Risoluzione dei problemi</a></li>
+<li><a class="" href="conclusioni.html">Conclusioni</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="prima-appendice.html"><span class="header-section-number">A</span> Prima Appendice</a></li>
+<li><a class="" href="la-seconda-appendice-per-ischerzo.html"><span class="header-section-number">B</span> la Seconda Appendice, per ischerzo</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/NiccoloSalvini/cattolicadown">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="customizzazioni-ed-estensioni" class="section level1" number="5">
+<h1>
+<span class="header-section-number">5</span> Customizzazioni ed estensioni<a class="anchor" aria-label="anchor" href="#customizzazioni-ed-estensioni"><i class="fas fa-link"></i></a>
+</h1>
+<p><!-- this will include a mini table of contents--></p>
+<!-- LaTeX normally does not indent the first line after a heading - however, it does so after the mini table of contents. You can manually tell it not to with \noindent -->
+<p>Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi di <code>cattolicadown</code>.</p>
+<div id="cache-di-chunk-e-la-cartella-_bookdown_files" class="section level2" number="5.1">
+<h2>
+<span class="header-section-number">5.1</span> cache di chunk e la cartella ** _bookdown_files**<a class="anchor" aria-label="anchor" href="#cache-di-chunk-e-la-cartella-_bookdown_files"><i class="fas fa-link"></i></a>
+</h2>
+<p>Se si imposta <code>cache = true</code> in un blocco di codice, per memorizzare nella memorizzazione la memorizzazione dei risultati se richiede tempo per eseguire, consultare [la documentazione R Markdown] (<a href="https://bookdown.org/yihui/rmarkdown-cookbook/cache" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/cache</a>. HTML), quindi i file per la memorizzazione nella cache sono archiviati nella cartella **_bookdown_files**.</p>
+<p>Se non usi la memorizzazione nella cache e desideri semplicemente avere la cartella ** _ bookdown_files ** eliminata dopo il completamento del processo di build, impostare <code>abilit_cache = false</code> in <strong>index.rmd </strong>.</p>
+<p>Cioè, il tuo yaml dovrebbe assomigliare a questo:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb29-1"><a href="customizzazioni-ed-estensioni.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">knit</span><span class="kw">:</span><span class="at"> (function(input, ...) {</span></span>
+<span id="cb29-2"><a href="customizzazioni-ed-estensioni.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="at">    thesis_formats &lt;- "pdf";</span></span>
+<span id="cb29-3"><a href="customizzazioni-ed-estensioni.html#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
+<span id="cb29-4"><a href="customizzazioni-ed-estensioni.html#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="at">    source("scripts_and_filters/knit-functions.R");</span></span>
+<span id="cb29-5"><a href="customizzazioni-ed-estensioni.html#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="at">    knit_thesis(input, thesis_formats, allow_cache = FALSE, ...)</span></span>
+<span id="cb29-6"><a href="customizzazioni-ed-estensioni.html#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="at">  })</span></span></code></pre></div>
+</div>
+<div id="fronte-pagina" class="section level2" number="5.2">
+<h2>
+<span class="header-section-number">5.2</span> Fronte Pagina<a class="anchor" aria-label="anchor" href="#fronte-pagina"><i class="fas fa-link"></i></a>
+</h2>
+<div id="accorcia-le-didascalie-mostrate-nellelenco-delle-figure-pdf" class="section level3" number="5.2.1">
+<h3>
+<span class="header-section-number">5.2.1</span> Accorcia le didascalie mostrate nell’elenco delle figure (PDF)<a class="anchor" aria-label="anchor" href="#accorcia-le-didascalie-mostrate-nellelenco-delle-figure-pdf"><i class="fas fa-link"></i></a>
+</h3>
+<p>Potresti voler che il tuo elenco di cifre (che segue il contenuto del contenuto) abbia descrizioni di figure più brevi (o semplicemente diverse) rispetto alle didascalie alla figura effettiva.</p>
+<p>Fallo usando l’opzione chunk <code>Fig.scap</code> (‘didascalia breve’), ad esempio<code>{R Captain-Image, fig.cap = "Una didascalia molto lunga e descrittiva (e potenzialmente noiosa) che non si adatta alla Elenco delle figure, ma aiuta il lettore a capire cosa comunica la figura. ", fig.scap =" Una descrizione concisa per l'elenco delle figure "</code></p>
+</div>
+<div id="abbrevia-le-didascalie-visualizzate-nellelenco-delle-tabelle-pdf" class="section level3" number="5.2.2">
+<h3>
+<span class="header-section-number">5.2.2</span> abbrevia le didascalie visualizzate nell’elenco delle tabelle (PDF)<a class="anchor" aria-label="anchor" href="#abbrevia-le-didascalie-visualizzate-nellelenco-delle-tabelle-pdf"><i class="fas fa-link"></i></a>
+</h3>
+<p>È possibile che l’elenco delle tabelle (che segue l’elenco delle figure nel frontespizio della tesi) abbia descrizioni delle tabelle più brevi (o semplicemente diverse) rispetto alle didascalie delle tabelle stesse.</p>
+<p>Se stai usando <code><a href="https://rdrr.io/pkg/knitr/man/kable.html">knitr::kable</a></code> per generare una tabella, puoi farlo con l’argomento <code>caption.short</code>, ad esempio:</p>
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">mtcars</span>,</span>
+<span>              caption <span class="op">=</span> <span class="st">"Una didascalia molto lunga e descrittiva (e potenzialmente</span></span>
+<span><span class="st">               noioso) che non si adatta all'elenco delle figure,</span></span>
+<span><span class="st">               ma aiuta il lettore a capire cosa la figura</span></span>
+<span><span class="st">               comunica."</span>,</span>
+<span>              caption.short <span class="op">=</span> <span class="st">"Una descrizione concisa per l'elenco delle tabelle"</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+<div id="accorciare-lintestazione-di-corsa-pdf" class="section level2" number="5.3">
+<h2>
+<span class="header-section-number">5.3</span> Accorciare l’intestazione di corsa (PDF)<a class="anchor" aria-label="anchor" href="#accorciare-lintestazione-di-corsa-pdf"><i class="fas fa-link"></i></a>
+</h2>
+<p>Potresti voler l’intestazione nel mezzo di un capitolo (ovvero l’intestazione che mostra il titolo all’interno dell’attuale capitolo nella parte superiore della pagina) è più breve (o semplicemente diversa) rispetto al titolo del capitolo effettivo.</p>
+<p>Fallo aggiungendo il comando latex <code>\ capitolo {la mia versione più corta}</code> dopo il titolo del capitolo.</p>
+<p>Ad esempio, il capitolo  <span class="citation">(<a href="#ref-ref" role="doc-biblioref"><strong>ref?</strong></a>)</span> (cittadini e refs) è semplicemente “cita e cross-refs”, perché inizia così:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb31-1"><a href="customizzazioni-ed-estensioni.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Citations, cross-references, and collaboration {#cites-and-refs} </span></span>
+<span id="cb31-2"><a href="customizzazioni-ed-estensioni.html#cb31-2" aria-hidden="true" tabindex="-1"></a>\chaptermark{Cites and cross-refs}</span></code></pre></div>
+</div>
+<div id="capitoli-non-numerati" class="section level2" number="5.4">
+<h2>
+<span class="header-section-number">5.4</span> Capitoli non numerati<a class="anchor" aria-label="anchor" href="#capitoli-non-numerati"><i class="fas fa-link"></i></a>
+</h2>
+<p>Per rendere i capitoli non numerati (normalmente lo fai per l’introduzione e/o la conclusione), far seguire l’intestazione del capitolo a <code>{-}</code>, ad es. <code># Introduzione {-}</code>.</p>
+<p>Quando lo fai, ricordati che devi anche mettere questi due comandi in LaTeX:</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb32-1"><a href="customizzazioni-ed-estensioni.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\adjustmtc</span></span>
+<span id="cb32-2"><a href="customizzazioni-ed-estensioni.html#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\markboth</span>{The Name of Your Unnumbered Chapter}{}</span></code></pre></div>
+<p>Altrimenti il mini-sommario del capitolo e l’intestazione mostreranno il capitolo precedente.</p>
+</div>
+<div id="capitoli-iniziali-con-citazioni-pdf" class="section level2" number="5.5">
+<h2>
+<span class="header-section-number">5.5</span> Capitoli iniziali con citazioni (PDF)<a class="anchor" aria-label="anchor" href="#capitoli-iniziali-con-citazioni-pdf"><i class="fas fa-link"></i></a>
+</h2>
+<p>Il modello di LaTeX di Oxthesis ti consente di includere anche un blocco di tipo <code>savequote</code> all’inizio dei capitoli.
+Per farlo, usa la sintassi <code></code> <code>{block type = 'savequote'}</code> ``.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Per ulteriori informazioni sui tipi di blocchi personalizzati, consultare la sezione in [&lt;em&gt;authoring libri con r markdown &lt;/em&gt;] (https (https : //bookdown.org/yihui/bookdown/custom-blocks.html).&lt;/p&gt;"><sup>3</sup></a></p>
+<p>Aggiungi la referenza della citazione con l’opzione chunk <code>quote_author =" il mio nome autore "</code>.
+Ti consiglio anche di aggiungere l’opzione chunk <code>include = knitr::is_latex_output()</code> in modo che le citazioni siano incluse solo nell’output PDF.</p>
+<p>Non è possibile utilizzare la sintassi di Markdown all’interno delle opzioni di chunk, quindi se si desidera ad es. in corsivo un nome del libro usa <a href="https://bookdown.org/yihui/Bookdown/markdown-extensions-by-Bookdown.html#text-references">‘Testo Reference’</a>: crea un pezzo di testo chiamato con ‘(rif: etichetta) il mio testo’, quindi indica questo nell’opzione chunk con <code>quote_author = '(rif: etichetta)'</code>.</p>
+</div>
+<div id="evidenziazione-delle-correzioni-html-e-pdf" class="section level2" number="5.6">
+<h2>
+<span class="header-section-number">5.6</span> Evidenziazione delle correzioni (HTML e PDF)<a class="anchor" aria-label="anchor" href="#evidenziazione-delle-correzioni-html-e-pdf"><i class="fas fa-link"></i></a>
+</h2>
+<p>Quando arriva il momento di fare correzioni, potresti voler evidenziare le modifiche apportate corretta agli esaminatori in modo che possano verificare rapidamente di le cose cambiate
+Puoi farlo così:</p>
+<div id="correzioni-in-linea-brevi" class="section level3" number="5.6.1">
+<h3>
+<span class="header-section-number">5.6.1</span> correzioni in linea brevi<a class="anchor" aria-label="anchor" href="#correzioni-in-linea-brevi"><i class="fas fa-link"></i></a>
+</h3>
+<p>Evidenzia <strong>correzioni brevi e inline </strong> facendo <code>[come questo] {.correction}</code> — Il testo tra le parentesi quadrate verrà quindi <span class="correction">evidenziato in blu</span> nell’output.</p>
+<p>Si noti che Pandoc potrebbe essere confuso da citazioni e riferimenti incrociati all’interno delle correzioni in linea.
+In particolare, potrebbe essere confuso da <code>" [cosa ha detto @shea2014] {.correction} "</code> che diventa <span class="citation">(cosa ha detto <a href="#ref-shea2014" role="doc-biblioref"><strong>shea2014?</strong></a>)</span> {. Correzione}
+In tali casi, è possibile utilizzare direttamente la sintassi in lattice.
+L’evidenziazione della correzione usa il pacchetto [Soul] (<a href="https://ctan.org/pkg/soul" class="uri">https://ctan.org/pkg/soul</a>), quindi puoi fare così:</p>
+<ul>
+<li>Se si utilizza BiBLATEX per i riferimenti, usa ` hl {What  textCite {Shea2014} detto}}</li>
+<li>Se si utilizza Natbib per riferimenti, usa ` hl {cosa  cite {shea2014} detto}}</li>
+</ul>
+<p>L’uso di LaTeX grezzo ha lo svantaggio delle correzioni, quindi non viene visualizzata nell’output HTML, ma potresti comunque preoccuparti dell’evidenziazione della correzione nel PDF per gli esaminatori!</p>
+</div>
+<div id="blocchi-di-materiale-aggiunto-o-modificato" class="section level3" number="5.6.2">
+<h3>
+<span class="header-section-number">5.6.2</span> blocchi di materiale aggiunto o modificato<a class="anchor" aria-label="anchor" href="#blocchi-di-materiale-aggiunto-o-modificato"><i class="fas fa-link"></i></a>
+</h3>
+Evidenzia interi ** blocchi di materiale aggiunto o modificato ** mettendoli in un blocco di tipo <code>correzione</code>, usando la sintassi<code>`` ``</code>{Block type = ‘correction’}<code>``.^[In Il file **. tex ** per output PDF, questo metterà il contenuto tra</code> inizio {correzione}<code>e</code> end {correzione}<code>; Nell'output di GitBook sarà messo tra</code>
+<div class="Correction">
+<code>e</code>
+</div>
+<p>`.]
+Così:</p>
+<div class="correction">
+<p>
+Per blocchi più grandi, come questo paragrafo o addirittura intere
+figure, è possibile utilizzare il tipo di blocco “Correction”. Questo
+ambiente <strong>mette in evidenza blocchi di dimensioni del paragrafo e
+più grandi</strong> con lo stesso colore blu.
+</p>
+</div>
+<p><em>Si noti che i blocchi di correzione non possono essere inclusi nell’output delle parole.</em></p>
+</div>
+<div id="che-interrompe-le-correzioni-da-essere-evidenziate" class="section level3" number="5.6.3">
+<h3>
+<span class="header-section-number">5.6.3</span> che interrompe le correzioni da essere evidenziate<a class="anchor" aria-label="anchor" href="#che-interrompe-le-correzioni-da-essere-evidenziate"><i class="fas fa-link"></i></a>
+</h3>
+<p>Per disattivare l’evidenziazione della correzione, vai all’intestazione YAML di ** INDICE.RMD **, quindi:</p>
+<ul>
+<li>Output PDF: Imposta <code>Correzioni: False</code><br>
+</li>
+<li>output HTML: rimuovi o commenta <code>- modelli/corrections.css</code>
+</li>
+</ul>
+</div>
+</div>
+<div id="applicare-il-colore-del-carattere-personalizzato-ed-evidenziazione-a-testo-html-e-pdf" class="section level2" number="5.7">
+<h2>
+<span class="header-section-number">5.7</span> Applicare il colore del carattere personalizzato ed evidenziazione a testo (HTML e PDF)<a class="anchor" aria-label="anchor" href="#applicare-il-colore-del-carattere-personalizzato-ed-evidenziazione-a-testo-html-e-pdf"><i class="fas fa-link"></i></a>
+</h2>
+<p>Il filtro LUA che aggiunge la funzionalità per evidenziare le correzioni aggiunge altri due trucchi:
+Puoi applicare la tua scelta di colore per evidenziare il testo o cambiare il colore del carattere.
+La sintassi è la seguente:</p>
+<blockquote>
+<p>Ecco <code>[qualche testo in posa evidenziazione] {evidenziazione =" rosa "}</code><br>
+Diventa: ecco [alcuni testi in evidenza rosa] {evidenziazione = “rosa”}.</p>
+</blockquote>
+<blockquote>
+<p><code>[Ecco un po 'di testo con font blu] {color =" blu "}</code><br>
+Diventa: [Ecco un po ’di testo con font blu] {color = “blu”}</p>
+</blockquote>
+<blockquote>
+<p>Finalmente — Mai e poi mai in realtà questo-<code>[Ecco un po 'di testo con evidenziazione nera e carattere giallo] {evidenziazione =" nero "color =" giallo "}</code><br>
+Diventa: [Ecco un po ’di testo con evidenziazione nera e carattere giallo] {evidenziazione = “nero” color = “giallo”}</p>
+</blockquote>
+<p>Il file ** Scripts_and_filters/Colour_and_highlight.lua ** implementa questo, se si desidera armeggiare con esso.
+Funziona con output PDF e HTML.</p>
+</div>
+<div id="aggiunta-di-un-secondo-astratto-pdf" class="section level2" number="5.8">
+<h2>
+<span class="header-section-number">5.8</span> Aggiunta di un secondo astratto (PDF)<a class="anchor" aria-label="anchor" href="#aggiunta-di-un-secondo-astratto-pdf"><i class="fas fa-link"></i></a>
+</h2>
+<p>Potresti aver bisogno di due abstract nella tua tesi, se ad es. Ho bisogno sia di un astratto in inglese che di qualche altra lingua.</p>
+<p>Puoi aggiungere un secondo abstract in ** index.rmd ** come: così:</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb33-1"><a href="customizzazioni-ed-estensioni.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">abstract-second-heading</span><span class="kw">:</span><span class="at"> </span><span class="st">"Resumé"</span></span>
+<span id="cb33-2"><a href="customizzazioni-ed-estensioni.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">abstract-second</span><span class="kw">:</span><span class="at"> </span><span class="st">"This is the second abstract, for example in beautiful French."</span><span class="at"> </span></span></code></pre></div>
+</div>
+<div id="incluso-un-altro-documento-nella-tesi---incorporare-un-documento-pdf-embed--pdf" class="section level2" number="5.9">
+<h2>
+<span class="header-section-number">5.9</span> incluso un altro documento nella tesi - Incorporare un documento PDF {#embed -pdf}<a class="anchor" aria-label="anchor" href="#incluso-un-altro-documento-nella-tesi---incorporare-un-documento-pdf-embed--pdf"><i class="fas fa-link"></i></a>
+</h2>
+<p>Potresti voler incorporare documenti PDF esistenti nella tesi, ad esempio se il tuo dipartimento consente una tesi di stile “Portfolio” e devi includere una pubblicazione di composizione esistente come capitolo.</p>
+<p>Nell’output di GitBook, puoi semplicemente usare <code>Knitr :: Include_Graphics</code> e dovrebbe includere un PDF scorrevole (e scaricabile).
+Probabilmente vorrai impostare le opzioni di chunk <code>out.width = '100%'</code> e <code>out.height = '1000px'</code>:</p>
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"figures/sample-content/pdf_embed_example/Lyngs2020_FB.pdf"</span><span class="op">)</span></span></code></pre></div>
+<embed src="figures/sample-content/pdf_embed_example/Lyngs2020_FB.pdf" width="100%" height="1000px" type="application/pdf"></embed><p><br></p>
+<p>Nell’output in lattice, tuttavia, questo approccio può causare comportamenti strani.
+Pertanto, quando si crea la tesi su PDF, dividere il PDF in una sequenza alfanumericamente ordinata di ** file pdf ** a pagina singola ** (puoi farlo automaticamente con il pacchetto <code>pdftools</code>). È quindi possibile utilizzare il comando in lattice appropriato per inserirli, come mostrato di seguito (per brevità, nel contenuto di esempio di <code>Oxforddown</code> PDF stiamo includendo solo due pagine).
+<em>Si noti che l’opzione chunk <code>risultati = 'asis'</code> deve essere impostata.</em>
+È inoltre possibile rimuovere i margini dai file PDF, che puoi fare con Adobe Acrobat (versione a pagamento) e probabilmente altri software.</p>
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># install.packages(pdftools)</span></span>
+<span><span class="co"># split PDF into pages stored in figures/sample-content/pdf_embed_example/split/</span></span>
+<span><span class="co"># pdftools::pdf_split("figures/sample-content/pdf_embed_example/Lyngs2020_FB.pdf",</span></span>
+<span><span class="co">#        output = "figures/sample-content/pdf_embed_example/split/")</span></span>
+<span></span>
+<span><span class="co"># grab the pages</span></span>
+<span><span class="va">pages</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.files.html">list.files</a></span><span class="op">(</span><span class="st">"figures/sample-content/pdf_embed_example/split"</span>, full.names <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># set how wide you want the inserted PDFs to be: </span></span>
+<span><span class="co"># 1.0 is 100 per cent of the oxforddown PDF page width;</span></span>
+<span><span class="co"># you may want to make it a bit bigger</span></span>
+<span><span class="va">pdf_width</span> <span class="op">&lt;-</span> <span class="fl">1.2</span></span>
+<span></span>
+<span><span class="co"># for each PDF page, insert it nicely and</span></span>
+<span><span class="co"># end with a page break</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_c.html">str_c</a></span><span class="op">(</span><span class="st">"\\newpage \\begin{center} \\makebox[\\linewidth][c]{\\includegraphics[width="</span>, <span class="va">pdf_width</span>, <span class="st">"\\linewidth]{"</span>, <span class="va">pages</span>, <span class="st">"}} \\end{center}"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div id="incluso-un-altro-documento-nella-tesi---r-documento-figlio-markdown-embed--rmd" class="section level2" number="5.10">
+<h2>
+<span class="header-section-number">5.10</span> incluso un altro documento nella tesi - r documento figlio markdown {#embed -rmd}<a class="anchor" aria-label="anchor" href="#incluso-un-altro-documento-nella-tesi---r-documento-figlio-markdown-embed--rmd"><i class="fas fa-link"></i></a>
+</h2>
+<p>A volte vuoi includere un altro documento che stai attualmente scrivendo come capitolo della tua tesi.
+Sopra  <span class="citation">(<a href="#ref-ref" role="doc-biblioref"><strong>ref?</strong></a>)</span> (embed-pdf), abbiamo descritto il modo più semplice per farlo: includere l’altro documento come PDF.
+Tuttavia, in alcuni casi invece si desidera includere la sorgente di markdown R da questo documento e farlo compilare all’interno della tesi.
+Questo è un po ’più complicato, perché è necessario tenere traccia attenta dei percorsi dei file, ma è possibile tramite [incluso il documento di un bambino] (<a href="https://bookdown.org/yihui/rmarkdown-cookbook/child" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/child</a> -Document.html).
+Ci sono quattro passaggi principali:</p>
+<ol style="list-style-type: decimal">
+<li>Includi il documento di carta come bambino</li>
+<li>Rendi i percorsi di file compatibili con il lavoro a maglia l’articolo da solo, nonché quando include nella tesi</li>
+<li>Rendi corretti i livelli di intestazione</li>
+<li>Rendi corretti le larghezze della figura</li>
+</ol>
+<div id="un-documento-di-esempio-in-unaltra-cartella" class="section level3" number="5.10.1">
+<h3>
+<span class="header-section-number">5.10.1</span> Un documento di esempio in un’altra cartella<a class="anchor" aria-label="anchor" href="#un-documento-di-esempio-in-unaltra-cartella"><i class="fas fa-link"></i></a>
+</h3>
+<p>Prendi questo semplice esempio (i file per questo sono in [questo repository github] (<a href="https://github.com/ulyngs/oxforddown-external-article" class="uri">https://github.com/ulyngs/oxforddown-external-article</a>)):</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb36-1"><a href="customizzazioni-ed-estensioni.html#cb36-1" aria-hidden="true" tabindex="-1"></a>|--paper_to_include</span>
+<span id="cb36-2"><a href="customizzazioni-ed-estensioni.html#cb36-2" aria-hidden="true" tabindex="-1"></a>|  |--my_paper.Rmd</span>
+<span id="cb36-3"><a href="customizzazioni-ed-estensioni.html#cb36-3" aria-hidden="true" tabindex="-1"></a>|  |--data</span>
+<span id="cb36-4"><a href="customizzazioni-ed-estensioni.html#cb36-4" aria-hidden="true" tabindex="-1"></a>|  |  |--cat_salt.csv</span>
+<span id="cb36-5"><a href="customizzazioni-ed-estensioni.html#cb36-5" aria-hidden="true" tabindex="-1"></a>|  |--figures</span>
+<span id="cb36-6"><a href="customizzazioni-ed-estensioni.html#cb36-6" aria-hidden="true" tabindex="-1"></a>|  |  |--cat.jpg</span>
+<span id="cb36-7"><a href="customizzazioni-ed-estensioni.html#cb36-7" aria-hidden="true" tabindex="-1"></a>|</span>
+<span id="cb36-8"><a href="customizzazioni-ed-estensioni.html#cb36-8" aria-hidden="true" tabindex="-1"></a>|--thesis</span></code></pre></div>
+<p>Come suggerisce il grafico, hai un’altra cartella, ** Paper_to_include/** che vive nella stessa cartella contenente della cartella di tesi.
+Nella cartella ** paper_to_include <strong>, il file </strong> my_paper.rmd ** è dove scrivi la carta.
+In ** my_paper.rmd <strong>, hai letto in un file CSV che si trova nella sottocartella </strong> Data/Cats.csv ** e anche un’immagine della sottocartella ** Figures/Cat.jpg **.</p>
+</div>
+<div id="passaggio-1-includere-la-carta-come-documento-figlio" class="section level3" number="5.10.2">
+<h3>
+<span class="header-section-number">5.10.2</span> PASSAGGIO 1: includere la carta come documento figlio<a class="anchor" aria-label="anchor" href="#passaggio-1-includere-la-carta-come-documento-figlio"><i class="fas fa-link"></i></a>
+</h3>
+<p>Nella cartella di tesi, crea un file RMD per il capitolo in cui si desidera includere un altro documento.
+Aggiungi uno o più blocchi di codice che includono i file di markdown r da quel documento come documenti figlio:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb37-1"><a href="customizzazioni-ed-estensioni.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Including an external chapter </span></span>
+<span id="cb37-2"><a href="customizzazioni-ed-estensioni.html#cb37-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-3"><a href="customizzazioni-ed-estensioni.html#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="in">```{r child = "../paper_to_include/my_paper.Rmd"}</span></span>
+<span id="cb37-4"><a href="customizzazioni-ed-estensioni.html#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
+</div>
+<div id="passaggio-2-rendi-compatibili-percorsi-di-file" class="section level3" number="5.10.3">
+<h3>
+<span class="header-section-number">5.10.3</span> Passaggio 2: Rendi compatibili percorsi di file<a class="anchor" aria-label="anchor" href="#passaggio-2-rendi-compatibili-percorsi-di-file"><i class="fas fa-link"></i></a>
+</h3>
+<p>Utilizzare [Parametri] (<a href="https://rmarkdown.studio.com/lesson-6.html" class="uri">https://rmarkdown.studio.com/lesson-6.html</a>) per regolare il percorso del file delle immagini in base ai valori impostati nell’intestazione YAML di un file di markdown R.
+In ** my_paper.rmd **, crea un parametro chiamato <code>altro_path</code> e impostalo su una stringa vuota:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb38-1"><a href="customizzazioni-ed-estensioni.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb38-2"><a href="customizzazioni-ed-estensioni.html#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"A fabulous article in a different folder"</span></span>
+<span id="cb38-3"><a href="customizzazioni-ed-estensioni.html#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">params</span><span class="kw">:</span></span>
+<span id="cb38-4"><a href="customizzazioni-ed-estensioni.html#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">other_path</span><span class="kw">:</span><span class="at"> </span><span class="st">""</span></span>
+<span id="cb38-5"><a href="customizzazioni-ed-estensioni.html#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<p>In ** my_paper.rmd **, mettilo all’inizio di FilePath quando leggi i dati o includi immagini:</p>
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/">knitr</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">cat_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_c.html">str_c</a></span><span class="op">(</span><span class="va">params</span><span class="op">$</span><span class="va">other_path</span>, <span class="st">"data/cats.csv"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_c.html">str_c</a></span><span class="op">(</span><span class="va">params</span><span class="op">$</span><span class="va">other_path</span>, <span class="st">"figures/cat.jpg"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p>Infine, nel file ** indice.rmd ** della cartella tesi, crea anche il parametro <code>Altro_Path</code>.
+Ma qui, impostalo su dove la cartella ** paper_to_include/** è relativa alla cartella di tesi:</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb40-1"><a href="customizzazioni-ed-estensioni.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">params</span><span class="kw">:</span></span>
+<span id="cb40-2"><a href="customizzazioni-ed-estensioni.html#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">other_path</span><span class="kw">:</span><span class="at"> </span><span class="st">"../paper_to_include/"</span></span></code></pre></div>
+</div>
+<div id="nota-sulloutput-html" class="section level3" number="5.10.4">
+<h3>
+<span class="header-section-number">5.10.4</span> NOTA sull’output HTML<a class="anchor" aria-label="anchor" href="#nota-sulloutput-html"><i class="fas fa-link"></i></a>
+</h3>
+<p>Nota che se si desidera ospitare una versione HTML sulla tesi online, dovrai includere la grafica nel contenuto che ospiti online - Internet ovviamente non sarà in grado di vedere i filepath che si riferiscono a cose in un’altra cartella il tuo computer!</p>
+</div>
+<div id="passaggio-3-assicurarsi-che-i-livelli-di-intestazione-siano-corretti" class="section level3" number="5.10.5">
+<h3>
+<span class="header-section-number">5.10.5</span> Passaggio 3: assicurarsi che i livelli di intestazione siano corretti<a class="anchor" aria-label="anchor" href="#passaggio-3-assicurarsi-che-i-livelli-di-intestazione-siano-corretti"><i class="fas fa-link"></i></a>
+</h3>
+<p>A meno che il documento che desideri includere non sia anche scritto come libro, probabilmente i livelli di intestazione saranno fuori.
+Cioè, le intestazioni di livello 1 (# alcune intestazioni) che usi per le sezioni principali nell’altra carta si trasformano in titoli di accompagnatore se incluse nella tesi.</p>
+<p>Per evitare questo, prima <em>increment tutti i livelli di intestazione di uno in ** paper_to_include/my_paper.rmd ** </em> (# qualche intestazione -&gt; # # Qualche intestazione).
+Quindi in ** paper_to_include/** Crea un [filtro Lua] (<a href="https://bookdown.org/yihui/rmarkdown-cookbook/lua-fiterters.html#lua-filters" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/lua-fiterters.html#lua-filters</a>) che riduce i livelli di intestazione di uno: creare un file di testo , salvalo come ** ridotto_header_level.lua ** e dargli il contenuto di seguito.</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode lua"><code class="sourceCode lua"><span id="cb41-1"><a href="customizzazioni-ed-estensioni.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> Header<span class="op">(</span>el<span class="op">)</span></span>
+<span id="cb41-2"><a href="customizzazioni-ed-estensioni.html#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">(</span>el<span class="op">.</span>level <span class="op">&lt;=</span> <span class="dv">1</span><span class="op">)</span> <span class="cf">then</span></span>
+<span id="cb41-3"><a href="customizzazioni-ed-estensioni.html#cb41-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">error</span><span class="op">(</span><span class="st">"I don't know how to decrease the level of h1"</span><span class="op">)</span></span>
+<span id="cb41-4"><a href="customizzazioni-ed-estensioni.html#cb41-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb41-5"><a href="customizzazioni-ed-estensioni.html#cb41-5" aria-hidden="true" tabindex="-1"></a>  el<span class="op">.</span>level <span class="op">=</span> el<span class="op">.</span>level <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb41-6"><a href="customizzazioni-ed-estensioni.html#cb41-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> el</span>
+<span id="cb41-7"><a href="customizzazioni-ed-estensioni.html#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div>
+<p>Nell’intestazione Yaml di ** Paper_to_include/my_paper.rmd **, usa questo filtro:</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb42-1"><a href="customizzazioni-ed-estensioni.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb42-2"><a href="customizzazioni-ed-estensioni.html#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"A fabulous article in a different folder"</span></span>
+<span id="cb42-3"><a href="customizzazioni-ed-estensioni.html#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="fu">params</span><span class="kw">:</span></span>
+<span id="cb42-4"><a href="customizzazioni-ed-estensioni.html#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">other_path</span><span class="kw">:</span><span class="at"> </span><span class="st">""</span></span>
+<span id="cb42-5"><a href="customizzazioni-ed-estensioni.html#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb42-6"><a href="customizzazioni-ed-estensioni.html#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">pdf_document</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb42-7"><a href="customizzazioni-ed-estensioni.html#cb42-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">pandoc_args</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"--lua-filter=reduce_header_level.lua"</span><span class="kw">]</span></span>
+<span id="cb42-8"><a href="customizzazioni-ed-estensioni.html#cb42-8" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<p>Ora, i livelli di intestazione saranno corretti sia quando si lavora da sola e quando è incluso nella tesi.</p>
+<p>Nota: potrebbe non essere necessario utilizzare un filtro LUA per spostare l’intestazione-Sembra che potresti semplicemente usare <code>Pandoc_args: ["-Shift-Heading-level-by = -1 "]</code> (vedi https: // pandoc. org/manual.html#lettore-opzioni)</p>
+</div>
+<div id="passaggio-4.-assicurarsi-che-le-larghezze-della-figura-siano-corrette" class="section level3" number="5.10.6">
+<h3>
+<span class="header-section-number">5.10.6</span> Passaggio 4. Assicurarsi che le larghezze della figura siano corrette<a class="anchor" aria-label="anchor" href="#passaggio-4.-assicurarsi-che-le-larghezze-della-figura-siano-corrette"><i class="fas fa-link"></i></a>
+</h3>
+<p>Potrebbe essere che le larghezze della tua figura quando si lavorano a maglia da sola e, quando lo includi nella tesi, debbano essere diversi.
+È possibile utilizzare nuovamente i parametri per impostare le larghezze delle figure.</p>
+<p>Immagina di volere che la larghezza della figura sia l’80% della larghezza della pagina quando si lavora da sola, ma al 100% nella tesi.
+In ** paper_to_include/my_paper.rmd **, prima aggiungi un parametro che potremmo chiamare <code>out_width</code> e impostarlo sulla stringa” 80%“:</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb43-1"><a href="customizzazioni-ed-estensioni.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb43-2"><a href="customizzazioni-ed-estensioni.html#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"A fabulous article in a different folder"</span></span>
+<span id="cb43-3"><a href="customizzazioni-ed-estensioni.html#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="fu">params</span><span class="kw">:</span></span>
+<span id="cb43-4"><a href="customizzazioni-ed-estensioni.html#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">other_path</span><span class="kw">:</span><span class="at"> </span><span class="st">""</span></span>
+<span id="cb43-5"><a href="customizzazioni-ed-estensioni.html#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">out_width</span><span class="kw">:</span><span class="at"> </span><span class="st">"80%"</span></span>
+<span id="cb43-6"><a href="customizzazioni-ed-estensioni.html#cb43-6" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb43-7"><a href="customizzazioni-ed-estensioni.html#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">pdf_document</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb43-8"><a href="customizzazioni-ed-estensioni.html#cb43-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">pandoc_args</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"--lua-filter=reduce_header_level.lua"</span><span class="kw">]</span></span>
+<span id="cb43-9"><a href="customizzazioni-ed-estensioni.html#cb43-9" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<p>Quindi, assicurati di utilizzare quel parametro per impostare la larghezza dell’uscita quando si includono le figure in ** paper_to_include/my_paper.rmd **:</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb44-1"><a href="customizzazioni-ed-estensioni.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, out.width=params$out_width, fig.cap="A very funny cat"}</span></span>
+<span id="cb44-2"><a href="customizzazioni-ed-estensioni.html#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="in">include_graphics(str_c(params$other_path, "figures/cat.jpg"))</span></span>
+<span id="cb44-3"><a href="customizzazioni-ed-estensioni.html#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
+<p>Infine, crea il parametro <code>out_width</code> nella tua tesi ’** indice.rmd ** File:</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb45-1"><a href="customizzazioni-ed-estensioni.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">params</span><span class="kw">:</span></span>
+<span id="cb45-2"><a href="customizzazioni-ed-estensioni.html#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">other_path</span><span class="kw">:</span><span class="at"> </span><span class="st">"../paper_to_include/"</span></span>
+<span id="cb45-3"><a href="customizzazioni-ed-estensioni.html#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">out_width</span><span class="kw">:</span><span class="at"> </span><span class="st">"80%"</span></span></code></pre></div>
+<p>Ora, la larghezza di output della tua cifra sarà dell’80% quando si è a maglia il tuo documento da solo e al 100% quando lo fa a lavorare come documento per bambini della tesi.</p>
+</div>
+</div>
+<div id="customising-citations" class="section level2" number="5.11">
+<h2>
+<span class="header-section-number">5.11</span> Personalizzazione di citazioni e riferimenti<a class="anchor" aria-label="anchor" href="#customising-citations"><i class="fas fa-link"></i></a>
+</h2>
+<div id="utilizzo-di-un-file-.csl-con-pandoc" class="section level3" number="5.11.1">
+<h3>
+<span class="header-section-number">5.11.1</span> Utilizzo di un file .csl con pandoc<a class="anchor" aria-label="anchor" href="#utilizzo-di-un-file-.csl-con-pandoc"><i class="fas fa-link"></i></a>
+</h3>
+<p>Vedere la sezione <a href="#citazione-aspetto"><strong>??</strong></a>.</p>
+<p>L’unico svantaggio di lasciare che pandoc gestisca le citazioni è che (i) non supporta le bibliografie dei capitoli, (ii) se sei un veterano di LaTeX, potresti essere più a tuo agio con <code>bilatex</code> o <code>natbib</code>.</p>
+</div>
+<div id="bilatex-custom" class="section level3" number="5.11.2">
+<h3>
+<span class="header-section-number">5.11.2</span> Utilizzo di <code>bilatex</code><a class="anchor" aria-label="anchor" href="#bilatex-custom"><i class="fas fa-link"></i></a>
+</h3>
+<p>Per utilizzare <a href="https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex">biblatex</a> per gestire le citazioni, prima decommenta questo in <strong>index.Rmd</strong>, YAML header:</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb46-1"><a href="customizzazioni-ed-estensioni.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="an">use-biblatex:</span><span class="co"> true</span></span>
+<span id="cb46-2"><a href="customizzazioni-ed-estensioni.html#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="an">bib-latex-options:</span><span class="co"> "style=authoryear, sorting=nyt, backend=biber, maxcitenames=2, useprefix, doi=true, isbn=false, uniquename=false"</span></span></code></pre></div>
+<p>Quindi dì a R Markdown di usare <code>biblatex</code> quando inserisci le citazioni, impostando <code>citation_package: biblatex</code>:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb47-1"><a href="customizzazioni-ed-estensioni.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="an">output:</span></span>
+<span id="cb47-2"><a href="customizzazioni-ed-estensioni.html#cb47-2" aria-hidden="true" tabindex="-1"></a>  bookdown::pdf_book:</span>
+<span id="cb47-3"><a href="customizzazioni-ed-estensioni.html#cb47-3" aria-hidden="true" tabindex="-1"></a>    citation_package: biblatex</span></code></pre></div>
+<p>Per personalizzare l’aspetto delle citazioni, cambia <code>bib-latex-options</code>. Ad esempio, per ottenere <strong>citazioni numeriche</strong>, con riferimenti in ordine di apparizione nel testo, impostarlo su</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb48-1"><a href="customizzazioni-ed-estensioni.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="an">bib-latex-options:</span><span class="co"> "style=numeric-comp, sorting=none, backend=biber, maxcitenames=2, useprefix, doi=true, isbn=false, uniquename=false"</span></span></code></pre></div>
+<div id="aggiunta-di-bibliografie-di-capitoli" class="section level4" number="5.11.2.1">
+<h4>
+<span class="header-section-number">5.11.2.1</span> Aggiunta di bibliografie di capitoli<a class="anchor" aria-label="anchor" href="#aggiunta-di-bibliografie-di-capitoli"><i class="fas fa-link"></i></a>
+</h4>
+<p>Se desideri bibliografie di capitoli, prima aggiungi “refsection=chapter” alle opzioni biblatex, ad esempio in questo modo:</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb49-1"><a href="customizzazioni-ed-estensioni.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="an">bib-latex-options:</span><span class="co"> "refsection=chapter, style=authoryear, sorting=nyt, backend=biber, maxcitenames=2, useprefix, doi=true, isbn=false, uniquename=false"</span></span></code></pre></div>
+<p>In secondo luogo, imposta il parametro <code>insertHeadingInPDF: false</code> in <strong>index.Rmd</strong>, per eliminare l’inclusione di un’intestazione ‘Riferimenti’ alla fine della tesi.</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb50-1"><a href="customizzazioni-ed-estensioni.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="an">params:</span></span>
+<span id="cb50-2"><a href="customizzazioni-ed-estensioni.html#cb50-2" aria-hidden="true" tabindex="-1"></a>  insertHeadingInPDF: false</span></code></pre></div>
+<p>Infine inserisci questa riga alla fine di ogni capitolo, per stamparvi le bibliografie:</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb51-1"><a href="customizzazioni-ed-estensioni.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\printbibliography</span>[segment=<span class="fu">\therefsection</span>,heading=subbibliography]</span></code></pre></div>
+</div>
+</div>
+<div id="natbib-custom" class="section level3" number="5.11.3">
+<h3>
+<span class="header-section-number">5.11.3</span> Utilizzo di <code>natbib</code><a class="anchor" aria-label="anchor" href="#natbib-custom"><i class="fas fa-link"></i></a>
+</h3>
+<p>Per utilizzare <a href="https://www.overleaf.com/learn/latex/Bibliography_management_with_natbib">natbib</a> per gestire le citazioni, prima decommenta questo in <strong>index.Rmd</strong>, YAML header:</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb52-1"><a href="customizzazioni-ed-estensioni.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="an">use-natbib:</span><span class="co"> true</span></span>
+<span id="cb52-2"><a href="customizzazioni-ed-estensioni.html#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="an">natbib-citation-style:</span><span class="co"> authoryear #for science, you might want numbers,square</span></span>
+<span id="cb52-3"><a href="customizzazioni-ed-estensioni.html#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="an">natbib-bibliography-style:</span><span class="co"> templates/ACM-Reference-Format.bst #e.g. "plainnat", unsrtnat, or path to a .bst file</span></span></code></pre></div>
+<p>Quindi dì a R Markdown di usare <code>natbib</code> quando inserisci le citazioni, impostando <code>citation_package: natbib</code>:</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb53-1"><a href="customizzazioni-ed-estensioni.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="an">output:</span></span>
+<span id="cb53-2"><a href="customizzazioni-ed-estensioni.html#cb53-2" aria-hidden="true" tabindex="-1"></a>  bookdown::pdf_book:</span>
+<span id="cb53-3"><a href="customizzazioni-ed-estensioni.html#cb53-3" aria-hidden="true" tabindex="-1"></a>    citation_package: natbib</span></code></pre></div>
+<p>Per personalizzare l’aspetto delle citazioni, cambia il file <strong>.bst</strong> a cui punti in <code>natbib-bibliography-style</code>.</p>
+</div>
+</div>
+<div id="customizing-the-page-headers-and-footers-pdf" class="section level2" number="5.12">
+<h2>
+<span class="header-section-number">5.12</span> Customizing the page headers and footers (PDF)<a class="anchor" aria-label="anchor" href="#customizing-the-page-headers-and-footers-pdf"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="personalizzazione-delle-intestazioni-e-dei-piè-di-pagina-di-pagina-pdf" class="section level2" number="5.13">
+<h2>
+<span class="header-section-number">5.13</span> Personalizzazione delle intestazioni e dei piè di pagina di pagina (PDF)<a class="anchor" aria-label="anchor" href="#personalizzazione-delle-intestazioni-e-dei-pi%C3%A8-di-pagina-di-pagina-pdf"><i class="fas fa-link"></i></a>
+</h2>
+<p>Questo può ora essere fatto direttamente nell’intestazione YAML di ** Index.rmd <strong>.
+Se sei un esperto di lattice e hai bisogno di ulteriore personalizzazione che ciò che è attualmente fornito, è possibile modificare le sezioni pertinenti di </strong> modelli/template.tex ** - Il codice pertinente è sotto la linea che inizia <code>\ usepackage {FancyHdr}</code>.</p>
+</div>
+<div id="immergersi-nel-modello-di-lattice-di-oxthesis-pdf" class="section level2" number="5.14">
+<h2>
+<span class="header-section-number">5.14</span> immergersi nel modello di lattice di Oxthesis (PDF)<a class="anchor" aria-label="anchor" href="#immergersi-nel-modello-di-lattice-di-oxthesis-pdf"><i class="fas fa-link"></i></a>
+</h2>
+<p>Per le persone di mentalità in lattice, puoi leggere ** modelli/template.tex ** Per vedere quali opzioni di personalizzazione aggiuntive sono disponibili e ** modelli/ociamthesis.cls ** che fornisce la classe base.
+Ad esempio, ** Template.tex ** fornisce un’opzione per le comunicazioni di laurea Master, che modifica le informazioni identificative al numero del candidato e include un conteggio delle parole.
+Al momento della stesura, è necessario impostarlo direttamente in ** template.tex ** anziché dall’intestazione Yaml in ** INDICE.RMD **.</p>
+</div>
+<div id="personalizzazione-in-unaltra-università" class="section level2" number="5.15">
+<h2>
+<span class="header-section-number">5.15</span> personalizzazione in un’altra università<a class="anchor" aria-label="anchor" href="#personalizzazione-in-unaltra-universit%C3%A0"><i class="fas fa-link"></i></a>
+</h2>
+<div id="il-percorso-minimo" class="section level3" number="5.15.1">
+<h3>
+<span class="header-section-number">5.15.1</span> il percorso minimo<a class="anchor" aria-label="anchor" href="#il-percorso-minimo"><i class="fas fa-link"></i></a>
+</h3>
+<p>Se la questione anteriore nel modello di lattice di Oxthesis è adatta alla tua università, personalizzare <code>Oxforddown</code> alle tue esigenze potrebbe essere semplice come mettere il nome della tua istituzione e il percorso per il logo della tua università in ** Index.rmd **:</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb54-1"><a href="customizzazioni-ed-estensioni.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">university</span><span class="kw">:</span><span class="at"> University of You</span></span>
+<span id="cb54-2"><a href="customizzazioni-ed-estensioni.html#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="fu">university-logo</span><span class="kw">:</span><span class="at"> figures/your-logo-here.pdf</span></span></code></pre></div>
+</div>
+<div id="sostituzione-dellintera-pagina-del-titolo-con-il-contenuto-richiesto" class="section level3" number="5.15.2">
+<h3>
+<span class="header-section-number">5.15.2</span> Sostituzione dell’intera pagina del titolo con il contenuto richiesto<a class="anchor" aria-label="anchor" href="#sostituzione-dellintera-pagina-del-titolo-con-il-contenuto-richiesto"><i class="fas fa-link"></i></a>
+</h3>
+<p>Se hai un file <strong>. Tex </strong> con una questione frontale richiesta dalla tua università che si desidera sostituire del tutto la pagina del titolo del modello di oxthesis, puoi fornire un filepath a questo file in ** index.rmd **.
+Il contenuto di esempio di `Oxforddown include ed esempio di questo — Se usi lo yaml di seguito, la questione anteriore sarà così:</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb55-1"><a href="customizzazioni-ed-estensioni.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">alternative-title-page</span><span class="kw">:</span><span class="at"> front-and-back-matter/alt-title-page-example.tex</span></span></code></pre></div>
+<embed src="figures/sample-content/alt_frontmatter_example/alt-frontmatter-example.pdf" width="100%" height="1000px" type="application/pdf"></embed><p>
+</p>
+
+</div>
+</div>
+</div>
+
+  <div class="chapter-nav">
+<div class="prev"><a href="tables.html"><span class="header-section-number">4</span> Tabelle</a></div>
+<div class="next"><a href="risoluzione-dei-problemi.html"><span class="header-section-number">6</span> Risoluzione dei problemi</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#customizzazioni-ed-estensioni"><span class="header-section-number">5</span> Customizzazioni ed estensioni</a></li>
+<li><a class="nav-link" href="#cache-di-chunk-e-la-cartella-_bookdown_files"><span class="header-section-number">5.1</span> cache di chunk e la cartella ** _bookdown_files**</a></li>
+<li>
+<a class="nav-link" href="#fronte-pagina"><span class="header-section-number">5.2</span> Fronte Pagina</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#accorcia-le-didascalie-mostrate-nellelenco-delle-figure-pdf"><span class="header-section-number">5.2.1</span> Accorcia le didascalie mostrate nell’elenco delle figure (PDF)</a></li>
+<li><a class="nav-link" href="#abbrevia-le-didascalie-visualizzate-nellelenco-delle-tabelle-pdf"><span class="header-section-number">5.2.2</span> abbrevia le didascalie visualizzate nell’elenco delle tabelle (PDF)</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#accorciare-lintestazione-di-corsa-pdf"><span class="header-section-number">5.3</span> Accorciare l’intestazione di corsa (PDF)</a></li>
+<li><a class="nav-link" href="#capitoli-non-numerati"><span class="header-section-number">5.4</span> Capitoli non numerati</a></li>
+<li><a class="nav-link" href="#capitoli-iniziali-con-citazioni-pdf"><span class="header-section-number">5.5</span> Capitoli iniziali con citazioni (PDF)</a></li>
+<li>
+<a class="nav-link" href="#evidenziazione-delle-correzioni-html-e-pdf"><span class="header-section-number">5.6</span> Evidenziazione delle correzioni (HTML e PDF)</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#correzioni-in-linea-brevi"><span class="header-section-number">5.6.1</span> correzioni in linea brevi</a></li>
+<li><a class="nav-link" href="#blocchi-di-materiale-aggiunto-o-modificato"><span class="header-section-number">5.6.2</span> blocchi di materiale aggiunto o modificato</a></li>
+<li><a class="nav-link" href="#che-interrompe-le-correzioni-da-essere-evidenziate"><span class="header-section-number">5.6.3</span> che interrompe le correzioni da essere evidenziate</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#applicare-il-colore-del-carattere-personalizzato-ed-evidenziazione-a-testo-html-e-pdf"><span class="header-section-number">5.7</span> Applicare il colore del carattere personalizzato ed evidenziazione a testo (HTML e PDF)</a></li>
+<li><a class="nav-link" href="#aggiunta-di-un-secondo-astratto-pdf"><span class="header-section-number">5.8</span> Aggiunta di un secondo astratto (PDF)</a></li>
+<li><a class="nav-link" href="#incluso-un-altro-documento-nella-tesi---incorporare-un-documento-pdf-embed--pdf"><span class="header-section-number">5.9</span> incluso un altro documento nella tesi - Incorporare un documento PDF {#embed -pdf}</a></li>
+<li>
+<a class="nav-link" href="#incluso-un-altro-documento-nella-tesi---r-documento-figlio-markdown-embed--rmd"><span class="header-section-number">5.10</span> incluso un altro documento nella tesi - r documento figlio markdown {#embed -rmd}</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#un-documento-di-esempio-in-unaltra-cartella"><span class="header-section-number">5.10.1</span> Un documento di esempio in un’altra cartella</a></li>
+<li><a class="nav-link" href="#passaggio-1-includere-la-carta-come-documento-figlio"><span class="header-section-number">5.10.2</span> PASSAGGIO 1: includere la carta come documento figlio</a></li>
+<li><a class="nav-link" href="#passaggio-2-rendi-compatibili-percorsi-di-file"><span class="header-section-number">5.10.3</span> Passaggio 2: Rendi compatibili percorsi di file</a></li>
+<li><a class="nav-link" href="#nota-sulloutput-html"><span class="header-section-number">5.10.4</span> NOTA sull’output HTML</a></li>
+<li><a class="nav-link" href="#passaggio-3-assicurarsi-che-i-livelli-di-intestazione-siano-corretti"><span class="header-section-number">5.10.5</span> Passaggio 3: assicurarsi che i livelli di intestazione siano corretti</a></li>
+<li><a class="nav-link" href="#passaggio-4.-assicurarsi-che-le-larghezze-della-figura-siano-corrette"><span class="header-section-number">5.10.6</span> Passaggio 4. Assicurarsi che le larghezze della figura siano corrette</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#customising-citations"><span class="header-section-number">5.11</span> Personalizzazione di citazioni e riferimenti</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#utilizzo-di-un-file-.csl-con-pandoc"><span class="header-section-number">5.11.1</span> Utilizzo di un file .csl con pandoc</a></li>
+<li><a class="nav-link" href="#bilatex-custom"><span class="header-section-number">5.11.2</span> Utilizzo di bilatex</a></li>
+<li><a class="nav-link" href="#natbib-custom"><span class="header-section-number">5.11.3</span> Utilizzo di natbib</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#customizing-the-page-headers-and-footers-pdf"><span class="header-section-number">5.12</span> Customizing the page headers and footers (PDF)</a></li>
+<li><a class="nav-link" href="#personalizzazione-delle-intestazioni-e-dei-pi%C3%A8-di-pagina-di-pagina-pdf"><span class="header-section-number">5.13</span> Personalizzazione delle intestazioni e dei piè di pagina di pagina (PDF)</a></li>
+<li><a class="nav-link" href="#immergersi-nel-modello-di-lattice-di-oxthesis-pdf"><span class="header-section-number">5.14</span> immergersi nel modello di lattice di Oxthesis (PDF)</a></li>
+<li>
+<a class="nav-link" href="#personalizzazione-in-unaltra-universit%C3%A0"><span class="header-section-number">5.15</span> personalizzazione in un’altra università</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#il-percorso-minimo"><span class="header-section-number">5.15.1</span> il percorso minimo</a></li>
+<li><a class="nav-link" href="#sostituzione-dellintera-pagina-del-titolo-con-il-contenuto-richiesto"><span class="header-section-number">5.15.2</span> Sostituzione dell’intera pagina del titolo con il contenuto richiesto</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/NiccoloSalvini/cattolicadown/blob/master/05-extensions.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/NiccoloSalvini/cattolicadown/edit/master/05-extensions.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong><p><code>cattolicadown</code>:<br>
+An UCSC Thesis<br>
+Template for R Markdown</p></strong>" was written by Author Name. </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

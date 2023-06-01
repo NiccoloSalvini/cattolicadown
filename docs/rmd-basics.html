@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>2 R Markdown basics | cattolicadown: An UCSC Thesis Template for R Markdown</title>
 <meta name="author" content="Author Name">
-<meta name="generator" content="bookdown 0.27 with bs4_book()">
+<meta name="generator" content="bookdown 0.29 with bs4_book()">
 <meta property="og:title" content="2 R Markdown basics | cattolicadown: An UCSC Thesis Template for R Markdown">
 <meta property="og:type" content="book">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2 R Markdown basics | cattolicadown: An UCSC Thesis Template for R Markdown">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script async defer src="https://hypothes.is/embed.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -73,8 +73,8 @@ Template for R Markdown</p></a>
 <li><a class="" href="come-si-usa.html"><span class="header-section-number">1</span> Come si usa?</a></li>
 <li><a class="active" href="rmd-basics.html"><span class="header-section-number">2</span> R Markdown basics</a></li>
 <li><a class="" href="cites-and-refs.html"><span class="header-section-number">3</span> Citazioni, referenze incrociate, e collaborazione</a></li>
-<li><a class="" href="tables.html"><span class="header-section-number">4</span> Tables</a></li>
-<li><a class="" href="customisations-and-extensions.html"><span class="header-section-number">5</span> Customisations and extensions</a></li>
+<li><a class="" href="tables.html"><span class="header-section-number">4</span> Tabelle</a></li>
+<li><a class="" href="customizzazioni-ed-estensioni.html"><span class="header-section-number">5</span> Customizzazioni ed estensioni</a></li>
 <li><a class="" href="risoluzione-dei-problemi.html"><span class="header-section-number">6</span> Risoluzione dei problemi</a></li>
 <li><a class="" href="conclusioni.html">Conclusioni</a></li>
 <li class="book-part">Appendix</li>
@@ -235,7 +235,7 @@ Le violette sono blu.</p>
 </h3>
 <ul>
 <li>
-<a href="https://www.google.com">Questo è un collegamento ipertestuale</a> creato scrivendo il testo che vuoi trasformare in un collegamento cliccabile tra <code>[parentesi quadre seguite da a](https://hyperlink-in-parentheses)</code>
+<a href="https://www.google.com">Questo è un collegamento ipertestuale</a> a google creato scrivendo il testo che vuoi trasformare in un collegamento cliccabile tra <code>[parentesi quadre seguite da a](https://hyperlink-in-parentheses)</code>
 </li>
 </ul>
 </div>
@@ -345,7 +345,7 @@ Figure 2.2: UCSC logo
 <span><span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
 <span>  <span class="va">rotate180</span> <span class="op">&lt;-</span> <span class="st">"style='transform:rotate(180deg);'"</span></span>
 <span><span class="op">}</span></span></code></pre></div>
-<p>Quindi puoi fare riferimento a quella variabile come il valore di <code>out.extra</code> per ruotare le immagini, come in Figura <a href="#fig:catto-logo-roated"><strong>??</strong></a>.</p>
+<p>Quindi puoi fare riferimento a quella variabile come il valore di <code>out.extra</code> per ruotare le immagini, come in Figura <a href="rmd-basics.html#fig:catto-logo-rotated">2.3</a>.</p>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:catto-logo-rotated"></span>
 <img src="figures/sample-content/cattolica-logo.png" alt="UCSC logo, rotated" width="50%" style="transform:rotate(180deg);"><p class="caption">
@@ -354,9 +354,9 @@ Figure 2.3: UCSC logo, rotated
 </div>
 </div>
 </div>
-<div id="comprese-le-trame" class="section level3" number="2.1.18">
+<div id="mettere-i-grafici" class="section level3" number="2.1.18">
 <h3>
-<span class="header-section-number">2.1.18</span> Comprese le trame<a class="anchor" aria-label="anchor" href="#comprese-le-trame"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.1.18</span> Mettere i grafici<a class="anchor" aria-label="anchor" href="#mettere-i-grafici"><i class="fas fa-link"></i></a>
 </h3>
 <p>Allo stesso modo, i blocchi di codice vengono utilizzati per includere grafici generati dinamicamente.
 Usi il codice ordinario in R o in altri linguaggi - La figura <a href="rmd-basics.html#fig:cars-plot">2.4</a> mostra un grafico del set di dati <code>cars</code> delle distanze di arresto per le auto a varie velocità (questo set di dati è integrato in <strong>R</strong> ).</p>
@@ -371,20 +371,20 @@ Usi il codice ordinario in R o in altri linguaggi - La figura <a href="rmd-basic
 Figure 2.4: A ggplot of car stuff
 </p>
 </div>
-<p>Sotto il cappelo, il grafico sono incluse nel tuo documento allo stesso modo delle immagini: quando costruisci il libro o lavori a maglia un capitolo, la trama viene generata automaticamente dal tuo codice, salvata come immagine, quindi inclusa nel documento di output.</p>
+<p>In automatico il grafico viene incluse nel tuo documento, così come le immagini. Questo succede tutte le volte che costruisci i.e. buildi il libro (bookdown <code><a href="https://pkgs.rstudio.com/bookdown/reference/serve_book.html">bookdown::serve_book()</a></code>) o fai knit i.e.<code><a href="https://rdrr.io/pkg/knitr/man/knit.html">knitr::knit</a></code> un capitolo, i plots vengono generati automaticamente a partire dal tuo codice, poi salvati come immagini, quindi inclusi nel documento di output.</p>
 </div>
-<div id="tabelle-comprese" class="section level3" number="2.1.19">
+<div id="tabelle" class="section level3" number="2.1.19">
 <h3>
-<span class="header-section-number">2.1.19</span> Tabelle comprese<a class="anchor" aria-label="anchor" href="#tabelle-comprese"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.1.19</span> Tabelle<a class="anchor" aria-label="anchor" href="#tabelle"><i class="fas fa-link"></i></a>
 </h3>
 <p>Le tabelle sono solitamente incluse con la funzione <code>kable</code> del pacchetto <code>knitr</code>.</p>
-<p>La tabella <a href="#tab:cars-table"><strong>??</strong></a> mostra le prime righe dei dati delle auto: leggi i tuoi dati, quindi usa questo approccio per generare automaticamente tabelle.</p>
+<p>La tabella <a href="#tab:cars-table"><strong>??</strong></a> mostra le prime righe dei dati del dataset <code>mtcars</code>.</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">cars</span> <span class="op">%&gt;%</span> </span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
 <span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"A knitr kable table"</span><span class="op">)</span></span></code></pre></div>
 <ul>
-<li>Gotcha: quando si utilizza <a href="https://www.rdocumentation.org/packages/knitr/versions/1.21/topics/kable"><code>kable</code></a>, i sottotitoli sono impostati all’interno della funzione <code>kable</code>
+<li>Gotchas: quando si utilizza <a href="https://www.rdocumentation.org/packages/knitr/versions/1.21/topics/kable"><code>kable</code></a>, i sottotitoli sono impostati all’interno della funzione <code>kable</code>
 </li>
 <li>Il pacchetto <code>kable</code> viene spesso utilizzato con il pacchetto <a href="https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html"><code>kableExtra</code></a>
 </li>
@@ -394,7 +394,7 @@ Figure 2.4: A ggplot of car stuff
 <h3>
 <span class="header-section-number">2.1.20</span> Controllo del posizionamento<a class="anchor" aria-label="anchor" href="#controllo-del-posizionamento"><i class="fas fa-link"></i></a>
 </h3>
-<p>Una cosa che potrebbe essere fastidiosa è il modo in cui <em>R Markdown</em> gestisce i “fluttuanti” come tabelle e figure.
+<p>Una cosa che potrebbe essere fastidiosa è il modo in cui <em>R Markdown</em> gestisce i “fluttuanti” come tabelle e figure. Li chiamo fluttuanti perchè prendo a prestito la notazione LaTeX che li chiama proprio così.
 Nel tuo output PDF, LaTeX cercherà di trovare il posto migliore per mettere il tuo oggetto in base al testo che lo circonda e finché non hai davvero finito di scrivere dovresti semplicemente lasciarlo dove si trova.</p>
 <p>In generale, dovresti consentire a LaTeX di farlo, ma se hai davvero <em>veramente</em> bisogno di una figura da posizionare dove inserisci nel documento, puoi fare in modo che LaTeX tenti di farlo con l’opzione chunk <code>fig.pos=" H"</code>, come in Figura <a href="rmd-basics.html#fig:cattolica-logo-controlled">2.5</a>:</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
@@ -405,7 +405,7 @@ Nel tuo output PDF, LaTeX cercherà di trovare il posto migliore per mettere il 
 Figure 2.5: An UCSC logo that LaTeX will try to place at this position in the text
 </p>
 </div>
-<p>Come sa chiunque abbia provato a giocare manualmente con il posizionamento di figure in un documento di Word, questo può avere molti effetti collaterali con spaziatura extra su altre pagine, ecc.
+<p>Come sa chiunque abbia provato a giocare manualmente con il posizionamento di figure in un documento di Word, questo può avere effetti collaterali tipo spaziatura extra su altre pagine, ecc.
 Pertanto, generalmente non è una buona idea farlo - fallo solo quando hai davvero bisogno di assicurarti che un’immagine segua direttamente sotto il testo dove ti riferisci ad essa (in questo documento, dovevo farlo per Figure @ref( fig:latex-font-sizing) nella sezione <a href="tables.html#max-power">4.1.4</a>).
 Per maggiori dettagli, leggi la sezione pertinente del <a href="https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html">R Markdown Cookbook</a>.</p>
 </div>
@@ -426,11 +426,11 @@ Ad esempio, potremmo assegnare il numero di righe nel dataset <code>cars</code> 
 <p>Che genererebbe:<br>
 “Nel set di dati <code>cars</code>, abbiamo osservazioni 50.”</p>
 </div>
-<div id="codice-eseguibile-in-lingue-diverse-da-r" class="section level2" number="2.3">
+<div id="codice-eseguibile-in-linguaggi-diversi-da-r" class="section level2" number="2.3">
 <h2>
-<span class="header-section-number">2.3</span> Codice eseguibile in lingue diverse da R<a class="anchor" aria-label="anchor" href="#codice-eseguibile-in-lingue-diverse-da-r"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.3</span> Codice eseguibile in linguaggi diversi da R<a class="anchor" aria-label="anchor" href="#codice-eseguibile-in-linguaggi-diversi-da-r"><i class="fas fa-link"></i></a>
 </h2>
-<p>Se desideri utilizzare linguaggi diversi da R, come Python, Julia C++ o SQL, consulta <a href="https://bookdown.org/yihui/rmarkdown-cookbook/other-%20lingue.html">la sezione pertinente del <em>R Markdown Cookbook</em></a></p>
+<p>Se desideri utilizzare linguaggi diversi da R, come Python, Julia C++ o SQL, consulta <a href="https://bookdown.org/yihui/rmarkdown-cookbook/other-%20lingue.html">la sezione pertinente del <em>R Markdown Cookbook</em></a>.</p>
 
 </div>
 </div>
@@ -461,13 +461,13 @@ Ad esempio, potremmo assegnare il numero di righe nel dataset <code>cars</code> 
 <li><a class="nav-link" href="#matematica-sintassi"><span class="header-section-number">2.1.15</span> Matematica (sintassi)</a></li>
 <li><a class="nav-link" href="#pezzi-di-configurazione-configurazione-immagini-grafici"><span class="header-section-number">2.1.16</span> Pezzi di configurazione: configurazione, immagini, grafici</a></li>
 <li><a class="nav-link" href="#comprese-le-immagini"><span class="header-section-number">2.1.17</span> Comprese le immagini</a></li>
-<li><a class="nav-link" href="#comprese-le-trame"><span class="header-section-number">2.1.18</span> Comprese le trame</a></li>
-<li><a class="nav-link" href="#tabelle-comprese"><span class="header-section-number">2.1.19</span> Tabelle comprese</a></li>
+<li><a class="nav-link" href="#mettere-i-grafici"><span class="header-section-number">2.1.18</span> Mettere i grafici</a></li>
+<li><a class="nav-link" href="#tabelle"><span class="header-section-number">2.1.19</span> Tabelle</a></li>
 <li><a class="nav-link" href="#controllo-del-posizionamento"><span class="header-section-number">2.1.20</span> Controllo del posizionamento</a></li>
 </ul>
 </li>
 <li><a class="nav-link" href="#codice-in-linea-eseguibile"><span class="header-section-number">2.2</span> Codice in linea eseguibile</a></li>
-<li><a class="nav-link" href="#codice-eseguibile-in-lingue-diverse-da-r"><span class="header-section-number">2.3</span> Codice eseguibile in lingue diverse da R</a></li>
+<li><a class="nav-link" href="#codice-eseguibile-in-linguaggi-diversi-da-r"><span class="header-section-number">2.3</span> Codice eseguibile in linguaggi diversi da R</a></li>
 </ul>
 
       <div class="book-extra">
@@ -500,7 +500,7 @@ Template for R Markdown</p></strong>" was written by Author Name. </p>
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
