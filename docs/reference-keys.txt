@@ -37,7 +37,7 @@ interruzioni-linea
 collegamenti-ipertestuali
 note-a-piè-di-pagina
 commenti
-matematica-sintassi
+matematica-e-formule-sintassi
 pezzi-di-configurazione-configurazione-immagini-grafici
 comprese-le-immagini
 mettere-i-grafici
@@ -69,7 +69,7 @@ cache-di-chunk-e-la-cartella-_bookdown_files
 fronte-pagina
 accorcia-le-didascalie-mostrate-nellelenco-delle-figure-pdf
 abbrevia-le-didascalie-visualizzate-nellelenco-delle-tabelle-pdf
-accorciare-lintestazione-di-corsa-pdf
+accorciare-lintestazione-pdf
 capitoli-non-numerati
 capitoli-iniziali-con-citazioni-pdf
 evidenziazione-delle-correzioni-html-e-pdf
@@ -77,12 +77,12 @@ correzioni-in-linea-brevi
 blocchi-di-materiale-aggiunto-o-modificato
 che-interrompe-le-correzioni-da-essere-evidenziate
 applicare-il-colore-del-carattere-personalizzato-ed-evidenziazione-a-testo-html-e-pdf
-aggiunta-di-un-secondo-astratto-pdf
-incluso-un-altro-documento-nella-tesi---incorporare-un-documento-pdf-embed--pdf
-incluso-un-altro-documento-nella-tesi---r-documento-figlio-markdown-embed--rmd
+aggiunta-di-un-secondo-estratto-pdf
+embed-pdf
+embed-rmd
 un-documento-di-esempio-in-unaltra-cartella
-passaggio-1-includere-la-carta-come-documento-figlio
-passaggio-2-rendi-compatibili-percorsi-di-file
+passaggio-1-includere-il-documento-come-child
+passaggio-2-rendi-compatibili-i-percorsi-dei-files
 nota-sulloutput-html
 passaggio-3-assicurarsi-che-i-livelli-di-intestazione-siano-corretti
 passaggio-4.-assicurarsi-che-le-larghezze-della-figura-siano-corrette
@@ -99,5 +99,6 @@ il-percorso-minimo
 sostituzione-dellintera-pagina-del-titolo-con-il-contenuto-richiesto
 risoluzione-dei-problemi
 errore-impossibile-creare-la-bibliografia-tramite-biber
+error-package-or-namespace-load-failed-for-kableextra
 prima-appendice
 la-seconda-appendice-per-ischerzo

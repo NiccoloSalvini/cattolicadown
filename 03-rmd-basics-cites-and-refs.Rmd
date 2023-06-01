@@ -144,13 +144,16 @@ Si noti che è necessario eseguire l'escape della barra inversa con un'altra bar
 ## Scrittura collaborativa
 
 Le migliori pratiche per la collaborazione e il rilevamento delle modifiche quando si utilizza R Markdown sono ancora una questione aperta.
-Nel post del blog [**One year to dissertate**](https://livefreeordichotomize.com/2018/09/14/one-year-to-dissertate/) di Lucy D'Agostino, che consiglio vivamente, l'autorice unisce i file .Rmd a un documento di Word, quindi utilizza il pacchetto "googledrive" R per inviarlo a Google Drive per commenti / revisioni dai coautori, quindi incorpora i suggerimenti di Google Drive *a mano* nel sorgente .Rmd File.
-Questo approccio è un po' goffo e ci sono discussioni in corso tra gli sviluppatori di _R Markdown_ su quale sia il modo migliore per gestire la scrittura collaborativa (vedi [numero #1463](https://github.com/rstudio/rmarkdown/issues/1463) su GitHub, dove [CriticMarkup](http://criticmarkup.com) è tra i suggerimenti).
+Nel post del blog [**One year to dissertate**](https://livefreeordichotomize.com/2018/09/14/one-year-to-dissertate/) di Lucy D'Agostino, che consiglio vivamente, l'autrice unisce i file .Rmd a un documento di Word, quindi utilizza il pacchetto "googledrive" R per inviarlo a Google Drive per commenti / revisioni dai coautori (quelli che saranno i tuoi supervisor/s o correlatore/i), quindi incorpora i suggerimenti di Google Drive *a mano* nella sorgente .Rmd File.
+Personalmente lo trovo molto laborioso e ci sono discussioni in corso tra gli sviluppatori di _R Markdown_ su quale sia il modo migliore per gestire la scrittura collaborativa (vedi [numero #1463](https://github.com/rstudio/rmarkdown/issues/1463) su GitHub, dove [CriticMarkup](http://criticmarkup.com) è tra i suggerimenti).
 
+
+Un'altra opzione è usare `hypothes`, cioè lo stesso strumento che sto utilizzando per ricevere feedbacks su questa documentazione. In questa maniera potrai semplicemente inviare il link al tuo correlatore e quello appunterà direttamente sul browser quello che non gli piace. Da lì puoi tu rimettere mano ai files .Rmd sorgente e rigeneare i documenti (sito + pdf di output).
 Per ora, questa è una domanda aperta nella comunità degli utenti di R Markdown.
-Spesso lavoro a un formato che può essere facilmente importato in Google Docs per i commenti, quindi esamino le revisioni suggerite e le reinserisco manualmente nei file di origine .Rmd.
-Per gli articoli, a volte carico una bozza quasi definitiva su [Overleaf](https://www.overleaf.com/), quindi apporto in modo collaborativo le modifiche finali al file LaTeX lì.
-Sospetto che qualche grande soluzione sarà sviluppata in un futuro non troppo lontano, probabilmente dal team di RStudio.
+Un'altra soluzione è esportare in un formato compatibile con Google Docs per i commenti, quindi esamini le revisioni suggerite e le reinserisci manualmente nei file di origine .Rmd.
+
+Per gli articoli scientifici, a volte carico una bozza quasi definitiva su [Overleaf](https://www.overleaf.com/), quindi apporto in modo collaborativo le modifiche finali al file LaTeX lì. La collaborazione è solo col Premium però.
+Sospetto che qualche soluzione sarà sviluppata in un futuro non troppo lontano, probabilmente dal team di Posit (Qaurto).
 
 ## Risorse addizionali
 

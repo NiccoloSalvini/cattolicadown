@@ -42,9 +42,9 @@
   </style>
 <link rel="stylesheet" href="templates/bs4_style.css">
 <link rel="stylesheet" href="templates/corrections.css">
-<meta name="description" content="Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi di cattolicadown.  5.1 cache di chunk e la cartella ** _bookdown_files** Se si...">
-<meta property="og:description" content="Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi di cattolicadown.  5.1 cache di chunk e la cartella ** _bookdown_files** Se si...">
-<meta name="twitter:description" content="Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi di cattolicadown.  5.1 cache di chunk e la cartella ** _bookdown_files** Se si...">
+<meta name="description" content="Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi scritta con cattolicadown.  5.1 cache di chunk e la cartella _bookdown_files...">
+<meta property="og:description" content="Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi scritta con cattolicadown.  5.1 cache di chunk e la cartella _bookdown_files...">
+<meta name="twitter:description" content="Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi scritta con cattolicadown.  5.1 cache di chunk e la cartella _bookdown_files...">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -94,14 +94,14 @@ Template for R Markdown</p></a>
 </h1>
 <p><!-- this will include a mini table of contents--></p>
 <!-- LaTeX normally does not indent the first line after a heading - however, it does so after the mini table of contents. You can manually tell it not to with \noindent -->
-<p>Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi di <code>cattolicadown</code>.</p>
+<p>Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi scritta con <code>cattolicadown</code>.</p>
 <div id="cache-di-chunk-e-la-cartella-_bookdown_files" class="section level2" number="5.1">
 <h2>
-<span class="header-section-number">5.1</span> cache di chunk e la cartella ** _bookdown_files**<a class="anchor" aria-label="anchor" href="#cache-di-chunk-e-la-cartella-_bookdown_files"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.1</span> cache di chunk e la cartella <strong>_bookdown_files</strong><a class="anchor" aria-label="anchor" href="#cache-di-chunk-e-la-cartella-_bookdown_files"><i class="fas fa-link"></i></a>
 </h2>
-<p>Se si imposta <code>cache = true</code> in un blocco di codice, per memorizzare nella memorizzazione la memorizzazione dei risultati se richiede tempo per eseguire, consultare [la documentazione R Markdown] (<a href="https://bookdown.org/yihui/rmarkdown-cookbook/cache" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/cache</a>. HTML), quindi i file per la memorizzazione nella cache sono archiviati nella cartella **_bookdown_files**.</p>
-<p>Se non usi la memorizzazione nella cache e desideri semplicemente avere la cartella ** _ bookdown_files ** eliminata dopo il completamento del processo di build, impostare <code>abilit_cache = false</code> in <strong>index.rmd </strong>.</p>
-<p>Cioè, il tuo yaml dovrebbe assomigliare a questo:</p>
+<p>Se si imposta <code>cache = true</code> in un blocco di codice si memorizzano i risultati dell’output del chunk. Quindi se il calcolo richiede tempo è utile. Consulta <a href="https://bookdown.org/yihui/rmarkdown-cookbook/cache.%20HTML">la documentazione R Markdown</a>. I files memorizzati così finiscono in una cache appunto nella cartella **_bookdown_files**.</p>
+<p>Se non usi la cache e desideri semplicemente eliminare la cartella <strong>_ bookdown_files </strong> dopo il completamento del processo di build, impostare <code>allow_cache = false</code> in <strong>index.rmd </strong>.</p>
+<p>Cioè, a questo punto il tuo yaml dovrebbe assomigliare a questo:</p>
 <div class="sourceCode" id="cb29"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb29-1"><a href="customizzazioni-ed-estensioni.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">knit</span><span class="kw">:</span><span class="at"> (function(input, ...) {</span></span>
 <span id="cb29-2"><a href="customizzazioni-ed-estensioni.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="at">    thesis_formats &lt;- "pdf";</span></span>
 <span id="cb29-3"><a href="customizzazioni-ed-estensioni.html#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
@@ -118,7 +118,7 @@ Template for R Markdown</p></a>
 <span class="header-section-number">5.2.1</span> Accorcia le didascalie mostrate nell’elenco delle figure (PDF)<a class="anchor" aria-label="anchor" href="#accorcia-le-didascalie-mostrate-nellelenco-delle-figure-pdf"><i class="fas fa-link"></i></a>
 </h3>
 <p>Potresti voler che il tuo elenco di cifre (che segue il contenuto del contenuto) abbia descrizioni di figure più brevi (o semplicemente diverse) rispetto alle didascalie alla figura effettiva.</p>
-<p>Fallo usando l’opzione chunk <code>Fig.scap</code> (‘didascalia breve’), ad esempio<code>{R Captain-Image, fig.cap = "Una didascalia molto lunga e descrittiva (e potenzialmente noiosa) che non si adatta alla Elenco delle figure, ma aiuta il lettore a capire cosa comunica la figura. ", fig.scap =" Una descrizione concisa per l'elenco delle figure "</code></p>
+<p>Fallo usando l’opzione chunk <code>fig.scap</code> (‘didascalia breve’), ad esempio<code>{R Captain-Image, fig.cap = "Una didascalia molto lunga e descrittiva (e potenzialmente noiosa) che non si adatta alla Elenco delle figure, ma aiuta il lettore a capire cosa comunica la figura. ", fig.scap =" Una descrizione concisa per l'elenco delle figure "</code></p>
 </div>
 <div id="abbrevia-le-didascalie-visualizzate-nellelenco-delle-tabelle-pdf" class="section level3" number="5.2.2">
 <h3>
@@ -135,9 +135,9 @@ Template for R Markdown</p></a>
 <span>              caption.short <span class="op">=</span> <span class="st">"Una descrizione concisa per l'elenco delle tabelle"</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
-<div id="accorciare-lintestazione-di-corsa-pdf" class="section level2" number="5.3">
+<div id="accorciare-lintestazione-pdf" class="section level2" number="5.3">
 <h2>
-<span class="header-section-number">5.3</span> Accorciare l’intestazione di corsa (PDF)<a class="anchor" aria-label="anchor" href="#accorciare-lintestazione-di-corsa-pdf"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.3</span> Accorciare l’intestazione (PDF)<a class="anchor" aria-label="anchor" href="#accorciare-lintestazione-pdf"><i class="fas fa-link"></i></a>
 </h2>
 <p>Potresti voler l’intestazione nel mezzo di un capitolo (ovvero l’intestazione che mostra il titolo all’interno dell’attuale capitolo nella parte superiore della pagina) è più breve (o semplicemente diversa) rispetto al titolo del capitolo effettivo.</p>
 <p>Fallo aggiungendo il comando latex <code>\ capitolo {la mia versione più corta}</code> dopo il titolo del capitolo.</p>
@@ -149,7 +149,7 @@ Template for R Markdown</p></a>
 <h2>
 <span class="header-section-number">5.4</span> Capitoli non numerati<a class="anchor" aria-label="anchor" href="#capitoli-non-numerati"><i class="fas fa-link"></i></a>
 </h2>
-<p>Per rendere i capitoli non numerati (normalmente lo fai per l’introduzione e/o la conclusione), far seguire l’intestazione del capitolo a <code>{-}</code>, ad es. <code># Introduzione {-}</code>.</p>
+<p>Per rendere i capitoli non numerati (normalmente lo fai per l’introduzione e/o la conclusione), far seguire l’intestazione del capitolo a <code>{-}</code>, ad es. così: <code># Introduzione {-}</code>.</p>
 <p>Quando lo fai, ricordati che devi anche mettere questi due comandi in LaTeX:</p>
 <div class="sourceCode" id="cb32"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb32-1"><a href="customizzazioni-ed-estensioni.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\adjustmtc</span></span>
 <span id="cb32-2"><a href="customizzazioni-ed-estensioni.html#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\markboth</span>{The Name of Your Unnumbered Chapter}{}</span></code></pre></div>
@@ -210,9 +210,9 @@ più grandi</strong> con lo stesso colore blu.
 <h3>
 <span class="header-section-number">5.6.3</span> che interrompe le correzioni da essere evidenziate<a class="anchor" aria-label="anchor" href="#che-interrompe-le-correzioni-da-essere-evidenziate"><i class="fas fa-link"></i></a>
 </h3>
-<p>Per disattivare l’evidenziazione della correzione, vai all’intestazione YAML di ** INDICE.RMD **, quindi:</p>
+<p>Per disattivare l’evidenziazione della correzione, vai all’intestazione YAML di <strong>index.Rmd </strong>, quindi:</p>
 <ul>
-<li>Output PDF: Imposta <code>Correzioni: False</code><br>
+<li>Output PDF: Imposta <code>corrections: false</code><br>
 </li>
 <li>output HTML: rimuovi o commenta <code>- modelli/corrections.css</code>
 </li>
@@ -223,47 +223,46 @@ più grandi</strong> con lo stesso colore blu.
 <h2>
 <span class="header-section-number">5.7</span> Applicare il colore del carattere personalizzato ed evidenziazione a testo (HTML e PDF)<a class="anchor" aria-label="anchor" href="#applicare-il-colore-del-carattere-personalizzato-ed-evidenziazione-a-testo-html-e-pdf"><i class="fas fa-link"></i></a>
 </h2>
-<p>Il filtro LUA che aggiunge la funzionalità per evidenziare le correzioni aggiunge altri due trucchi:
+<p>Il filtro LUA che aggiunge la funzionalità di evidenziare le correzioni aggiunge altri due trucchi:
 Puoi applicare la tua scelta di colore per evidenziare il testo o cambiare il colore del carattere.
 La sintassi è la seguente:</p>
 <blockquote>
-<p>Ecco <code>[qualche testo in posa evidenziazione] {evidenziazione =" rosa "}</code><br>
-Diventa: ecco [alcuni testi in evidenza rosa] {evidenziazione = “rosa”}.</p>
+<p>Ecco <code>[qualche testo da evidenziare] {highlight = "pink" }</code><br>
+Diventa: ecco [alcuni testi in evidenza rosa] {highlight = “pink”}.</p>
 </blockquote>
 <blockquote>
-<p><code>[Ecco un po 'di testo con font blu] {color =" blu "}</code><br>
-Diventa: [Ecco un po ’di testo con font blu] {color = “blu”}</p>
+<p><code>[Ecco un po 'di testo con font blu] {color = "blue" }</code><br>
+Diventa: [Ecco un po ’di testo con font blu] {color = “blue”}</p>
 </blockquote>
 <blockquote>
-<p>Finalmente — Mai e poi mai in realtà questo-<code>[Ecco un po 'di testo con evidenziazione nera e carattere giallo] {evidenziazione =" nero "color =" giallo "}</code><br>
-Diventa: [Ecco un po ’di testo con evidenziazione nera e carattere giallo] {evidenziazione = “nero” color = “giallo”}</p>
+<p>Finalmente — Mai e poi mai in realtà questo-<code>[Ecco un po 'di testo con evidenziazione nera e carattere giallo] {highlight = "black", color = "yellow"}</code><br>
+Diventa: [Ecco un po ’di testo da evidenziaziare in nero e con colore del carattere giallo] {highlight = “black” color = “yellow”}</p>
 </blockquote>
-<p>Il file ** Scripts_and_filters/Colour_and_highlight.lua ** implementa questo, se si desidera armeggiare con esso.
-Funziona con output PDF e HTML.</p>
+<p>Il file <strong>Scripts_and_filters/Colour_and_highlight.lua </strong> serve proprio a questo. Funziona sia con output PDF che HTML. Divertiti a modificarlo o ad aggiungerne altri!</p>
 </div>
-<div id="aggiunta-di-un-secondo-astratto-pdf" class="section level2" number="5.8">
+<div id="aggiunta-di-un-secondo-estratto-pdf" class="section level2" number="5.8">
 <h2>
-<span class="header-section-number">5.8</span> Aggiunta di un secondo astratto (PDF)<a class="anchor" aria-label="anchor" href="#aggiunta-di-un-secondo-astratto-pdf"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.8</span> Aggiunta di un secondo estratto (PDF)<a class="anchor" aria-label="anchor" href="#aggiunta-di-un-secondo-estratto-pdf"><i class="fas fa-link"></i></a>
 </h2>
-<p>Potresti aver bisogno di due abstract nella tua tesi, se ad es. Ho bisogno sia di un astratto in inglese che di qualche altra lingua.</p>
-<p>Puoi aggiungere un secondo abstract in ** index.rmd ** come: così:</p>
+<p>Potresti aver bisogno di due abstract nella tua tesi, se ad es. hai bisogno sia di un astratto in inglese che in un’altra lingua.</p>
+<p>Puoi aggiungere un secondo abstract in <strong>index.rmd </strong> come: così:</p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb33-1"><a href="customizzazioni-ed-estensioni.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">abstract-second-heading</span><span class="kw">:</span><span class="at"> </span><span class="st">"Resumé"</span></span>
 <span id="cb33-2"><a href="customizzazioni-ed-estensioni.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">abstract-second</span><span class="kw">:</span><span class="at"> </span><span class="st">"This is the second abstract, for example in beautiful French."</span><span class="at"> </span></span></code></pre></div>
 </div>
-<div id="incluso-un-altro-documento-nella-tesi---incorporare-un-documento-pdf-embed--pdf" class="section level2" number="5.9">
+<div id="embed-pdf" class="section level2" number="5.9">
 <h2>
-<span class="header-section-number">5.9</span> incluso un altro documento nella tesi - Incorporare un documento PDF {#embed -pdf}<a class="anchor" aria-label="anchor" href="#incluso-un-altro-documento-nella-tesi---incorporare-un-documento-pdf-embed--pdf"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.9</span> incluso un altro documento nella tesi - Incorporare un documento PDF<a class="anchor" aria-label="anchor" href="#embed-pdf"><i class="fas fa-link"></i></a>
 </h2>
-<p>Potresti voler incorporare documenti PDF esistenti nella tesi, ad esempio se il tuo dipartimento consente una tesi di stile “Portfolio” e devi includere una pubblicazione di composizione esistente come capitolo.</p>
-<p>Nell’output di GitBook, puoi semplicemente usare <code>Knitr :: Include_Graphics</code> e dovrebbe includere un PDF scorrevole (e scaricabile).
+<p>Potresti voler incorporare documenti PDF esistenti nella tesi, ad esempio se il tuo dipartimento consente una tesi in stile “portfolio” (cioè una raccolta di articoli) e devi includere una o più pubblicazioni.</p>
+<p>Nell’output di GitBook, puoi semplicemente usare <code><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">knitr::include_graphics</a></code> e dovrebbe includere un PDF scorrevole (e scaricabile).
 Probabilmente vorrai impostare le opzioni di chunk <code>out.width = '100%'</code> e <code>out.height = '1000px'</code>:</p>
 <div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"figures/sample-content/pdf_embed_example/Lyngs2020_FB.pdf"</span><span class="op">)</span></span></code></pre></div>
 <embed src="figures/sample-content/pdf_embed_example/Lyngs2020_FB.pdf" width="100%" height="1000px" type="application/pdf"></embed><p><br></p>
-<p>Nell’output in lattice, tuttavia, questo approccio può causare comportamenti strani.
-Pertanto, quando si crea la tesi su PDF, dividere il PDF in una sequenza alfanumericamente ordinata di ** file pdf ** a pagina singola ** (puoi farlo automaticamente con il pacchetto <code>pdftools</code>). È quindi possibile utilizzare il comando in lattice appropriato per inserirli, come mostrato di seguito (per brevità, nel contenuto di esempio di <code>Oxforddown</code> PDF stiamo includendo solo due pagine).
+<p>Nell’output in LaTeX, tuttavia, questo approccio può causare comportamenti strani.
+Pertanto, quando si crea la tesi su PDF, dividere il PDF in una sequenza alfanumericamente ordinata di <strong>file pdf </strong> a pagina singola, puoi farlo automaticamente con il pacchetto <code>pdftools</code>). È quindi possibile utilizzare il comando in LaTeX appropriato per inserirli, come mostrato di seguito (per brevità, nel contenuto di esempio di <code>cattolicadown</code> PDF stiamo includendo solo due pagine).
 <em>Si noti che l’opzione chunk <code>risultati = 'asis'</code> deve essere impostata.</em>
-È inoltre possibile rimuovere i margini dai file PDF, che puoi fare con Adobe Acrobat (versione a pagamento) e probabilmente altri software.</p>
+È inoltre possibile rimuovere i margini dai file PDF, che puoi fare con Adobe Acrobat (versione a pagamento) e probabilmente altri software open source online.</p>
 <div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages(pdftools)</span></span>
 <span><span class="co"># split PDF into pages stored in figures/sample-content/pdf_embed_example/split/</span></span>
@@ -282,26 +281,26 @@ Pertanto, quando si crea la tesi su PDF, dividere il PDF in una sequenza alfanum
 <span><span class="co"># end with a page break</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_c.html">str_c</a></span><span class="op">(</span><span class="st">"\\newpage \\begin{center} \\makebox[\\linewidth][c]{\\includegraphics[width="</span>, <span class="va">pdf_width</span>, <span class="st">"\\linewidth]{"</span>, <span class="va">pages</span>, <span class="st">"}} \\end{center}"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="incluso-un-altro-documento-nella-tesi---r-documento-figlio-markdown-embed--rmd" class="section level2" number="5.10">
+<div id="embed-rmd" class="section level2" number="5.10">
 <h2>
-<span class="header-section-number">5.10</span> incluso un altro documento nella tesi - r documento figlio markdown {#embed -rmd}<a class="anchor" aria-label="anchor" href="#incluso-un-altro-documento-nella-tesi---r-documento-figlio-markdown-embed--rmd"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.10</span> includere un altro documento nella tesi - documento Rmd dentro Rmd (child markdown)<a class="anchor" aria-label="anchor" href="#embed-rmd"><i class="fas fa-link"></i></a>
 </h2>
-<p>A volte vuoi includere un altro documento che stai attualmente scrivendo come capitolo della tua tesi.
-Sopra  <span class="citation">(<a href="#ref-ref" role="doc-biblioref"><strong>ref?</strong></a>)</span> (embed-pdf), abbiamo descritto il modo più semplice per farlo: includere l’altro documento come PDF.
-Tuttavia, in alcuni casi invece si desidera includere la sorgente di markdown R da questo documento e farlo compilare all’interno della tesi.
-Questo è un po ’più complicato, perché è necessario tenere traccia attenta dei percorsi dei file, ma è possibile tramite [incluso il documento di un bambino] (<a href="https://bookdown.org/yihui/rmarkdown-cookbook/child" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/child</a> -Document.html).
-Ci sono quattro passaggi principali:</p>
+<p>A volte vuoi poter includere un altro documento che stai attualmente scrivendo come capitolo della tua tesi.
+Sopra <a href="customizzazioni-ed-estensioni.html#embed-pdf">5.9</a>, abbiamo descritto il modo più semplice per farlo: includere l’altro documento come PDF nel PDF.
+Tuttavia, in alcuni casi invece si desidera includere la sorgente R markdown, quindi ancora un altro ducumento .Rmd in questo documento e farlo compilare all’interno della tesi.
+Questo è un po ’più complicato, perché è necessario tenere traccia attenta dei percorsi dei file, ma è possibile tramite <a href="https://bookdown.org/yihui/rmarkdown-cookbook/child%20-Document.html">l’inclusiome del child document</a>.
+Sono quattro i passaggi principali:</p>
 <ol style="list-style-type: decimal">
-<li>Includi il documento di carta come bambino</li>
-<li>Rendi i percorsi di file compatibili con il lavoro a maglia l’articolo da solo, nonché quando include nella tesi</li>
-<li>Rendi corretti i livelli di intestazione</li>
-<li>Rendi corretti le larghezze della figura</li>
+<li>Includi il documento Markdown come child</li>
+<li>Rendi i percorsi di file compatibili col knit</li>
+<li>Rendi corretti i livelli di intestazione (armonizza le impostazioni di formattazione per scrittura)</li>
+<li>Rendi corretti le larghezze della figura (armonizza le impostazioni di formattazione per figure)</li>
 </ol>
 <div id="un-documento-di-esempio-in-unaltra-cartella" class="section level3" number="5.10.1">
 <h3>
 <span class="header-section-number">5.10.1</span> Un documento di esempio in un’altra cartella<a class="anchor" aria-label="anchor" href="#un-documento-di-esempio-in-unaltra-cartella"><i class="fas fa-link"></i></a>
 </h3>
-<p>Prendi questo semplice esempio (i file per questo sono in [questo repository github] (<a href="https://github.com/ulyngs/oxforddown-external-article" class="uri">https://github.com/ulyngs/oxforddown-external-article</a>)):</p>
+<p>Prendi questo esempio (i file per questo sono in <a href="https://github.com/ulyngs/oxforddown-external-article">questo repository github</a>):</p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb36-1"><a href="customizzazioni-ed-estensioni.html#cb36-1" aria-hidden="true" tabindex="-1"></a>|--paper_to_include</span>
 <span id="cb36-2"><a href="customizzazioni-ed-estensioni.html#cb36-2" aria-hidden="true" tabindex="-1"></a>|  |--my_paper.Rmd</span>
 <span id="cb36-3"><a href="customizzazioni-ed-estensioni.html#cb36-3" aria-hidden="true" tabindex="-1"></a>|  |--data</span>
@@ -310,41 +309,41 @@ Ci sono quattro passaggi principali:</p>
 <span id="cb36-6"><a href="customizzazioni-ed-estensioni.html#cb36-6" aria-hidden="true" tabindex="-1"></a>|  |  |--cat.jpg</span>
 <span id="cb36-7"><a href="customizzazioni-ed-estensioni.html#cb36-7" aria-hidden="true" tabindex="-1"></a>|</span>
 <span id="cb36-8"><a href="customizzazioni-ed-estensioni.html#cb36-8" aria-hidden="true" tabindex="-1"></a>|--thesis</span></code></pre></div>
-<p>Come suggerisce il grafico, hai un’altra cartella, ** Paper_to_include/** che vive nella stessa cartella contenente della cartella di tesi.
-Nella cartella ** paper_to_include <strong>, il file </strong> my_paper.rmd ** è dove scrivi la carta.
-In ** my_paper.rmd <strong>, hai letto in un file CSV che si trova nella sottocartella </strong> Data/Cats.csv ** e anche un’immagine della sottocartella ** Figures/Cat.jpg **.</p>
+<p>Come suggerisce il grafico, hai un’altra cartella, <strong>paper_to_include/</strong> che sta nella stessa cartella contenente la tesi.
+Nella cartella <strong>paper_to_include </strong>, il file <strong>my_paper.Rmd </strong> è quello da includere.
+In <strong>my_paper.Rmd </strong>, hai letto un file CSV che si trova nella sottocartella <strong>data/cats.csv </strong> e anche un’immagine della sottocartella <strong>figures/cat.jpg </strong>.</p>
 </div>
-<div id="passaggio-1-includere-la-carta-come-documento-figlio" class="section level3" number="5.10.2">
+<div id="passaggio-1-includere-il-documento-come-child" class="section level3" number="5.10.2">
 <h3>
-<span class="header-section-number">5.10.2</span> PASSAGGIO 1: includere la carta come documento figlio<a class="anchor" aria-label="anchor" href="#passaggio-1-includere-la-carta-come-documento-figlio"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.10.2</span> PASSAGGIO 1: includere il documento come child<a class="anchor" aria-label="anchor" href="#passaggio-1-includere-il-documento-come-child"><i class="fas fa-link"></i></a>
 </h3>
-<p>Nella cartella di tesi, crea un file RMD per il capitolo in cui si desidera includere un altro documento.
-Aggiungi uno o più blocchi di codice che includono i file di markdown r da quel documento come documenti figlio:</p>
+<p>Nella cartella di tesi, crea un file .Rmd per il capitolo in cui si desidera includere un altro documento.
+Aggiungi uno o più blocchi di codice che includono i file di .Rmd da quel documento come documenti figlio:</p>
 <div class="sourceCode" id="cb37"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb37-1"><a href="customizzazioni-ed-estensioni.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Including an external chapter </span></span>
 <span id="cb37-2"><a href="customizzazioni-ed-estensioni.html#cb37-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-3"><a href="customizzazioni-ed-estensioni.html#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="in">```{r child = "../paper_to_include/my_paper.Rmd"}</span></span>
 <span id="cb37-4"><a href="customizzazioni-ed-estensioni.html#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 </div>
-<div id="passaggio-2-rendi-compatibili-percorsi-di-file" class="section level3" number="5.10.3">
+<div id="passaggio-2-rendi-compatibili-i-percorsi-dei-files" class="section level3" number="5.10.3">
 <h3>
-<span class="header-section-number">5.10.3</span> Passaggio 2: Rendi compatibili percorsi di file<a class="anchor" aria-label="anchor" href="#passaggio-2-rendi-compatibili-percorsi-di-file"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.10.3</span> Passaggio 2: Rendi compatibili i percorsi dei files<a class="anchor" aria-label="anchor" href="#passaggio-2-rendi-compatibili-i-percorsi-dei-files"><i class="fas fa-link"></i></a>
 </h3>
-<p>Utilizzare [Parametri] (<a href="https://rmarkdown.studio.com/lesson-6.html" class="uri">https://rmarkdown.studio.com/lesson-6.html</a>) per regolare il percorso del file delle immagini in base ai valori impostati nell’intestazione YAML di un file di markdown R.
-In ** my_paper.rmd **, crea un parametro chiamato <code>altro_path</code> e impostalo su una stringa vuota:</p>
+<p>Utilizzare <a href="https://rmarkdown.studio.com/lesson-6.html">Parametri</a> per regolare il percorso del file delle immagini in base ai valori impostati nell’intestazione YAML di un file di markdown R.
+In <strong>my_paper.rmd </strong>, crea un parametro chiamato <code>other_path</code> e impostalo su una stringa vuota:</p>
 <div class="sourceCode" id="cb38"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb38-1"><a href="customizzazioni-ed-estensioni.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb38-2"><a href="customizzazioni-ed-estensioni.html#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"A fabulous article in a different folder"</span></span>
 <span id="cb38-3"><a href="customizzazioni-ed-estensioni.html#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">params</span><span class="kw">:</span></span>
 <span id="cb38-4"><a href="customizzazioni-ed-estensioni.html#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">other_path</span><span class="kw">:</span><span class="at"> </span><span class="st">""</span></span>
 <span id="cb38-5"><a href="customizzazioni-ed-estensioni.html#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
-<p>In ** my_paper.rmd **, mettilo all’inizio di FilePath quando leggi i dati o includi immagini:</p>
+<p>In <strong>my_paper.rmd </strong>, mettilo all’inizio di FilePath quando leggi i dati o includi immagini:</p>
 <div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/">knitr</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">cat_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_c.html">str_c</a></span><span class="op">(</span><span class="va">params</span><span class="op">$</span><span class="va">other_path</span>, <span class="st">"data/cats.csv"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_c.html">str_c</a></span><span class="op">(</span><span class="va">params</span><span class="op">$</span><span class="va">other_path</span>, <span class="st">"figures/cat.jpg"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p>Infine, nel file ** indice.rmd ** della cartella tesi, crea anche il parametro <code>Altro_Path</code>.
-Ma qui, impostalo su dove la cartella ** paper_to_include/** è relativa alla cartella di tesi:</p>
+<p>Infine, nel file <strong>index.rmd </strong> della cartella tesi, crea anche il parametro <code>other_path</code>.
+Ma qui, impostalo su dove la cartella <strong>paper_to_include/</strong> è relativa alla cartella di tesi:</p>
 <div class="sourceCode" id="cb40"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb40-1"><a href="customizzazioni-ed-estensioni.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">params</span><span class="kw">:</span></span>
 <span id="cb40-2"><a href="customizzazioni-ed-estensioni.html#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">other_path</span><span class="kw">:</span><span class="at"> </span><span class="st">"../paper_to_include/"</span></span></code></pre></div>
 </div>
@@ -352,16 +351,16 @@ Ma qui, impostalo su dove la cartella ** paper_to_include/** è relativa alla ca
 <h3>
 <span class="header-section-number">5.10.4</span> NOTA sull’output HTML<a class="anchor" aria-label="anchor" href="#nota-sulloutput-html"><i class="fas fa-link"></i></a>
 </h3>
-<p>Nota che se si desidera ospitare una versione HTML sulla tesi online, dovrai includere la grafica nel contenuto che ospiti online - Internet ovviamente non sarà in grado di vedere i filepath che si riferiscono a cose in un’altra cartella il tuo computer!</p>
+<p>Nota che se si desidera ospitare una versione HTML della tesi online, dovrai mettere i contenuti figli offline (cioè in una cartella in lcoale) pubblicati online (tipo in un Drive) - Internet ovviamente non sarà in grado di vedere i filepath che si riferiscono a cose in un’altra cartella il tuo computer!</p>
 </div>
 <div id="passaggio-3-assicurarsi-che-i-livelli-di-intestazione-siano-corretti" class="section level3" number="5.10.5">
 <h3>
 <span class="header-section-number">5.10.5</span> Passaggio 3: assicurarsi che i livelli di intestazione siano corretti<a class="anchor" aria-label="anchor" href="#passaggio-3-assicurarsi-che-i-livelli-di-intestazione-siano-corretti"><i class="fas fa-link"></i></a>
 </h3>
-<p>A meno che il documento che desideri includere non sia anche scritto come libro, probabilmente i livelli di intestazione saranno fuori.
+<p>A meno che il documento che desideri includere non sia scritto come un libro, probabilmente i livelli di intestazione saranno fuori dalle righe.
 Cioè, le intestazioni di livello 1 (# alcune intestazioni) che usi per le sezioni principali nell’altra carta si trasformano in titoli di accompagnatore se incluse nella tesi.</p>
-<p>Per evitare questo, prima <em>increment tutti i livelli di intestazione di uno in ** paper_to_include/my_paper.rmd ** </em> (# qualche intestazione -&gt; # # Qualche intestazione).
-Quindi in ** paper_to_include/** Crea un [filtro Lua] (<a href="https://bookdown.org/yihui/rmarkdown-cookbook/lua-fiterters.html#lua-filters" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/lua-fiterters.html#lua-filters</a>) che riduce i livelli di intestazione di uno: creare un file di testo , salvalo come ** ridotto_header_level.lua ** e dargli il contenuto di seguito.</p>
+<p>Per evitare questo, prima <em>increment tutti i livelli di intestazione di uno in <strong>paper_to_include/my_paper.rmd </strong> </em> (# qualche intestazione -&gt; # # Qualche intestazione).
+Quindi in <strong>paper_to_include/</strong> Crea un [filtro Lua] (<a href="https://bookdown.org/yihui/rmarkdown-cookbook/lua-fiterters.html#lua-filters" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/lua-fiterters.html#lua-filters</a>) che riduce i livelli di intestazione di uno: creare un file di testo , salvalo come ** ridotto_header_level.lua ** e dargli il contenuto di seguito.</p>
 <div class="sourceCode" id="cb41"><pre class="sourceCode lua"><code class="sourceCode lua"><span id="cb41-1"><a href="customizzazioni-ed-estensioni.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> Header<span class="op">(</span>el<span class="op">)</span></span>
 <span id="cb41-2"><a href="customizzazioni-ed-estensioni.html#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">(</span>el<span class="op">.</span>level <span class="op">&lt;=</span> <span class="dv">1</span><span class="op">)</span> <span class="cf">then</span></span>
 <span id="cb41-3"><a href="customizzazioni-ed-estensioni.html#cb41-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">error</span><span class="op">(</span><span class="st">"I don't know how to decrease the level of h1"</span><span class="op">)</span></span>
@@ -369,7 +368,7 @@ Quindi in ** paper_to_include/** Crea un [filtro Lua] (<a href="https://bookdown
 <span id="cb41-5"><a href="customizzazioni-ed-estensioni.html#cb41-5" aria-hidden="true" tabindex="-1"></a>  el<span class="op">.</span>level <span class="op">=</span> el<span class="op">.</span>level <span class="op">-</span> <span class="dv">1</span></span>
 <span id="cb41-6"><a href="customizzazioni-ed-estensioni.html#cb41-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> el</span>
 <span id="cb41-7"><a href="customizzazioni-ed-estensioni.html#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div>
-<p>Nell’intestazione Yaml di ** Paper_to_include/my_paper.rmd **, usa questo filtro:</p>
+<p>Nell’intestazione Yaml di <strong>paper_to_include/my_paper.rmd </strong>, usa questo filtro:</p>
 <div class="sourceCode" id="cb42"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb42-1"><a href="customizzazioni-ed-estensioni.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb42-2"><a href="customizzazioni-ed-estensioni.html#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"A fabulous article in a different folder"</span></span>
 <span id="cb42-3"><a href="customizzazioni-ed-estensioni.html#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="fu">params</span><span class="kw">:</span></span>
@@ -388,7 +387,7 @@ Quindi in ** paper_to_include/** Crea un [filtro Lua] (<a href="https://bookdown
 <p>Potrebbe essere che le larghezze della tua figura quando si lavorano a maglia da sola e, quando lo includi nella tesi, debbano essere diversi.
 È possibile utilizzare nuovamente i parametri per impostare le larghezze delle figure.</p>
 <p>Immagina di volere che la larghezza della figura sia l’80% della larghezza della pagina quando si lavora da sola, ma al 100% nella tesi.
-In ** paper_to_include/my_paper.rmd **, prima aggiungi un parametro che potremmo chiamare <code>out_width</code> e impostarlo sulla stringa” 80%“:</p>
+In <strong>paper_to_include/my_paper.rmd </strong>, prima aggiungi un parametro che potremmo chiamare <code>out_width</code> e impostarlo sulla stringa” 80%“:</p>
 <div class="sourceCode" id="cb43"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb43-1"><a href="customizzazioni-ed-estensioni.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb43-2"><a href="customizzazioni-ed-estensioni.html#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"A fabulous article in a different folder"</span></span>
 <span id="cb43-3"><a href="customizzazioni-ed-estensioni.html#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="fu">params</span><span class="kw">:</span></span>
@@ -398,15 +397,15 @@ In ** paper_to_include/my_paper.rmd **, prima aggiungi un parametro che potremmo
 <span id="cb43-7"><a href="customizzazioni-ed-estensioni.html#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">pdf_document</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb43-8"><a href="customizzazioni-ed-estensioni.html#cb43-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">pandoc_args</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"--lua-filter=reduce_header_level.lua"</span><span class="kw">]</span></span>
 <span id="cb43-9"><a href="customizzazioni-ed-estensioni.html#cb43-9" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
-<p>Quindi, assicurati di utilizzare quel parametro per impostare la larghezza dell’uscita quando si includono le figure in ** paper_to_include/my_paper.rmd **:</p>
+<p>Quindi, assicurati di utilizzare quel parametro per impostare la larghezza dell’uscita quando si includono le figure in <strong>paper_to_include/my_paper.rmd </strong>:</p>
 <div class="sourceCode" id="cb44"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb44-1"><a href="customizzazioni-ed-estensioni.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, out.width=params$out_width, fig.cap="A very funny cat"}</span></span>
 <span id="cb44-2"><a href="customizzazioni-ed-estensioni.html#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="in">include_graphics(str_c(params$other_path, "figures/cat.jpg"))</span></span>
 <span id="cb44-3"><a href="customizzazioni-ed-estensioni.html#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
-<p>Infine, crea il parametro <code>out_width</code> nella tua tesi ’** indice.rmd ** File:</p>
+<p>Infine, stabilisci il parametro <code>out_width</code> per tua tesi ’<strong>index.rmd </strong> File:</p>
 <div class="sourceCode" id="cb45"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb45-1"><a href="customizzazioni-ed-estensioni.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">params</span><span class="kw">:</span></span>
 <span id="cb45-2"><a href="customizzazioni-ed-estensioni.html#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">other_path</span><span class="kw">:</span><span class="at"> </span><span class="st">"../paper_to_include/"</span></span>
 <span id="cb45-3"><a href="customizzazioni-ed-estensioni.html#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">out_width</span><span class="kw">:</span><span class="at"> </span><span class="st">"80%"</span></span></code></pre></div>
-<p>Ora, la larghezza di output della tua cifra sarà dell’80% quando si è a maglia il tuo documento da solo e al 100% quando lo fa a lavorare come documento per bambini della tesi.</p>
+<p>Ora, la larghezza di output della tuo documento child sarà dell’80%.</p>
 </div>
 </div>
 <div id="customising-citations" class="section level2" number="5.11">
@@ -417,7 +416,7 @@ In ** paper_to_include/my_paper.rmd **, prima aggiungi un parametro che potremmo
 <h3>
 <span class="header-section-number">5.11.1</span> Utilizzo di un file .csl con pandoc<a class="anchor" aria-label="anchor" href="#utilizzo-di-un-file-.csl-con-pandoc"><i class="fas fa-link"></i></a>
 </h3>
-<p>Vedere la sezione <a href="#citazione-aspetto"><strong>??</strong></a>.</p>
+<p>Vedere la sezione <a href="cites-and-refs.html#citation-appearance">3.1.1</a>.</p>
 <p>L’unico svantaggio di lasciare che pandoc gestisca le citazioni è che (i) non supporta le bibliografie dei capitoli, (ii) se sei un veterano di LaTeX, potresti essere più a tuo agio con <code>bilatex</code> o <code>natbib</code>.</p>
 </div>
 <div id="bilatex-custom" class="section level3" number="5.11.2">
@@ -470,16 +469,16 @@ In ** paper_to_include/my_paper.rmd **, prima aggiungi un parametro che potremmo
 <h2>
 <span class="header-section-number">5.13</span> Personalizzazione delle intestazioni e dei piè di pagina di pagina (PDF)<a class="anchor" aria-label="anchor" href="#personalizzazione-delle-intestazioni-e-dei-pi%C3%A8-di-pagina-di-pagina-pdf"><i class="fas fa-link"></i></a>
 </h2>
-<p>Questo può ora essere fatto direttamente nell’intestazione YAML di ** Index.rmd <strong>.
-Se sei un esperto di lattice e hai bisogno di ulteriore personalizzazione che ciò che è attualmente fornito, è possibile modificare le sezioni pertinenti di </strong> modelli/template.tex ** - Il codice pertinente è sotto la linea che inizia <code>\ usepackage {FancyHdr}</code>.</p>
+<p>Questo può ora essere fatto direttamente nell’intestazione YAML di <strong>index.rmd </strong>.
+Se sei un esperto di lattice e hai bisogno di ulteriore personalizzazione che ciò che è attualmente fornito, è possibile modificare le sezioni pertinenti di <strong>models/template.tex </strong> - Il codice pertinente è sotto la linea che inizia <code>\usepackage{FancyHdr}</code>.</p>
 </div>
 <div id="immergersi-nel-modello-di-lattice-di-oxthesis-pdf" class="section level2" number="5.14">
 <h2>
 <span class="header-section-number">5.14</span> immergersi nel modello di lattice di Oxthesis (PDF)<a class="anchor" aria-label="anchor" href="#immergersi-nel-modello-di-lattice-di-oxthesis-pdf"><i class="fas fa-link"></i></a>
 </h2>
-<p>Per le persone di mentalità in lattice, puoi leggere ** modelli/template.tex ** Per vedere quali opzioni di personalizzazione aggiuntive sono disponibili e ** modelli/ociamthesis.cls ** che fornisce la classe base.
-Ad esempio, ** Template.tex ** fornisce un’opzione per le comunicazioni di laurea Master, che modifica le informazioni identificative al numero del candidato e include un conteggio delle parole.
-Al momento della stesura, è necessario impostarlo direttamente in ** template.tex ** anziché dall’intestazione Yaml in ** INDICE.RMD **.</p>
+<p>Per le persone di mentalità in lattice, puoi leggere <strong>models/template.tex </strong> Per vedere quali opzioni di personalizzazione aggiuntive sono disponibili e <strong>models/ociamthesis.cls </strong> che fornisce la classe base.
+Ad esempio, <strong>template.tex </strong> fornisce un’opzione per le comunicazioni di laurea Master, che modifica le informazioni identificative al numero del candidato e include un conteggio delle parole.
+Al momento della stesura, è necessario impostarlo direttamente in <strong>template.tex </strong> anziché dall’intestazione Yaml in <strong>index.rmd </strong>.</p>
 </div>
 <div id="personalizzazione-in-unaltra-università" class="section level2" number="5.15">
 <h2>
@@ -489,16 +488,16 @@ Al momento della stesura, è necessario impostarlo direttamente in ** template.t
 <h3>
 <span class="header-section-number">5.15.1</span> il percorso minimo<a class="anchor" aria-label="anchor" href="#il-percorso-minimo"><i class="fas fa-link"></i></a>
 </h3>
-<p>Se la questione anteriore nel modello di lattice di Oxthesis è adatta alla tua università, personalizzare <code>Oxforddown</code> alle tue esigenze potrebbe essere semplice come mettere il nome della tua istituzione e il percorso per il logo della tua università in ** Index.rmd **:</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb54-1"><a href="customizzazioni-ed-estensioni.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">university</span><span class="kw">:</span><span class="at"> University of You</span></span>
+<p>Se la questione anteriore nel modello di LaTeX di Oxthesis è adatta alla tua università, personalizzare <code>cattolicadown</code> alle tue esigenze potrebbe essere semplice come mettere il nome della tua istituzione e il percorso per il logo della tua università in <strong>index.rmd </strong>:</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb54-1"><a href="customizzazioni-ed-estensioni.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">university</span><span class="kw">:</span><span class="at"> University of the street</span></span>
 <span id="cb54-2"><a href="customizzazioni-ed-estensioni.html#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="fu">university-logo</span><span class="kw">:</span><span class="at"> figures/your-logo-here.pdf</span></span></code></pre></div>
 </div>
 <div id="sostituzione-dellintera-pagina-del-titolo-con-il-contenuto-richiesto" class="section level3" number="5.15.2">
 <h3>
 <span class="header-section-number">5.15.2</span> Sostituzione dell’intera pagina del titolo con il contenuto richiesto<a class="anchor" aria-label="anchor" href="#sostituzione-dellintera-pagina-del-titolo-con-il-contenuto-richiesto"><i class="fas fa-link"></i></a>
 </h3>
-<p>Se hai un file <strong>. Tex </strong> con una questione frontale richiesta dalla tua università che si desidera sostituire del tutto la pagina del titolo del modello di oxthesis, puoi fornire un filepath a questo file in ** index.rmd **.
-Il contenuto di esempio di `Oxforddown include ed esempio di questo — Se usi lo yaml di seguito, la questione anteriore sarà così:</p>
+<p>Se hai un file <strong>.tex </strong> con una questione frontale richiesta dalla tua università che si desidera sostituire del tutto la pagina del titolo del modello di oxthesis, puoi fornire un filepath a questo file in <strong>index.rmd </strong>.
+Il contenuto di esempio di `cattolicadown include ed esempio di questo — Se usi lo yaml di seguito, la questione anteriore sarà così:</p>
 <div class="sourceCode" id="cb55"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb55-1"><a href="customizzazioni-ed-estensioni.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">alternative-title-page</span><span class="kw">:</span><span class="at"> front-and-back-matter/alt-title-page-example.tex</span></span></code></pre></div>
 <embed src="figures/sample-content/alt_frontmatter_example/alt-frontmatter-example.pdf" width="100%" height="1000px" type="application/pdf"></embed><p>
 </p>
@@ -514,14 +513,14 @@ Il contenuto di esempio di `Oxforddown include ed esempio di questo — Se usi l
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#customizzazioni-ed-estensioni"><span class="header-section-number">5</span> Customizzazioni ed estensioni</a></li>
-<li><a class="nav-link" href="#cache-di-chunk-e-la-cartella-_bookdown_files"><span class="header-section-number">5.1</span> cache di chunk e la cartella ** _bookdown_files**</a></li>
+<li><a class="nav-link" href="#cache-di-chunk-e-la-cartella-_bookdown_files"><span class="header-section-number">5.1</span> cache di chunk e la cartella _bookdown_files</a></li>
 <li>
 <a class="nav-link" href="#fronte-pagina"><span class="header-section-number">5.2</span> Fronte Pagina</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#accorcia-le-didascalie-mostrate-nellelenco-delle-figure-pdf"><span class="header-section-number">5.2.1</span> Accorcia le didascalie mostrate nell’elenco delle figure (PDF)</a></li>
 <li><a class="nav-link" href="#abbrevia-le-didascalie-visualizzate-nellelenco-delle-tabelle-pdf"><span class="header-section-number">5.2.2</span> abbrevia le didascalie visualizzate nell’elenco delle tabelle (PDF)</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#accorciare-lintestazione-di-corsa-pdf"><span class="header-section-number">5.3</span> Accorciare l’intestazione di corsa (PDF)</a></li>
+<li><a class="nav-link" href="#accorciare-lintestazione-pdf"><span class="header-section-number">5.3</span> Accorciare l’intestazione (PDF)</a></li>
 <li><a class="nav-link" href="#capitoli-non-numerati"><span class="header-section-number">5.4</span> Capitoli non numerati</a></li>
 <li><a class="nav-link" href="#capitoli-iniziali-con-citazioni-pdf"><span class="header-section-number">5.5</span> Capitoli iniziali con citazioni (PDF)</a></li>
 <li>
@@ -532,13 +531,13 @@ Il contenuto di esempio di `Oxforddown include ed esempio di questo — Se usi l
 </ul>
 </li>
 <li><a class="nav-link" href="#applicare-il-colore-del-carattere-personalizzato-ed-evidenziazione-a-testo-html-e-pdf"><span class="header-section-number">5.7</span> Applicare il colore del carattere personalizzato ed evidenziazione a testo (HTML e PDF)</a></li>
-<li><a class="nav-link" href="#aggiunta-di-un-secondo-astratto-pdf"><span class="header-section-number">5.8</span> Aggiunta di un secondo astratto (PDF)</a></li>
-<li><a class="nav-link" href="#incluso-un-altro-documento-nella-tesi---incorporare-un-documento-pdf-embed--pdf"><span class="header-section-number">5.9</span> incluso un altro documento nella tesi - Incorporare un documento PDF {#embed -pdf}</a></li>
+<li><a class="nav-link" href="#aggiunta-di-un-secondo-estratto-pdf"><span class="header-section-number">5.8</span> Aggiunta di un secondo estratto (PDF)</a></li>
+<li><a class="nav-link" href="#embed-pdf"><span class="header-section-number">5.9</span> incluso un altro documento nella tesi - Incorporare un documento PDF</a></li>
 <li>
-<a class="nav-link" href="#incluso-un-altro-documento-nella-tesi---r-documento-figlio-markdown-embed--rmd"><span class="header-section-number">5.10</span> incluso un altro documento nella tesi - r documento figlio markdown {#embed -rmd}</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#embed-rmd"><span class="header-section-number">5.10</span> includere un altro documento nella tesi - documento Rmd dentro Rmd (child markdown)</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#un-documento-di-esempio-in-unaltra-cartella"><span class="header-section-number">5.10.1</span> Un documento di esempio in un’altra cartella</a></li>
-<li><a class="nav-link" href="#passaggio-1-includere-la-carta-come-documento-figlio"><span class="header-section-number">5.10.2</span> PASSAGGIO 1: includere la carta come documento figlio</a></li>
-<li><a class="nav-link" href="#passaggio-2-rendi-compatibili-percorsi-di-file"><span class="header-section-number">5.10.3</span> Passaggio 2: Rendi compatibili percorsi di file</a></li>
+<li><a class="nav-link" href="#passaggio-1-includere-il-documento-come-child"><span class="header-section-number">5.10.2</span> PASSAGGIO 1: includere il documento come child</a></li>
+<li><a class="nav-link" href="#passaggio-2-rendi-compatibili-i-percorsi-dei-files"><span class="header-section-number">5.10.3</span> Passaggio 2: Rendi compatibili i percorsi dei files</a></li>
 <li><a class="nav-link" href="#nota-sulloutput-html"><span class="header-section-number">5.10.4</span> NOTA sull’output HTML</a></li>
 <li><a class="nav-link" href="#passaggio-3-assicurarsi-che-i-livelli-di-intestazione-siano-corretti"><span class="header-section-number">5.10.5</span> Passaggio 3: assicurarsi che i livelli di intestazione siano corretti</a></li>
 <li><a class="nav-link" href="#passaggio-4.-assicurarsi-che-le-larghezze-della-figura-siano-corrette"><span class="header-section-number">5.10.6</span> Passaggio 4. Assicurarsi che le larghezze della figura siano corrette</a></li>

@@ -20,15 +20,15 @@ There is grandeur in this view of life, with its several powers, having been ori
 
 <!-- LaTeX normally does not indent the first line after a heading - however, it does so after the mini table of contents. You can manually tell it not to with \noindent -->
 
-\noindent Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi di `cattolicadown`.
+\noindent Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi scritta con `cattolicadown`.
 
-## cache di chunk e la cartella **\ _bookdown\_files**
+## cache di chunk e la cartella **\_bookdown\_files**
 
-Se si imposta `cache = true` in un blocco di codice, per memorizzare nella memorizzazione la memorizzazione dei risultati se richiede tempo per eseguire, consultare [la documentazione R Markdown] (https://bookdown.org/yihui/rmarkdown-cookbook/cache. HTML), quindi i file per la memorizzazione nella cache sono archiviati nella cartella **_bookdown_files**.
+Se si imposta `cache = true` in un blocco di codice si memorizzano i risultati dell'output del chunk. Quindi se il calcolo richiede tempo è utile. Consulta [la documentazione R Markdown](https://bookdown.org/yihui/rmarkdown-cookbook/cache. HTML). I files memorizzati così finiscono in una cache appunto nella cartella **_bookdown_files**.
 
-Se non usi la memorizzazione nella cache e desideri semplicemente avere la cartella ** _ bookdown_files ** eliminata dopo il completamento del processo di build, impostare `abilit_cache = false` in **index.rmd **.
+Se non usi la cache e desideri semplicemente eliminare la cartella **_ bookdown_files **  dopo il completamento del processo di build, impostare `allow_cache = false` in **index.rmd **.
 
-Cioè, il tuo yaml dovrebbe assomigliare a questo:
+Cioè, a questo punto il tuo yaml dovrebbe assomigliare a questo:
 
 ```yaml
 knit: (function(input, ...) {
@@ -43,7 +43,7 @@ knit: (function(input, ...) {
 ### Accorcia le didascalie mostrate nell'elenco delle figure (PDF)
 Potresti voler che il tuo elenco di cifre (che segue il contenuto del contenuto) abbia descrizioni di figure più brevi (o semplicemente diverse) rispetto alle didascalie alla figura effettiva.
 
-Fallo usando l'opzione chunk `Fig.scap` ('didascalia breve'), ad esempio` {R Captain-Image, fig.cap = "Una didascalia molto lunga e descrittiva (e potenzialmente noiosa) che non si adatta alla Elenco delle figure, ma aiuta il lettore a capire cosa comunica la figura. ", fig.scap =" Una descrizione concisa per l'elenco delle figure "`
+Fallo usando l'opzione chunk `fig.scap` ('didascalia breve'), ad esempio` {R Captain-Image, fig.cap = "Una didascalia molto lunga e descrittiva (e potenzialmente noiosa) che non si adatta alla Elenco delle figure, ma aiuta il lettore a capire cosa comunica la figura. ", fig.scap =" Una descrizione concisa per l'elenco delle figure "`
 
 ### abbrevia le didascalie visualizzate nell'elenco delle tabelle (PDF)
 È possibile che l'elenco delle tabelle (che segue l'elenco delle figure nel frontespizio della tesi) abbia descrizioni delle tabelle più brevi (o semplicemente diverse) rispetto alle didascalie delle tabelle stesse.
@@ -58,7 +58,7 @@ knitr::kable(mtcars,
               caption.short = "Una descrizione concisa per l'elenco delle tabelle")
 ```
 
-## Accorciare l'intestazione di corsa (PDF)
+## Accorciare l'intestazione (PDF)
 Potresti voler l'intestazione nel mezzo di un capitolo (ovvero l'intestazione che mostra il titolo all'interno dell'attuale capitolo nella parte superiore della pagina) è più breve (o semplicemente diversa) rispetto al titolo del capitolo effettivo.
 
 Fallo aggiungendo il comando latex `\ capitolo {la mia versione più corta}` dopo il titolo del capitolo.
@@ -71,7 +71,7 @@ Ad esempio, il capitolo \ @ref (cittadini e refs) è semplicemente "cita e cross
 ```
 
 ## Capitoli non numerati
-Per rendere i capitoli non numerati (normalmente lo fai per l'introduzione e/o la conclusione), far seguire l'intestazione del capitolo a `{-}`, ad es. `# Introduzione {-}`.
+Per rendere i capitoli non numerati (normalmente lo fai per l'introduzione e/o la conclusione), far seguire l'intestazione del capitolo a `{-}`, ad es. così: `# Introduzione {-}`.
 
 Quando lo fai, ricordati che devi anche mettere questi due comandi in LaTeX:
 ```latex
@@ -121,44 +121,43 @@ Per blocchi più grandi, come questo paragrafo o addirittura intere figure, è p
 *Si noti che i blocchi di correzione non possono essere inclusi nell'output delle parole.*
 
 ### che interrompe le correzioni da essere evidenziate
-Per disattivare l'evidenziazione della correzione, vai all'intestazione YAML di ** INDICE.RMD **, quindi:
+Per disattivare l'evidenziazione della correzione, vai all'intestazione YAML di **index.Rmd **, quindi:
 
-- Output PDF: Imposta `Correzioni: False` \
+- Output PDF: Imposta `corrections: false` \
 - output HTML: rimuovi o commenta `- modelli/corrections.css`
 
 
 ## Applicare il colore del carattere personalizzato ed evidenziazione a testo (HTML e PDF)
-Il filtro LUA che aggiunge la funzionalità per evidenziare le correzioni aggiunge altri due trucchi:
+Il filtro LUA che aggiunge la funzionalità di evidenziare le correzioni aggiunge altri due trucchi:
 Puoi applicare la tua scelta di colore per evidenziare il testo o cambiare il colore del carattere.
 La sintassi è la seguente:
 
-> Ecco `[qualche testo in posa evidenziazione] {evidenziazione =" rosa "}` \
-> Diventa: ecco [alcuni testi in evidenza rosa] {evidenziazione = "rosa"}.
+> Ecco `[qualche testo da evidenziare] {highlight = "pink" }` \
+> Diventa: ecco [alcuni testi in evidenza rosa] {highlight = "pink"}.
 
-> `[Ecco un po 'di testo con font blu] {color =" blu "}` \
-> Diventa: [Ecco un po 'di testo con font blu] {color = "blu"}
+> `[Ecco un po 'di testo con font blu] {color = "blue" }` \
+> Diventa: [Ecco un po 'di testo con font blu] {color = "blue"}
 
-> Finalmente --- Mai e poi mai in realtà questo-`[Ecco un po 'di testo con evidenziazione nera e carattere giallo] {evidenziazione =" nero "color =" giallo "}` \
-> Diventa: [Ecco un po 'di testo con evidenziazione nera e carattere giallo] {evidenziazione = "nero" color = "giallo"}
+> Finalmente --- Mai e poi mai in realtà questo-`[Ecco un po 'di testo con evidenziazione nera e carattere giallo] {highlight = "black", color = "yellow"}` \
+> Diventa: [Ecco un po 'di testo da evidenziaziare in nero e con colore del carattere giallo] {highlight = "black" color = "yellow"}
 
-Il file ** Scripts_and_filters/Colour_and_highlight.lua ** implementa questo, se si desidera armeggiare con esso.
-Funziona con output PDF e HTML.
+Il file **Scripts_and_filters/Colour_and_highlight.lua ** serve proprio a questo. Funziona sia con output PDF che HTML. Divertiti a modificarlo o ad aggiungerne altri!
 
-## Aggiunta di un secondo astratto (PDF)
-Potresti aver bisogno di due abstract nella tua tesi, se ad es. Ho bisogno sia di un astratto in inglese che di qualche altra lingua.
+## Aggiunta di un secondo estratto (PDF)
+Potresti aver bisogno di due abstract nella tua tesi, se ad es. hai bisogno sia di un astratto in inglese che in un'altra lingua.
 
 
-Puoi aggiungere un secondo abstract in ** index.rmd ** come: così:
+Puoi aggiungere un secondo abstract in **index.rmd ** come: così:
 
 ``` yaml
 abstract-second-heading: "Resumé"
 abstract-second: "This is the second abstract, for example in beautiful French." 
 ```
-## incluso un altro documento nella tesi - Incorporare un documento PDF {#embed -pdf}
+## incluso un altro documento nella tesi - Incorporare un documento PDF {#embed-pdf}
 
-Potresti voler incorporare documenti PDF esistenti nella tesi, ad esempio se il tuo dipartimento consente una tesi di stile "Portfolio" e devi includere una pubblicazione di composizione esistente come capitolo.
+Potresti voler incorporare documenti PDF esistenti nella tesi, ad esempio se il tuo dipartimento consente una tesi in stile "portfolio" (cioè una raccolta di articoli) e devi includere una o più pubblicazioni.
 
-Nell'output di GitBook, puoi semplicemente usare `Knitr :: Include_Graphics` e dovrebbe includere un PDF scorrevole (e scaricabile).
+Nell'output di GitBook, puoi semplicemente usare `knitr::include_graphics` e dovrebbe includere un PDF scorrevole (e scaricabile).
 Probabilmente vorrai impostare le opzioni di chunk `out.width = '100%'` e `out.height = '1000px'`:
 
 ```{r, eval=knitr::is_html_output(), out.width='100%', out.height='1000px'}
@@ -166,10 +165,10 @@ knitr::include_graphics("figures/sample-content/pdf_embed_example/Lyngs2020_FB.p
 ```
 <br>
 
-Nell'output in lattice, tuttavia, questo approccio può causare comportamenti strani.
-Pertanto, quando si crea la tesi su PDF, dividere il PDF in una sequenza alfanumericamente ordinata di ** file pdf ** a pagina singola ** (puoi farlo automaticamente con il pacchetto `pdftools`). È quindi possibile utilizzare il comando in lattice appropriato per inserirli, come mostrato di seguito (per brevità, nel contenuto di esempio di `Oxforddown` PDF stiamo includendo solo due pagine).
+Nell'output in LaTeX, tuttavia, questo approccio può causare comportamenti strani.
+Pertanto, quando si crea la tesi su PDF, dividere il PDF in una sequenza alfanumericamente ordinata di **file pdf ** a pagina singola, puoi farlo automaticamente con il pacchetto `pdftools`). È quindi possibile utilizzare il comando in LaTeX appropriato per inserirli, come mostrato di seguito (per brevità, nel contenuto di esempio di `cattolicadown` PDF stiamo includendo solo due pagine).
 *Si noti che l'opzione chunk `risultati = 'asis'` deve essere impostata.*
-È inoltre possibile rimuovere i margini dai file PDF, che puoi fare con Adobe Acrobat (versione a pagamento) e probabilmente altri software.
+È inoltre possibile rimuovere i margini dai file PDF, che puoi fare con Adobe Acrobat (versione a pagamento) e probabilmente altri software open source online.
 
 ```{r, echo=TRUE, results='asis', eval=knitr::is_latex_output(), linewidth = 70}
 # install.packages(pdftools)
@@ -191,21 +190,21 @@ cat(stringr::str_c("\\newpage \\begin{center} \\makebox[\\linewidth][c]{\\includ
 
 ```
 
-## incluso un altro documento nella tesi - r documento figlio markdown {#embed -rmd}
+## includere un altro documento nella tesi - documento Rmd dentro Rmd (child markdown) {#embed-rmd}
 
-A volte vuoi includere un altro documento che stai attualmente scrivendo come capitolo della tua tesi.
-Sopra \ @ref (embed-pdf), abbiamo descritto il modo più semplice per farlo: includere l'altro documento come PDF.
-Tuttavia, in alcuni casi invece si desidera includere la sorgente di markdown R da questo documento e farlo compilare all'interno della tesi.
-Questo è un po 'più complicato, perché è necessario tenere traccia attenta dei percorsi dei file, ma è possibile tramite [incluso il documento di un bambino] (https://bookdown.org/yihui/rmarkdown-cookbook/child -Document.html).
-Ci sono quattro passaggi principali:
+A volte vuoi poter includere un altro documento che stai attualmente scrivendo come capitolo della tua tesi.
+Sopra \@ref(embed-pdf), abbiamo descritto il modo più semplice per farlo: includere l'altro documento come PDF nel PDF.
+Tuttavia, in alcuni casi invece si desidera includere la sorgente R markdown, quindi ancora un altro ducumento .Rmd in questo documento e farlo compilare all'interno della tesi.
+Questo è un po 'più complicato, perché è necessario tenere traccia attenta dei percorsi dei file, ma è possibile tramite [l'inclusiome del child document ](https://bookdown.org/yihui/rmarkdown-cookbook/child -Document.html).
+Sono quattro i passaggi principali:
 
-1. Includi il documento di carta come bambino
-1. Rendi i percorsi di file compatibili con il lavoro a maglia l'articolo da solo, nonché quando include nella tesi
-1. Rendi corretti i livelli di intestazione
-1. Rendi corretti le larghezze della figura
+1. Includi il documento Markdown come child
+1. Rendi i percorsi di file compatibili col knit
+1. Rendi corretti i livelli di intestazione (armonizza le impostazioni di formattazione per scrittura)
+1. Rendi corretti le larghezze della figura (armonizza le impostazioni di formattazione per figure)
 
 ### Un documento di esempio in un'altra cartella
-Prendi questo semplice esempio (i file per questo sono in [questo repository github] (https://github.com/ulyngs/oxforddown-external-article)):
+Prendi questo esempio (i file per questo sono in [questo repository github](https://github.com/ulyngs/oxforddown-external-article)):
 
 
 ```markdown 
@@ -219,13 +218,13 @@ Prendi questo semplice esempio (i file per questo sono in [questo repository git
 |--thesis
 ```
 
-Come suggerisce il grafico, hai un'altra cartella, ** Paper_to_include/** che vive nella stessa cartella contenente della cartella di tesi.
-Nella cartella ** paper_to_include **, il file ** my_paper.rmd ** è dove scrivi la carta.
-In ** my_paper.rmd **, hai letto in un file CSV che si trova nella sottocartella ** Data/Cats.csv ** e anche un'immagine della sottocartella ** Figures/Cat.jpg **.
+Come suggerisce il grafico, hai un'altra cartella, **paper_to_include/** che sta nella stessa cartella contenente la tesi.
+Nella cartella **paper_to_include **, il file **my_paper.Rmd ** è quello da includere.
+In **my_paper.Rmd **, hai letto un file CSV che si trova nella sottocartella **data/cats.csv ** e anche un'immagine della sottocartella **figures/cat.jpg **.
 
-### PASSAGGIO 1: includere la carta come documento figlio
-Nella cartella di tesi, crea un file RMD per il capitolo in cui si desidera includere un altro documento.
-Aggiungi uno o più blocchi di codice che includono i file di markdown r da quel documento come documenti figlio:
+### PASSAGGIO 1: includere il documento come child
+Nella cartella di tesi, crea un file .Rmd per il capitolo in cui si desidera includere un altro documento.
+Aggiungi uno o più blocchi di codice che includono i file di .Rmd da quel documento come documenti figlio:
 
 ````markdown
 # Including an external chapter 
@@ -234,9 +233,9 @@ Aggiungi uno o più blocchi di codice che includono i file di markdown r da quel
 ```
 ````
 
-### Passaggio 2: Rendi compatibili percorsi di file
-Utilizzare [Parametri] (https://rmarkdown.studio.com/lesson-6.html) per regolare il percorso del file delle immagini in base ai valori impostati nell'intestazione YAML di un file di markdown R.
-In ** my_paper.rmd **, crea un parametro chiamato `altro_path` e impostalo su una stringa vuota:
+### Passaggio 2: Rendi compatibili i percorsi dei files
+Utilizzare [Parametri](https://rmarkdown.studio.com/lesson-6.html) per regolare il percorso del file delle immagini in base ai valori impostati nell'intestazione YAML di un file di markdown R.
+In **my_paper.rmd **, crea un parametro chiamato `other_path` e impostalo su una stringa vuota:
 
 ```yaml
 ---
@@ -246,7 +245,7 @@ params:
 ---
 ```
 
-In ** my_paper.rmd **, mettilo all'inizio di FilePath quando leggi i dati o includi immagini:
+In **my_paper.rmd **, mettilo all'inizio di FilePath quando leggi i dati o includi immagini:
 
 ```r
 library(tidyverse)
@@ -255,8 +254,8 @@ library(knitr)
 cat_data <- read_csv(str_c(params$other_path, "data/cats.csv"))
 include_graphics(str_c(params$other_path, "figures/cat.jpg"))
 ```
-Infine, nel file ** indice.rmd ** della cartella tesi, crea anche il parametro `Altro_Path`.
-Ma qui, impostalo su dove la cartella ** paper_to_include/** è relativa alla cartella di tesi:
+Infine, nel file **index.rmd ** della cartella tesi, crea anche il parametro `other_path`.
+Ma qui, impostalo su dove la cartella **paper_to_include/** è relativa alla cartella di tesi:
 
 ```yaml
 params:
@@ -264,15 +263,15 @@ params:
 ```
 
 ### NOTA sull'output HTML
-Nota che se si desidera ospitare una versione HTML sulla tesi online, dovrai includere la grafica nel contenuto che ospiti online - Internet ovviamente non sarà in grado di vedere i filepath che si riferiscono a cose in un'altra cartella il tuo computer!
+Nota che se si desidera ospitare una versione HTML della tesi online, dovrai mettere i contenuti figli offline (cioè in una cartella in lcoale) pubblicati online (tipo in un Drive) - Internet ovviamente non sarà in grado di vedere i filepath che si riferiscono a cose in un'altra cartella il tuo computer!
 
 
 ### Passaggio 3: assicurarsi che i livelli di intestazione siano corretti
-A meno che il documento che desideri includere non sia anche scritto come libro, probabilmente i livelli di intestazione saranno fuori.
+A meno che il documento che desideri includere non sia scritto come un libro, probabilmente i livelli di intestazione saranno fuori dalle righe.
 Cioè, le intestazioni di livello 1 (\# alcune intestazioni) che usi per le sezioni principali nell'altra carta si trasformano in titoli di accompagnatore se incluse nella tesi.
 
-Per evitare questo, prima _increment tutti i livelli di intestazione di uno in ** paper_to_include/my_paper.rmd ** _ (\# qualche intestazione -> \# \# Qualche intestazione).
-Quindi in ** paper_to_include/** Crea un [filtro Lua] (https://bookdown.org/yihui/rmarkdown-cookbook/lua-fiterters.html#lua-filters) che riduce i livelli di intestazione di uno: creare un file di testo , salvalo come ** ridotto_header_level.lua ** e dargli il contenuto di seguito.
+Per evitare questo, prima _increment tutti i livelli di intestazione di uno in **paper_to_include/my_paper.rmd ** _ (\# qualche intestazione -> \# \# Qualche intestazione).
+Quindi in **paper_to_include/** Crea un [filtro Lua] (https://bookdown.org/yihui/rmarkdown-cookbook/lua-fiterters.html#lua-filters) che riduce i livelli di intestazione di uno: creare un file di testo , salvalo come ** ridotto_header_level.lua ** e dargli il contenuto di seguito.
 
 ```lua
 function Header(el)
@@ -284,7 +283,7 @@ function Header(el)
 end
 ```
 
-Nell'intestazione Yaml di ** Paper_to_include/my_paper.rmd **, usa questo filtro:
+Nell'intestazione Yaml di **paper_to_include/my_paper.rmd **, usa questo filtro:
 
 ```yaml
 ---
@@ -305,7 +304,7 @@ Potrebbe essere che le larghezze della tua figura quando si lavorano a maglia da
 È possibile utilizzare nuovamente i parametri per impostare le larghezze delle figure.
 
 Immagina di volere che la larghezza della figura sia l'80% della larghezza della pagina quando si lavora da sola, ma al 100% nella tesi.
-In ** paper_to_include/my_paper.rmd **, prima aggiungi un parametro che potremmo chiamare `out_width` e impostarlo sulla stringa" 80%":
+In **paper_to_include/my_paper.rmd **, prima aggiungi un parametro che potremmo chiamare `out_width` e impostarlo sulla stringa" 80%":
 
 ```yaml
 ---
@@ -319,7 +318,7 @@ output:
 ---
 ```
 
-Quindi, assicurati di utilizzare quel parametro per impostare la larghezza dell'uscita quando si includono le figure in ** paper_to_include/my_paper.rmd **:
+Quindi, assicurati di utilizzare quel parametro per impostare la larghezza dell'uscita quando si includono le figure in **paper_to_include/my_paper.rmd **:
 
 ````markdown
 `r ''````{r, out.width=params$out_width, fig.cap="A very funny cat"}
@@ -327,7 +326,7 @@ include_graphics(str_c(params$other_path, "figures/cat.jpg"))
 ```
 ````
 
-Infine, crea il parametro `out_width` nella tua tesi '** indice.rmd ** File:
+Infine, stabilisci il parametro `out_width` per tua tesi '**index.rmd ** File:
 
 ```yaml
 params:
@@ -335,14 +334,12 @@ params:
   out_width: "80%"
 ```
 
-Ora, la larghezza di output della tua cifra sarà dell'80% quando si è a maglia il tuo documento da solo e al 100% quando lo fa a lavorare come documento per bambini della tesi.
-
-
+Ora, la larghezza di output della tuo documento child sarà dell'80%.
 
 ## Personalizzazione di citazioni e riferimenti {#customising-citations}
 
 ### Utilizzo di un file .csl con pandoc
-Vedere la sezione \@ref(citazione-aspetto).
+Vedere la sezione \@ref(citation-appearance).
 
 L'unico svantaggio di lasciare che pandoc gestisca le citazioni è che (i) non supporta le bibliografie dei capitoli, (ii) se sei un veterano di LaTeX, potresti essere più a tuo agio con `bilatex` o `natbib`.
 
@@ -411,27 +408,27 @@ Per personalizzare l'aspetto delle citazioni, cambia il file **.bst** a cui punt
 ## Customizing the page headers and footers (PDF)
 ## Personalizzazione delle intestazioni e dei piè di pagina di pagina (PDF)
 
-Questo può ora essere fatto direttamente nell'intestazione YAML di ** Index.rmd **.
-Se sei un esperto di lattice e hai bisogno di ulteriore personalizzazione che ciò che è attualmente fornito, è possibile modificare le sezioni pertinenti di ** modelli/template.tex ** - Il codice pertinente è sotto la linea che inizia `\ usepackage {FancyHdr}`.
+Questo può ora essere fatto direttamente nell'intestazione YAML di **index.rmd **.
+Se sei un esperto di lattice e hai bisogno di ulteriore personalizzazione che ciò che è attualmente fornito, è possibile modificare le sezioni pertinenti di **models/template.tex ** - Il codice pertinente è sotto la linea che inizia `\usepackage{FancyHdr}`.
 
 ## immergersi nel modello di lattice di Oxthesis (PDF)
-Per le persone di mentalità in lattice, puoi leggere ** modelli/template.tex ** Per vedere quali opzioni di personalizzazione aggiuntive sono disponibili e ** modelli/ociamthesis.cls ** che fornisce la classe base.
-Ad esempio, ** Template.tex ** fornisce un'opzione per le comunicazioni di laurea Master, che modifica le informazioni identificative al numero del candidato e include un conteggio delle parole.
-Al momento della stesura, è necessario impostarlo direttamente in ** template.tex ** anziché dall'intestazione Yaml in ** INDICE.RMD **.
+Per le persone di mentalità in lattice, puoi leggere **models/template.tex ** Per vedere quali opzioni di personalizzazione aggiuntive sono disponibili e **models/ociamthesis.cls ** che fornisce la classe base.
+Ad esempio, **template.tex ** fornisce un'opzione per le comunicazioni di laurea Master, che modifica le informazioni identificative al numero del candidato e include un conteggio delle parole.
+Al momento della stesura, è necessario impostarlo direttamente in **template.tex ** anziché dall'intestazione Yaml in **index.rmd **.
 
 
 ## personalizzazione in un'altra università
 ### il percorso minimo
-Se la questione anteriore nel modello di lattice di Oxthesis è adatta alla tua università, personalizzare `Oxforddown` alle tue esigenze potrebbe essere semplice come mettere il nome della tua istituzione e il percorso per il logo della tua università in ** Index.rmd **:
+Se la questione anteriore nel modello di LaTeX di Oxthesis è adatta alla tua università, personalizzare `cattolicadown` alle tue esigenze potrebbe essere semplice come mettere il nome della tua istituzione e il percorso per il logo della tua università in **index.rmd **:
 
 ```yaml
-university: University of You
+university: University of the street
 university-logo: figures/your-logo-here.pdf
 ```
 
 ### Sostituzione dell'intera pagina del titolo con il contenuto richiesto
-Se hai un file **. Tex ** con una questione frontale richiesta dalla tua università che si desidera sostituire del tutto la pagina del titolo del modello di oxthesis, puoi fornire un filepath a questo file in ** index.rmd **.
-Il contenuto di esempio di `Oxforddown include ed esempio di questo --- Se usi lo yaml di seguito, la questione anteriore sarà così:
+Se hai un file **.tex ** con una questione frontale richiesta dalla tua università che si desidera sostituire del tutto la pagina del titolo del modello di oxthesis, puoi fornire un filepath a questo file in **index.rmd **.
+Il contenuto di esempio di `cattolicadown include ed esempio di questo --- Se usi lo yaml di seguito, la questione anteriore sarà così:
 
 ```yaml
 alternative-title-page: front-and-back-matter/alt-title-page-example.tex

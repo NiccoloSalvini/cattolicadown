@@ -134,11 +134,11 @@ Per scrivere commenti all'interno del testo che non verranno effettivamente incl
 
 <!-- È super utile usare i commenti! -->
 
-### Matematica (sintassi)
-La sintassi per scrivere matematica è stata rubata da LaTeX (il cui strumento di render MathJax). Per scrivere un'espressione matematica che verrà mostrata **inline**, racchiuderla tra i segni del dollaro.
+### Matematica e formule (sintassi)
+La sintassi per scrivere matematichese è stata rubata da LaTeX (il cui strumento di render è MathJax). Per scrivere un'espressione matematica che verrà mostrata **inline**, racchiudila tra i segni del dollaro.
   - Questo: \$A = \\pi*r^{2}\$ Diventa: $A = \pi*r^{2}$
   
-Per scrivere un'espressione matematica che verrà mostrata in un blocco, racchiuderla tra due segni di dollaro.\
+Per scrivere un'espressione matematica che verrà mostrata in un blocco, racchiudila tra due segni di dollaro.\
 
 Questo: `r ifelse(knitr::opts_knit$get('rmarkdown.pandoc.to') == 'latex', "\\$\\$A = \\\\pi*r^{2}\\$ \\$", "<span>&#36;</span>\\$A = \\\\pi*r^{2}\\$\\$")`
 

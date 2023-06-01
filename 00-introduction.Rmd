@@ -42,7 +42,7 @@ Anche se potresti non aver mai avuto problemi con Word in passato, è probabile 
 
 ## Chi lo dovrebbe usare? {.unnumbered}
 
-Chiunque abbia bisogno di utilizzare l'analisi dei dati, la matematica, le tabelle, molte cifre, riferimenti incrociati complessi o che si preoccupa solo della riproducibilità nella ricerca può trarre vantaggio dall'utilizzo di *R Markdown*.
+Chiunque abbia bisogno di utilizzare l'analisi dei dati, la matematica, le tabelle, molte cifre, riferimenti incrociati complessi o che si preoccupa della riproducibilità nella ricerca può trarre vantaggio dall'utilizzo di *R Markdown* e da questo template.
 Se stai lavorando in campi "più morbidi", la natura user-friendly della sintassi *Markdown* e la sua capacità di tenere traccia e includere facilmente le figure, generano automaticamente un sommario, indice, riferimenti, sommario, ecc. dovrebbe comunque renderlo di grande beneficio per il tuo progetto di tesi.
 
 Inoltre se deciderai di ospitare i files della tua tesi tramite *git* in una cartella *Github*, offrirai al tu* relatore/correlat* la possiblità di farti fare una PR (pull request) sul codice che genera sia il testo, sia le analisi, sia la formattazione. Questo permetterà ad entrambe di tenere traccia dei cambiamenti, dello sviluppo e limitare l'antipatia del ping-pong delle versioni, come "final.docx", "final-final.docx" e "davvero-ultimo-final.docx"

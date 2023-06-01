@@ -32,3 +32,12 @@ output:
   bookdown::pdf_book:
     citation_package: natbib
 ```
+
+
+## Error: package or namespace load failed for 'kableExtra':
+
+prova a reinstallare il pacchetto `kableExtra` con questo:
+
+```
+devtools::install_github("kupietz/kableExtra")
+```

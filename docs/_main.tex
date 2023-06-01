@@ -451,7 +451,7 @@ Anche se potresti non aver mai avuto problemi con Word in passato, è probabile 
 \section*{Chi lo dovrebbe usare?}\label{chi-lo-dovrebbe-usare}}
 \addcontentsline{toc}{section}{Chi lo dovrebbe usare?}
 
-Chiunque abbia bisogno di utilizzare l'analisi dei dati, la matematica, le tabelle, molte cifre, riferimenti incrociati complessi o che si preoccupa solo della riproducibilità nella ricerca può trarre vantaggio dall'utilizzo di \emph{R Markdown}.
+Chiunque abbia bisogno di utilizzare l'analisi dei dati, la matematica, le tabelle, molte cifre, riferimenti incrociati complessi o che si preoccupa della riproducibilità nella ricerca può trarre vantaggio dall'utilizzo di \emph{R Markdown} e da questo template.
 Se stai lavorando in campi ``più morbidi'', la natura user-friendly della sintassi \emph{Markdown} e la sua capacità di tenere traccia e includere facilmente le figure, generano automaticamente un sommario, indice, riferimenti, sommario, ecc. dovrebbe comunque renderlo di grande beneficio per il tuo progetto di tesi.
 
 Inoltre se deciderai di ospitare i files della tua tesi tramite \emph{git} in una cartella \emph{Github}, offrirai al tu* relatore/correlat* la possiblità di farti fare una PR (pull request) sul codice che genera sia il testo, sia le analisi, sia la formattazione. Questo permetterà ad entrambe di tenere traccia dei cambiamenti, dello sviluppo e limitare l'antipatia del ping-pong delle versioni, come ``final.docx'', ``final-final.docx'' e ``davvero-ultimo-final.docx''
@@ -958,13 +958,13 @@ Pertanto, questa riga inizia il proprio paragrafo.
 
 Per scrivere commenti all'interno del testo che non verranno effettivamente inclusi nell'output, utilizzare la stessa sintassi utilizzata per scrivere commenti in HTML. Cioè, \textless!-\/- questo non sarà incluso nell'output -\/-\textgreater.
 
-\hypertarget{matematica-sintassi}{%
-\subsection{Matematica (sintassi)}\label{matematica-sintassi}}
+\hypertarget{matematica-e-formule-sintassi}{%
+\subsection{Matematica e formule (sintassi)}\label{matematica-e-formule-sintassi}}
 
-La sintassi per scrivere matematica è stata rubata da LaTeX (il cui strumento di render MathJax). Per scrivere un'espressione matematica che verrà mostrata \textbf{inline}, racchiuderla tra i segni del dollaro.
+La sintassi per scrivere matematichese è stata rubata da LaTeX (il cui strumento di render è MathJax). Per scrivere un'espressione matematica che verrà mostrata \textbf{inline}, racchiudila tra i segni del dollaro.
 - Questo: \$A = \textbackslash pi*r\^{}\{2\}\$ Diventa: \(A = \pi*r^{2}\)
 
-Per scrivere un'espressione matematica che verrà mostrata in un blocco, racchiuderla tra due segni di dollaro.\\
+Per scrivere un'espressione matematica che verrà mostrata in un blocco, racchiudila tra due segni di dollaro.\\
 
 Questo: \$\$A = \textbackslash pi*r\^{}\{2\}\$ \$
 
@@ -1456,13 +1456,15 @@ Si noti che è necessario eseguire l'escape della barra inversa con un'altra bar
 \section{Scrittura collaborativa}\label{scrittura-collaborativa}}
 
 Le migliori pratiche per la collaborazione e il rilevamento delle modifiche quando si utilizza R Markdown sono ancora una questione aperta.
-Nel post del blog \href{https://livefreeordichotomize.com/2018/09/14/one-year-to-dissertate/}{\textbf{One year to dissertate}} di Lucy D'Agostino, che consiglio vivamente, l'autorice unisce i file .Rmd a un documento di Word, quindi utilizza il pacchetto ``googledrive'' R per inviarlo a Google Drive per commenti / revisioni dai coautori, quindi incorpora i suggerimenti di Google Drive \emph{a mano} nel sorgente .Rmd File.
-Questo approccio è un po' goffo e ci sono discussioni in corso tra gli sviluppatori di \emph{R Markdown} su quale sia il modo migliore per gestire la scrittura collaborativa (vedi \href{https://github.com/rstudio/rmarkdown/issues/1463}{numero \#1463} su GitHub, dove \href{http://criticmarkup.com}{CriticMarkup} è tra i suggerimenti).
+Nel post del blog \href{https://livefreeordichotomize.com/2018/09/14/one-year-to-dissertate/}{\textbf{One year to dissertate}} di Lucy D'Agostino, che consiglio vivamente, l'autrice unisce i file .Rmd a un documento di Word, quindi utilizza il pacchetto ``googledrive'' R per inviarlo a Google Drive per commenti / revisioni dai coautori (quelli che saranno i tuoi supervisor/s o correlatore/i), quindi incorpora i suggerimenti di Google Drive \emph{a mano} nella sorgente .Rmd File.
+Personalmente lo trovo molto laborioso e ci sono discussioni in corso tra gli sviluppatori di \emph{R Markdown} su quale sia il modo migliore per gestire la scrittura collaborativa (vedi \href{https://github.com/rstudio/rmarkdown/issues/1463}{numero \#1463} su GitHub, dove \href{http://criticmarkup.com}{CriticMarkup} è tra i suggerimenti).
 
+Un'altra opzione è usare \texttt{hypothes}, cioè lo stesso strumento che sto utilizzando per ricevere feedbacks su questa documentazione. In questa maniera potrai semplicemente inviare il link al tuo correlatore e quello appunterà direttamente sul browser quello che non gli piace. Da lì puoi tu rimettere mano ai files .Rmd sorgente e rigeneare i documenti (sito + pdf di output).
 Per ora, questa è una domanda aperta nella comunità degli utenti di R Markdown.
-Spesso lavoro a un formato che può essere facilmente importato in Google Docs per i commenti, quindi esamino le revisioni suggerite e le reinserisco manualmente nei file di origine .Rmd.
-Per gli articoli, a volte carico una bozza quasi definitiva su \href{https://www.overleaf.com/}{Overleaf}, quindi apporto in modo collaborativo le modifiche finali al file LaTeX lì.
-Sospetto che qualche grande soluzione sarà sviluppata in un futuro non troppo lontano, probabilmente dal team di RStudio.
+Un'altra soluzione è esportare in un formato compatibile con Google Docs per i commenti, quindi esamini le revisioni suggerite e le reinserisci manualmente nei file di origine .Rmd.
+
+Per gli articoli scientifici, a volte carico una bozza quasi definitiva su \href{https://www.overleaf.com/}{Overleaf}, quindi apporto in modo collaborativo le modifiche finali al file LaTeX lì. La collaborazione è solo col Premium però.
+Sospetto che qualche soluzione sarà sviluppata in un futuro non troppo lontano, probabilmente dal team di Posit (Qaurto).
 
 \hypertarget{risorse-addizionali}{%
 \section{Risorse addizionali}\label{risorse-addizionali}}
@@ -2148,16 +2150,16 @@ wonderful have been, and are being, evolved.
 
 \minitoc 
 
-\noindent Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi di \texttt{cattolicadown}.
+\noindent Questo capitolo descrive una serie di suggerimenti e trucchi aggiuntivi, nonché possibili personalizzazioni alla tesi scritta con \texttt{cattolicadown}.
 
 \hypertarget{cache-di-chunk-e-la-cartella-_bookdown_files}{%
-\section{cache di chunk e la cartella **~\_bookdown\_files**}\label{cache-di-chunk-e-la-cartella-_bookdown_files}}
+\section{\texorpdfstring{cache di chunk e la cartella \textbf{\_bookdown\_files}}{cache di chunk e la cartella \_bookdown\_files}}\label{cache-di-chunk-e-la-cartella-_bookdown_files}}
 
-Se si imposta \texttt{cache\ =\ true} in un blocco di codice, per memorizzare nella memorizzazione la memorizzazione dei risultati se richiede tempo per eseguire, consultare {[}la documentazione R Markdown{]} (\url{https://bookdown.org/yihui/rmarkdown-cookbook/cache}. HTML), quindi i file per la memorizzazione nella cache sono archiviati nella cartella **\_bookdown\_files**.
+Se si imposta \texttt{cache\ =\ true} in un blocco di codice si memorizzano i risultati dell'output del chunk. Quindi se il calcolo richiede tempo è utile. Consulta \href{https://bookdown.org/yihui/rmarkdown-cookbook/cache.\%20HTML}{la documentazione R Markdown}. I files memorizzati così finiscono in una cache appunto nella cartella **\_bookdown\_files**.
 
-Se non usi la memorizzazione nella cache e desideri semplicemente avere la cartella ** \_ bookdown\_files ** eliminata dopo il completamento del processo di build, impostare \texttt{abilit\_cache\ =\ false} in \textbf{index.rmd }.
+Se non usi la cache e desideri semplicemente eliminare la cartella \textbf{\_ bookdown\_files } dopo il completamento del processo di build, impostare \texttt{allow\_cache\ =\ false} in \textbf{index.rmd }.
 
-Cioè, il tuo yaml dovrebbe assomigliare a questo:
+Cioè, a questo punto il tuo yaml dovrebbe assomigliare a questo:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2178,7 +2180,7 @@ Cioè, il tuo yaml dovrebbe assomigliare a questo:
 
 Potresti voler che il tuo elenco di cifre (che segue il contenuto del contenuto) abbia descrizioni di figure più brevi (o semplicemente diverse) rispetto alle didascalie alla figura effettiva.
 
-Fallo usando l'opzione chunk \texttt{Fig.scap} (`didascalia breve'), ad esempio\texttt{\{R\ Captain-Image,\ fig.cap\ =\ "Una\ didascalia\ molto\ lunga\ e\ descrittiva\ (e\ potenzialmente\ noiosa)\ che\ non\ si\ adatta\ alla\ Elenco\ delle\ figure,\ ma\ aiuta\ il\ lettore\ a\ capire\ cosa\ comunica\ la\ figura.\ ",\ fig.scap\ ="\ Una\ descrizione\ concisa\ per\ l\textquotesingle{}elenco\ delle\ figure\ "}
+Fallo usando l'opzione chunk \texttt{fig.scap} (`didascalia breve'), ad esempio\texttt{\{R\ Captain-Image,\ fig.cap\ =\ "Una\ didascalia\ molto\ lunga\ e\ descrittiva\ (e\ potenzialmente\ noiosa)\ che\ non\ si\ adatta\ alla\ Elenco\ delle\ figure,\ ma\ aiuta\ il\ lettore\ a\ capire\ cosa\ comunica\ la\ figura.\ ",\ fig.scap\ ="\ Una\ descrizione\ concisa\ per\ l\textquotesingle{}elenco\ delle\ figure\ "}
 
 \hypertarget{abbrevia-le-didascalie-visualizzate-nellelenco-delle-tabelle-pdf}{%
 \subsection{abbrevia le didascalie visualizzate nell'elenco delle tabelle (PDF)}\label{abbrevia-le-didascalie-visualizzate-nellelenco-delle-tabelle-pdf}}
@@ -2198,8 +2200,8 @@ Se stai usando \texttt{knitr::kable} per generare una tabella, puoi farlo con l'
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{accorciare-lintestazione-di-corsa-pdf}{%
-\section{Accorciare l'intestazione di corsa (PDF)}\label{accorciare-lintestazione-di-corsa-pdf}}
+\hypertarget{accorciare-lintestazione-pdf}{%
+\section{Accorciare l'intestazione (PDF)}\label{accorciare-lintestazione-pdf}}
 
 Potresti voler l'intestazione nel mezzo di un capitolo (ovvero l'intestazione che mostra il titolo all'interno dell'attuale capitolo nella parte superiore della pagina) è più breve (o semplicemente diversa) rispetto al titolo del capitolo effettivo.
 
@@ -2217,7 +2219,7 @@ Ad esempio, il capitolo ~(\protect\hyperlink{ref-ref}{\textbf{ref?}}) (cittadini
 \hypertarget{capitoli-non-numerati}{%
 \section{Capitoli non numerati}\label{capitoli-non-numerati}}
 
-Per rendere i capitoli non numerati (normalmente lo fai per l'introduzione e/o la conclusione), far seguire l'intestazione del capitolo a \texttt{\{-\}}, ad es. \texttt{\#\ Introduzione\ \{-\}}.
+Per rendere i capitoli non numerati (normalmente lo fai per l'introduzione e/o la conclusione), far seguire l'intestazione del capitolo a \texttt{\{-\}}, ad es. così: \texttt{\#\ Introduzione\ \{-\}}.
 
 Quando lo fai, ricordati che devi anche mettere questi due comandi in LaTeX:
 
@@ -2289,12 +2291,12 @@ più grandi} con lo stesso colore blu.
 \hypertarget{che-interrompe-le-correzioni-da-essere-evidenziate}{%
 \subsection{che interrompe le correzioni da essere evidenziate}\label{che-interrompe-le-correzioni-da-essere-evidenziate}}
 
-Per disattivare l'evidenziazione della correzione, vai all'intestazione YAML di ** INDICE.RMD **, quindi:
+Per disattivare l'evidenziazione della correzione, vai all'intestazione YAML di \textbf{index.Rmd }, quindi:
 
 \begin{itemize}
 \tightlist
 \item
-  Output PDF: Imposta \texttt{Correzioni:\ False}\\
+  Output PDF: Imposta \texttt{corrections:\ false}\\
 \item
   output HTML: rimuovi o commenta \texttt{-\ modelli/corrections.css}
 \end{itemize}
@@ -2302,34 +2304,33 @@ Per disattivare l'evidenziazione della correzione, vai all'intestazione YAML di 
 \hypertarget{applicare-il-colore-del-carattere-personalizzato-ed-evidenziazione-a-testo-html-e-pdf}{%
 \section{Applicare il colore del carattere personalizzato ed evidenziazione a testo (HTML e PDF)}\label{applicare-il-colore-del-carattere-personalizzato-ed-evidenziazione-a-testo-html-e-pdf}}
 
-Il filtro LUA che aggiunge la funzionalità per evidenziare le correzioni aggiunge altri due trucchi:
+Il filtro LUA che aggiunge la funzionalità di evidenziare le correzioni aggiunge altri due trucchi:
 Puoi applicare la tua scelta di colore per evidenziare il testo o cambiare il colore del carattere.
 La sintassi è la seguente:
 
 \begin{quote}
-Ecco \texttt{{[}qualche\ testo\ in\ posa\ evidenziazione{]}\ \{evidenziazione\ ="\ rosa\ "\}}\\
-Diventa: ecco {[}alcuni testi in evidenza rosa{]} \{evidenziazione = ``rosa''\}.
+Ecco \texttt{{[}qualche\ testo\ da\ evidenziare{]}\ \{highlight\ =\ "pink"\ \}}\\
+Diventa: ecco {[}alcuni testi in evidenza rosa{]} \{highlight = ``pink''\}.
 \end{quote}
 
 \begin{quote}
-\texttt{{[}Ecco\ un\ po\ \textquotesingle{}di\ testo\ con\ font\ blu{]}\ \{color\ ="\ blu\ "\}}\strut \\
-Diventa: {[}Ecco un po 'di testo con font blu{]} \{color = ``blu''\}
+\texttt{{[}Ecco\ un\ po\ \textquotesingle{}di\ testo\ con\ font\ blu{]}\ \{color\ =\ "blue"\ \}}\strut \\
+Diventa: {[}Ecco un po 'di testo con font blu{]} \{color = ``blue''\}
 \end{quote}
 
 \begin{quote}
-Finalmente --- Mai e poi mai in realtà questo-\texttt{{[}Ecco\ un\ po\ \textquotesingle{}di\ testo\ con\ evidenziazione\ nera\ e\ carattere\ giallo{]}\ \{evidenziazione\ ="\ nero\ "color\ ="\ giallo\ "\}}\\
-Diventa: {[}Ecco un po 'di testo con evidenziazione nera e carattere giallo{]} \{evidenziazione = ``nero'' color = ``giallo''\}
+Finalmente --- Mai e poi mai in realtà questo-\texttt{{[}Ecco\ un\ po\ \textquotesingle{}di\ testo\ con\ evidenziazione\ nera\ e\ carattere\ giallo{]}\ \{highlight\ =\ "black",\ color\ =\ "yellow"\}}\\
+Diventa: {[}Ecco un po 'di testo da evidenziaziare in nero e con colore del carattere giallo{]} \{highlight = ``black'' color = ``yellow''\}
 \end{quote}
 
-Il file ** Scripts\_and\_filters/Colour\_and\_highlight.lua ** implementa questo, se si desidera armeggiare con esso.
-Funziona con output PDF e HTML.
+Il file \textbf{Scripts\_and\_filters/Colour\_and\_highlight.lua } serve proprio a questo. Funziona sia con output PDF che HTML. Divertiti a modificarlo o ad aggiungerne altri!
 
-\hypertarget{aggiunta-di-un-secondo-astratto-pdf}{%
-\section{Aggiunta di un secondo astratto (PDF)}\label{aggiunta-di-un-secondo-astratto-pdf}}
+\hypertarget{aggiunta-di-un-secondo-estratto-pdf}{%
+\section{Aggiunta di un secondo estratto (PDF)}\label{aggiunta-di-un-secondo-estratto-pdf}}
 
-Potresti aver bisogno di due abstract nella tua tesi, se ad es. Ho bisogno sia di un astratto in inglese che di qualche altra lingua.
+Potresti aver bisogno di due abstract nella tua tesi, se ad es. hai bisogno sia di un astratto in inglese che in un'altra lingua.
 
-Puoi aggiungere un secondo abstract in ** index.rmd ** come: così:
+Puoi aggiungere un secondo abstract in \textbf{index.rmd } come: così:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2338,12 +2339,12 @@ Puoi aggiungere un secondo abstract in ** index.rmd ** come: così:
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{incluso-un-altro-documento-nella-tesi---incorporare-un-documento-pdf-embed--pdf}{%
-\section{incluso un altro documento nella tesi - Incorporare un documento PDF \{\#embed -pdf\}}\label{incluso-un-altro-documento-nella-tesi---incorporare-un-documento-pdf-embed--pdf}}
+\hypertarget{embed-pdf}{%
+\section{incluso un altro documento nella tesi - Incorporare un documento PDF}\label{embed-pdf}}
 
-Potresti voler incorporare documenti PDF esistenti nella tesi, ad esempio se il tuo dipartimento consente una tesi di stile ``Portfolio'' e devi includere una pubblicazione di composizione esistente come capitolo.
+Potresti voler incorporare documenti PDF esistenti nella tesi, ad esempio se il tuo dipartimento consente una tesi in stile ``portfolio'' (cioè una raccolta di articoli) e devi includere una o più pubblicazioni.
 
-Nell'output di GitBook, puoi semplicemente usare \texttt{Knitr\ ::\ Include\_Graphics} e dovrebbe includere un PDF scorrevole (e scaricabile).
+Nell'output di GitBook, puoi semplicemente usare \texttt{knitr::include\_graphics} e dovrebbe includere un PDF scorrevole (e scaricabile).
 Probabilmente vorrai impostare le opzioni di chunk \texttt{out.width\ =\ \textquotesingle{}100\%\textquotesingle{}} e \texttt{out.height\ =\ \textquotesingle{}1000px\textquotesingle{}}:
 
 \begin{Shaded}
@@ -2352,10 +2353,10 @@ Probabilmente vorrai impostare le opzioni di chunk \texttt{out.width\ =\ \textqu
 \end{Highlighting}
 \end{Shaded}
 
-Nell'output in lattice, tuttavia, questo approccio può causare comportamenti strani.
-Pertanto, quando si crea la tesi su PDF, dividere il PDF in una sequenza alfanumericamente ordinata di ** file pdf ** a pagina singola ** (puoi farlo automaticamente con il pacchetto \texttt{pdftools}). È quindi possibile utilizzare il comando in lattice appropriato per inserirli, come mostrato di seguito (per brevità, nel contenuto di esempio di \texttt{Oxforddown} PDF stiamo includendo solo due pagine).
+Nell'output in LaTeX, tuttavia, questo approccio può causare comportamenti strani.
+Pertanto, quando si crea la tesi su PDF, dividere il PDF in una sequenza alfanumericamente ordinata di \textbf{file pdf } a pagina singola, puoi farlo automaticamente con il pacchetto \texttt{pdftools}). È quindi possibile utilizzare il comando in LaTeX appropriato per inserirli, come mostrato di seguito (per brevità, nel contenuto di esempio di \texttt{cattolicadown} PDF stiamo includendo solo due pagine).
 \emph{Si noti che l'opzione chunk \texttt{risultati\ =\ \textquotesingle{}asis\textquotesingle{}} deve essere impostata.}
-È inoltre possibile rimuovere i margini dai file PDF, che puoi fare con Adobe Acrobat (versione a pagamento) e probabilmente altri software.
+È inoltre possibile rimuovere i margini dai file PDF, che puoi fare con Adobe Acrobat (versione a pagamento) e probabilmente altri software open source online.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2385,32 +2386,32 @@ Pertanto, quando si crea la tesi su PDF, dividere il PDF in una sequenza alfanum
 
 \newpage \begin{center} \makebox[\linewidth][c]{\includegraphics[width=1.2\linewidth]{figures/sample-content/pdf_embed_example/split/_000000000000001.pdf}} \end{center} \newpage \begin{center} \makebox[\linewidth][c]{\includegraphics[width=1.2\linewidth]{figures/sample-content/pdf_embed_example/split/_000000000000011.pdf}} \end{center}
 
-\hypertarget{incluso-un-altro-documento-nella-tesi---r-documento-figlio-markdown-embed--rmd}{%
-\section{incluso un altro documento nella tesi - r documento figlio markdown \{\#embed -rmd\}}\label{incluso-un-altro-documento-nella-tesi---r-documento-figlio-markdown-embed--rmd}}
+\hypertarget{embed-rmd}{%
+\section{includere un altro documento nella tesi - documento Rmd dentro Rmd (child markdown)}\label{embed-rmd}}
 
-A volte vuoi includere un altro documento che stai attualmente scrivendo come capitolo della tua tesi.
-Sopra ~(\protect\hyperlink{ref-ref}{\textbf{ref?}}) (embed-pdf), abbiamo descritto il modo più semplice per farlo: includere l'altro documento come PDF.
-Tuttavia, in alcuni casi invece si desidera includere la sorgente di markdown R da questo documento e farlo compilare all'interno della tesi.
-Questo è un po 'più complicato, perché è necessario tenere traccia attenta dei percorsi dei file, ma è possibile tramite {[}incluso il documento di un bambino{]} (\url{https://bookdown.org/yihui/rmarkdown-cookbook/child} -Document.html).
-Ci sono quattro passaggi principali:
+A volte vuoi poter includere un altro documento che stai attualmente scrivendo come capitolo della tua tesi.
+Sopra \ref{embed-pdf}, abbiamo descritto il modo più semplice per farlo: includere l'altro documento come PDF nel PDF.
+Tuttavia, in alcuni casi invece si desidera includere la sorgente R markdown, quindi ancora un altro ducumento .Rmd in questo documento e farlo compilare all'interno della tesi.
+Questo è un po 'più complicato, perché è necessario tenere traccia attenta dei percorsi dei file, ma è possibile tramite \href{https://bookdown.org/yihui/rmarkdown-cookbook/child\%20-Document.html}{l'inclusiome del child document}.
+Sono quattro i passaggi principali:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Includi il documento di carta come bambino
+  Includi il documento Markdown come child
 \item
-  Rendi i percorsi di file compatibili con il lavoro a maglia l'articolo da solo, nonché quando include nella tesi
+  Rendi i percorsi di file compatibili col knit
 \item
-  Rendi corretti i livelli di intestazione
+  Rendi corretti i livelli di intestazione (armonizza le impostazioni di formattazione per scrittura)
 \item
-  Rendi corretti le larghezze della figura
+  Rendi corretti le larghezze della figura (armonizza le impostazioni di formattazione per figure)
 \end{enumerate}
 
 \hypertarget{un-documento-di-esempio-in-unaltra-cartella}{%
 \subsection{Un documento di esempio in un'altra cartella}\label{un-documento-di-esempio-in-unaltra-cartella}}
 
-Prendi questo semplice esempio (i file per questo sono in {[}questo repository github{]} (\url{https://github.com/ulyngs/oxforddown-external-article})):
+Prendi questo esempio (i file per questo sono in \href{https://github.com/ulyngs/oxforddown-external-article}{questo repository github}):
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2425,15 +2426,15 @@ Prendi questo semplice esempio (i file per questo sono in {[}questo repository g
 \end{Highlighting}
 \end{Shaded}
 
-Come suggerisce il grafico, hai un'altra cartella, ** Paper\_to\_include/** che vive nella stessa cartella contenente della cartella di tesi.
-Nella cartella ** paper\_to\_include \textbf{, il file } my\_paper.rmd ** è dove scrivi la carta.
-In ** my\_paper.rmd \textbf{, hai letto in un file CSV che si trova nella sottocartella } Data/Cats.csv ** e anche un'immagine della sottocartella ** Figures/Cat.jpg **.
+Come suggerisce il grafico, hai un'altra cartella, \textbf{paper\_to\_include/} che sta nella stessa cartella contenente la tesi.
+Nella cartella \textbf{paper\_to\_include }, il file \textbf{my\_paper.Rmd } è quello da includere.
+In \textbf{my\_paper.Rmd }, hai letto un file CSV che si trova nella sottocartella \textbf{data/cats.csv } e anche un'immagine della sottocartella \textbf{figures/cat.jpg }.
 
-\hypertarget{passaggio-1-includere-la-carta-come-documento-figlio}{%
-\subsection{PASSAGGIO 1: includere la carta come documento figlio}\label{passaggio-1-includere-la-carta-come-documento-figlio}}
+\hypertarget{passaggio-1-includere-il-documento-come-child}{%
+\subsection{PASSAGGIO 1: includere il documento come child}\label{passaggio-1-includere-il-documento-come-child}}
 
-Nella cartella di tesi, crea un file RMD per il capitolo in cui si desidera includere un altro documento.
-Aggiungi uno o più blocchi di codice che includono i file di markdown r da quel documento come documenti figlio:
+Nella cartella di tesi, crea un file .Rmd per il capitolo in cui si desidera includere un altro documento.
+Aggiungi uno o più blocchi di codice che includono i file di .Rmd da quel documento come documenti figlio:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2444,11 +2445,11 @@ Aggiungi uno o più blocchi di codice che includono i file di markdown r da quel
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{passaggio-2-rendi-compatibili-percorsi-di-file}{%
-\subsection{Passaggio 2: Rendi compatibili percorsi di file}\label{passaggio-2-rendi-compatibili-percorsi-di-file}}
+\hypertarget{passaggio-2-rendi-compatibili-i-percorsi-dei-files}{%
+\subsection{Passaggio 2: Rendi compatibili i percorsi dei files}\label{passaggio-2-rendi-compatibili-i-percorsi-dei-files}}
 
-Utilizzare {[}Parametri{]} (\url{https://rmarkdown.studio.com/lesson-6.html}) per regolare il percorso del file delle immagini in base ai valori impostati nell'intestazione YAML di un file di markdown R.
-In ** my\_paper.rmd **, crea un parametro chiamato \texttt{altro\_path} e impostalo su una stringa vuota:
+Utilizzare \href{https://rmarkdown.studio.com/lesson-6.html}{Parametri} per regolare il percorso del file delle immagini in base ai valori impostati nell'intestazione YAML di un file di markdown R.
+In \textbf{my\_paper.rmd }, crea un parametro chiamato \texttt{other\_path} e impostalo su una stringa vuota:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2460,7 +2461,7 @@ In ** my\_paper.rmd **, crea un parametro chiamato \texttt{altro\_path} e impost
 \end{Highlighting}
 \end{Shaded}
 
-In ** my\_paper.rmd **, mettilo all'inizio di FilePath quando leggi i dati o includi immagini:
+In \textbf{my\_paper.rmd }, mettilo all'inizio di FilePath quando leggi i dati o includi immagini:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2472,8 +2473,8 @@ In ** my\_paper.rmd **, mettilo all'inizio di FilePath quando leggi i dati o inc
 \end{Highlighting}
 \end{Shaded}
 
-Infine, nel file ** indice.rmd ** della cartella tesi, crea anche il parametro \texttt{Altro\_Path}.
-Ma qui, impostalo su dove la cartella ** paper\_to\_include/** è relativa alla cartella di tesi:
+Infine, nel file \textbf{index.rmd } della cartella tesi, crea anche il parametro \texttt{other\_path}.
+Ma qui, impostalo su dove la cartella \textbf{paper\_to\_include/} è relativa alla cartella di tesi:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2485,16 +2486,16 @@ Ma qui, impostalo su dove la cartella ** paper\_to\_include/** è relativa alla 
 \hypertarget{nota-sulloutput-html}{%
 \subsection{NOTA sull'output HTML}\label{nota-sulloutput-html}}
 
-Nota che se si desidera ospitare una versione HTML sulla tesi online, dovrai includere la grafica nel contenuto che ospiti online - Internet ovviamente non sarà in grado di vedere i filepath che si riferiscono a cose in un'altra cartella il tuo computer!
+Nota che se si desidera ospitare una versione HTML della tesi online, dovrai mettere i contenuti figli offline (cioè in una cartella in lcoale) pubblicati online (tipo in un Drive) - Internet ovviamente non sarà in grado di vedere i filepath che si riferiscono a cose in un'altra cartella il tuo computer!
 
 \hypertarget{passaggio-3-assicurarsi-che-i-livelli-di-intestazione-siano-corretti}{%
 \subsection{Passaggio 3: assicurarsi che i livelli di intestazione siano corretti}\label{passaggio-3-assicurarsi-che-i-livelli-di-intestazione-siano-corretti}}
 
-A meno che il documento che desideri includere non sia anche scritto come libro, probabilmente i livelli di intestazione saranno fuori.
+A meno che il documento che desideri includere non sia scritto come un libro, probabilmente i livelli di intestazione saranno fuori dalle righe.
 Cioè, le intestazioni di livello 1 (\# alcune intestazioni) che usi per le sezioni principali nell'altra carta si trasformano in titoli di accompagnatore se incluse nella tesi.
 
-Per evitare questo, prima \emph{increment tutti i livelli di intestazione di uno in ** paper\_to\_include/my\_paper.rmd ** } (\# qualche intestazione -\textgreater{} \# \# Qualche intestazione).
-Quindi in ** paper\_to\_include/** Crea un {[}filtro Lua{]} (\url{https://bookdown.org/yihui/rmarkdown-cookbook/lua-fiterters.html\#lua-filters}) che riduce i livelli di intestazione di uno: creare un file di testo , salvalo come ** ridotto\_header\_level.lua ** e dargli il contenuto di seguito.
+Per evitare questo, prima \emph{increment tutti i livelli di intestazione di uno in \textbf{paper\_to\_include/my\_paper.rmd } } (\# qualche intestazione -\textgreater{} \# \# Qualche intestazione).
+Quindi in \textbf{paper\_to\_include/} Crea un {[}filtro Lua{]} (\url{https://bookdown.org/yihui/rmarkdown-cookbook/lua-fiterters.html\#lua-filters}) che riduce i livelli di intestazione di uno: creare un file di testo , salvalo come ** ridotto\_header\_level.lua ** e dargli il contenuto di seguito.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2508,7 +2509,7 @@ Quindi in ** paper\_to\_include/** Crea un {[}filtro Lua{]} (\url{https://bookdo
 \end{Highlighting}
 \end{Shaded}
 
-Nell'intestazione Yaml di ** Paper\_to\_include/my\_paper.rmd **, usa questo filtro:
+Nell'intestazione Yaml di \textbf{paper\_to\_include/my\_paper.rmd }, usa questo filtro:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2534,7 +2535,7 @@ Potrebbe essere che le larghezze della tua figura quando si lavorano a maglia da
 È possibile utilizzare nuovamente i parametri per impostare le larghezze delle figure.
 
 Immagina di volere che la larghezza della figura sia l'80\% della larghezza della pagina quando si lavora da sola, ma al 100\% nella tesi.
-In ** paper\_to\_include/my\_paper.rmd **, prima aggiungi un parametro che potremmo chiamare \texttt{out\_width} e impostarlo sulla stringa'' 80\%``:
+In \textbf{paper\_to\_include/my\_paper.rmd }, prima aggiungi un parametro che potremmo chiamare \texttt{out\_width} e impostarlo sulla stringa'' 80\%``:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2550,7 +2551,7 @@ In ** paper\_to\_include/my\_paper.rmd **, prima aggiungi un parametro che potre
 \end{Highlighting}
 \end{Shaded}
 
-Quindi, assicurati di utilizzare quel parametro per impostare la larghezza dell'uscita quando si includono le figure in ** paper\_to\_include/my\_paper.rmd **:
+Quindi, assicurati di utilizzare quel parametro per impostare la larghezza dell'uscita quando si includono le figure in \textbf{paper\_to\_include/my\_paper.rmd }:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2560,7 +2561,7 @@ Quindi, assicurati di utilizzare quel parametro per impostare la larghezza dell'
 \end{Highlighting}
 \end{Shaded}
 
-Infine, crea il parametro \texttt{out\_width} nella tua tesi '** indice.rmd ** File:
+Infine, stabilisci il parametro \texttt{out\_width} per tua tesi '\textbf{index.rmd } File:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2570,7 +2571,7 @@ Infine, crea il parametro \texttt{out\_width} nella tua tesi '** indice.rmd ** F
 \end{Highlighting}
 \end{Shaded}
 
-Ora, la larghezza di output della tua cifra sarà dell'80\% quando si è a maglia il tuo documento da solo e al 100\% quando lo fa a lavorare come documento per bambini della tesi.
+Ora, la larghezza di output della tuo documento child sarà dell'80\%.
 
 \hypertarget{customising-citations}{%
 \section{Personalizzazione di citazioni e riferimenti}\label{customising-citations}}
@@ -2578,7 +2579,7 @@ Ora, la larghezza di output della tua cifra sarà dell'80\% quando si è a magli
 \hypertarget{utilizzo-di-un-file-.csl-con-pandoc}{%
 \subsection{Utilizzo di un file .csl con pandoc}\label{utilizzo-di-un-file-.csl-con-pandoc}}
 
-Vedere la sezione \ref{citazione-aspetto}.
+Vedere la sezione \ref{citation-appearance}.
 
 L'unico svantaggio di lasciare che pandoc gestisca le citazioni è che (i) non supporta le bibliografie dei capitoli, (ii) se sei un veterano di LaTeX, potresti essere più a tuo agio con \texttt{bilatex} o \texttt{natbib}.
 
@@ -2671,15 +2672,15 @@ Per personalizzare l'aspetto delle citazioni, cambia il file \textbf{.bst} a cui
 \hypertarget{personalizzazione-delle-intestazioni-e-dei-piuxe8-di-pagina-di-pagina-pdf}{%
 \section{Personalizzazione delle intestazioni e dei piè di pagina di pagina (PDF)}\label{personalizzazione-delle-intestazioni-e-dei-piuxe8-di-pagina-di-pagina-pdf}}
 
-Questo può ora essere fatto direttamente nell'intestazione YAML di ** Index.rmd \textbf{.
-Se sei un esperto di lattice e hai bisogno di ulteriore personalizzazione che ciò che è attualmente fornito, è possibile modificare le sezioni pertinenti di } modelli/template.tex ** - Il codice pertinente è sotto la linea che inizia \texttt{\textbackslash{}\ usepackage\ \{FancyHdr\}}.
+Questo può ora essere fatto direttamente nell'intestazione YAML di \textbf{index.rmd }.
+Se sei un esperto di lattice e hai bisogno di ulteriore personalizzazione che ciò che è attualmente fornito, è possibile modificare le sezioni pertinenti di \textbf{models/template.tex } - Il codice pertinente è sotto la linea che inizia \texttt{\textbackslash{}usepackage\{FancyHdr\}}.
 
 \hypertarget{immergersi-nel-modello-di-lattice-di-oxthesis-pdf}{%
 \section{immergersi nel modello di lattice di Oxthesis (PDF)}\label{immergersi-nel-modello-di-lattice-di-oxthesis-pdf}}
 
-Per le persone di mentalità in lattice, puoi leggere ** modelli/template.tex ** Per vedere quali opzioni di personalizzazione aggiuntive sono disponibili e ** modelli/ociamthesis.cls ** che fornisce la classe base.
-Ad esempio, ** Template.tex ** fornisce un'opzione per le comunicazioni di laurea Master, che modifica le informazioni identificative al numero del candidato e include un conteggio delle parole.
-Al momento della stesura, è necessario impostarlo direttamente in ** template.tex ** anziché dall'intestazione Yaml in ** INDICE.RMD **.
+Per le persone di mentalità in lattice, puoi leggere \textbf{models/template.tex } Per vedere quali opzioni di personalizzazione aggiuntive sono disponibili e \textbf{models/ociamthesis.cls } che fornisce la classe base.
+Ad esempio, \textbf{template.tex } fornisce un'opzione per le comunicazioni di laurea Master, che modifica le informazioni identificative al numero del candidato e include un conteggio delle parole.
+Al momento della stesura, è necessario impostarlo direttamente in \textbf{template.tex } anziché dall'intestazione Yaml in \textbf{index.rmd }.
 
 \hypertarget{personalizzazione-in-unaltra-universituxe0}{%
 \section{personalizzazione in un'altra università}\label{personalizzazione-in-unaltra-universituxe0}}
@@ -2687,11 +2688,11 @@ Al momento della stesura, è necessario impostarlo direttamente in ** template.t
 \hypertarget{il-percorso-minimo}{%
 \subsection{il percorso minimo}\label{il-percorso-minimo}}
 
-Se la questione anteriore nel modello di lattice di Oxthesis è adatta alla tua università, personalizzare \texttt{Oxforddown} alle tue esigenze potrebbe essere semplice come mettere il nome della tua istituzione e il percorso per il logo della tua università in ** Index.rmd **:
+Se la questione anteriore nel modello di LaTeX di Oxthesis è adatta alla tua università, personalizzare \texttt{cattolicadown} alle tue esigenze potrebbe essere semplice come mettere il nome della tua istituzione e il percorso per il logo della tua università in \textbf{index.rmd }:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{university}\KeywordTok{:}\AttributeTok{ University of You}
+\FunctionTok{university}\KeywordTok{:}\AttributeTok{ University of the street}
 \FunctionTok{university{-}logo}\KeywordTok{:}\AttributeTok{ figures/your{-}logo{-}here.pdf}
 \end{Highlighting}
 \end{Shaded}
@@ -2699,8 +2700,8 @@ Se la questione anteriore nel modello di lattice di Oxthesis è adatta alla tua 
 \hypertarget{sostituzione-dellintera-pagina-del-titolo-con-il-contenuto-richiesto}{%
 \subsection{Sostituzione dell'intera pagina del titolo con il contenuto richiesto}\label{sostituzione-dellintera-pagina-del-titolo-con-il-contenuto-richiesto}}
 
-Se hai un file \textbf{. Tex } con una questione frontale richiesta dalla tua università che si desidera sostituire del tutto la pagina del titolo del modello di oxthesis, puoi fornire un filepath a questo file in ** index.rmd **.
-Il contenuto di esempio di `Oxforddown include ed esempio di questo --- Se usi lo yaml di seguito, la questione anteriore sarà così:
+Se hai un file \textbf{.tex } con una questione frontale richiesta dalla tua università che si desidera sostituire del tutto la pagina del titolo del modello di oxthesis, puoi fornire un filepath a questo file in \textbf{index.rmd }.
+Il contenuto di esempio di `cattolicadown include ed esempio di questo --- Se usi lo yaml di seguito, la questione anteriore sarà così:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2751,6 +2752,15 @@ Per fare ciò, vai su \textbf{index.Rmd} e
 \AttributeTok{    }\FunctionTok{citation\_package}\KeywordTok{:}\AttributeTok{ natbib}
 \end{Highlighting}
 \end{Shaded}
+
+\hypertarget{error-package-or-namespace-load-failed-for-kableextra}{%
+\section{Error: package or namespace load failed for `kableExtra':}\label{error-package-or-namespace-load-failed-for-kableextra}}
+
+prova a reinstallare il pacchetto \texttt{kableExtra} con questo:
+
+\begin{verbatim}
+devtools::install_github("kupietz/kableExtra")
+\end{verbatim}
 
 \begin{savequote}
 Alles Gescheite ist schon gedacht worden.\\
