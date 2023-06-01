@@ -221,7 +221,7 @@ corpo del testo.)
 -   Se vuoi personalizzare la funzione build, modifica in
     **scripts_and_filters/knit-functions.R**
 
-#### PDF output {#pdf-output}
+#### PDF output{#pdf-output}
 
 ``` yaml
 knit: (function(input, ...) {
@@ -336,17 +336,15 @@ percorso in **index.Rmd** e causare problemi al knit dell'intera tesi.
 
 *under dev*
 
-### Gotchas {#gotchas}
+### Gotchas{#gotchas}
 
--   don't use underscores (\_) in your YAML front matter or code chunk
-    labels! (underscores have special meaning in LaTeX, so therefore you
-    are likely to get an error, cf.
-    <https://yihui.org/en/2018/03/space-pain/>)
+-   non usare i trattini bassi (\_) nel frontespizio di YAML o nelle etichette dei pezzi di codice.
+    di codice! (I trattini bassi hanno un significato speciale in LaTeX, quindi è probabile che si ottenga un errore. è probabile che si verifichi un errore, cfr. <https://yihui.org/en/2018/03/space-pain/>)
 
-    -   bad YAML: `bibliography: bib_final.bib`
-    -   good YAML: `bibliography: bib-final.bib`
-    -   bad chunk label: `{r my_plot}`
-    -   good chunk label: `{r my-plot}`
+    -   cattivo YAML: `bibliography: bib_final.bib`
+    -   buono YAML: `bibliography: bib-final.bib`
+    -   cattivo chunk label: `{r my_plot}`
+    -   buono chunk label: `{r my-plot}`
 
 ### Formati di Output
 
